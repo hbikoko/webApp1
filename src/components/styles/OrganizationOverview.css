@@ -1,0 +1,21 @@
+.organization-overview {
+    background-color: #0044cc; /* Match the orange background */
+    color: white; /* Text color */
+    padding: 20px; /* Some padding around the text */
+    text-align: center; /* Center the text */
+  }
+  
+  .organization-overview h2 {
+    font-size: 1.5em; /* Larger font size for the headline */
+    margin-bottom: 0.5em; /* Spacing between the headline and the mission statement */
+  }
+  
+  .organization-overview p {
+    margin-bottom: 0.5em; /* Spacing between the paragraphs */
+  }
+  
+  .call-to-action a {
+    color: red; /* Color for the clickable link */
+    text-decoration: underline; /* Underline to highlight it's clickable */
+  }
+  

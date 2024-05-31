@@ -1,0 +1,56 @@
+/* Style for the navigation bar */
+nav {
+    background-color: #0044cc; /* Navbar background color */
+    color: white;
+    padding: 10px 20px; /* Padding inside the navbar */
+    display: flex;
+    justify-content: space-between; /* Space out logo and navigation items */
+    align-items: center; /* Align items vertically */
+  }
+  
+  /* Style for the list of navigation links */
+  nav ul {
+    list-style-type: none; /* Remove default list styling */
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Display list items in a row */
+  }
+  
+  /* Style for each list item */
+  nav li {
+    margin: 0 15px; /* Margin between each list item */
+  }
+  
+  /* Style for links inside the navbar */
+  nav a {
+    color: white; /* Text color for links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1.1em; /* Increase font size */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover effect for links */
+  nav a:hover {
+    color: #ffdd00; /* Change color when hovering over links */
+  }
+  
+  /* Style for the brand/logo */
+  .nav-brand {
+    font-size: 2.0em; /* Larger font size for the brand */
+    font-weight: bold; /* Make the brand text bold */
+    margin-right: auto;
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column; /* Stack the items vertically */
+      align-items: flex-start; /* Align items to the start */
+    }
+  
+    nav li {
+      margin: 5px 0; /* Adjust margin for list items */
+    }
+  }
+  

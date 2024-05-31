@@ -1,0 +1,21 @@
+
+.homePage {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    display: flex;
+  }
+
+/* Style for the container of each slide */
+.slick-slide {
+    padding: 0;
+    margin: 0;
+  }
+
+  
+  /* Style for the images within the slides */
+.slick-slide img {
+    width: 100%;  /* Make images take up full width of the slide */
+    height: auto; /* Maintain aspect ratio of images */
+  }
+  
+  

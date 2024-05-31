@@ -1,0 +1,77 @@
+/* Style for the entire What We Do section */
+.wwd-container {
+    background-color: #f8f8f8; /* Light background color */
+    text-align: center; /* Center-align the text */
+    padding: 40px 20px; /* Padding around the entire section */
+  }
+  
+  /* Style for the header 'What We Do' */
+  .wwd-header {
+    font-size: 2em; /* Large font size for the header */
+    color: #333; /* Dark text color */
+    margin-bottom: 30px; /* Space below the header */
+  }
+  
+  /* Container for all services */
+  .services-container {
+    display: flex; /* Align service blocks in a row */
+    justify-content: center; /* Center the blocks */
+    flex-wrap: wrap; /* Allow the blocks to wrap on smaller screens */
+    gap: 20px; /* Space between the blocks */
+  }
+  
+  /* Individual service block styling */
+  .service-block {
+    background-color: #fff; /* White background for each block */
+    border-radius: 8px; /* Rounded corners for the blocks */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside each block */
+    width: 200px; /* Fixed width, adjust as needed */
+    margin: 0 10px; /* Horizontal margin for spacing between blocks */
+  }
+  
+  /* Icon styling */
+  .service-block img {
+    height: 60px; /* Fixed height for icons */
+    margin-bottom: 15px; /* Space below the icons */
+  }
+  
+  /* Title styling */
+  .service-block h3 {
+    font-size: 1.2em; /* Slightly larger font size for titles */
+    color: #333; /* Dark text color for titles */
+    margin-bottom: 10px; /* Space below the titles */
+  }
+  
+  /* Description styling */
+  .service-block p {
+    font-size: 1em; /* Standard font size for description */
+    color: #666; /* Lighter text color for descriptions */
+  }
+  
+  /* Read more button */
+  .wwd-read-more {
+    background-color: #0044cc; /* Orange background color for the button */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners for the button */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 1em; /* Standard font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 30px; /* Space above the button */
+    text-transform: uppercase; /* Uppercase text for styling */
+    letter-spacing: 1px; /* Spacing between letters for styling */
+  }
+  
+  /* Style adjustments for responsiveness */
+  @media (max-width: 768px) {
+    .services-container {
+      flex-direction: column; /* Stack blocks vertically on small screens */
+    }
+    
+    .service-block {
+      width: auto; /* Auto width to fit smaller screens */
+      margin: 10px; /* Adjust margin for vertical layout */
+    }
+  }
+  
