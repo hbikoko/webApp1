@@ -4,62 +4,43 @@ const mongoose = require('mongoose');
 const path = require('path');
 
 const app = express();
-const port = 5000;
+const port = 9000;
 
-const allowedOrigins = ['http://127.0.0.1:3000', 'http://localhost:3000']; // List your allowed origins here
+// Middleware
+app.use(cors());
+app.use(express.json()); // for parsing application/json
 
-app.use(cors({
-  origin: (origin, callback) => {
-    // Allow requests with no origin like mobile apps or curl requests
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.includes(origin)) {
-      return callback(null, true);
-    } else {
-      return callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true // Allow credentials (cookies, authorization headers, TLS client certificates, etc.)
-}));
-app.use(express.json());
+// MongoDB connection
+const uri = "mongodb+srv://hermanbikoko:aXW5SF4Qg8jpwlxM@cluster0.ex8jgld.mongodb.net/BlogPlatformDB?retryWrites=true&w=majority&appName=Cluster0";
 
-const connectionString = 'mongodb+srv://hermanbikoko:<redGr@pes235!>@cluster0.ex8jgld.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'; // Replace with your actual connection string
-
-mongoose.connect(connectionString, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+mongoose.connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
 })
-.then(() => console.log('MongoDB connected'))
+.then(() => console.log('MongoDB connected successfully'))
 .catch(err => console.log('MongoDB connection error:', err));
 
-const BlogPostSchema = new mongoose.Schema({
-  title: String,
-  content: String,
-  author: String,
-  datePublished: Date,
-  tags: [String],
-  imageURL: String,
+// Define a schema and model for BlogPost
+const blogPostSchema = new mongoose.Schema({
+    title: String,
+    content: String,
+    author: String,
+    date: { type: Date, default: Date.now }
 });
 
-const BlogPost = mongoose.model('BlogPost', BlogPostSchema);
+const BlogPost = mongoose.model('BlogPost', blogPostSchema, 'Posts');
 
-// Define the API route for fetching blog posts
+// Routes
 app.get('/api/blogposts', async (req, res) => {
-  try {
-    const posts = await BlogPost.find();
-    res.json(posts);
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
+    try {
+        const blogPosts = await BlogPost.find();
+        res.json(blogPosts);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
 });
 
-// Serve static files (e.g., your React app)
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Fallback route for React Router
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
-});
-
+// Starting the server
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+    console.log(`Server running at http://localhost:${port}`);
 });

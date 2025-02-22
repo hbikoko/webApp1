@@ -1,77 +1,121 @@
-/* Style for the entire What We Do section */
+/* Updated WWD.css - Sexy Design Update with ADA Compliance Enhancements */
+
+/* 1. Overall container */
 .wwd-container {
-    background-color: #f8f8f8; /* Light background color */
-    text-align: center; /* Center-align the text */
-    padding: 40px 20px; /* Padding around the entire section */
-  }
+  background-color: linear-gradient(120deg, #f0f8ff, #e6f7ff);; /* Softer light background color */
+  text-align: center; 
+  padding: 60px 20px; /* Generous padding for visual breathing room */
+}
+
+/* 2. Section header */
+.wwd-header {
+  font-size: 2.5em; 
+  color: #222; 
+  font-weight: bold; 
+  margin-bottom: 40px; 
+  margin-top: -15px;
+}
+
+/* 3. Flex container for services */
+.wwd-container .services-container {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  /* Optionally, remove or reset any max-width and margin that might be causing layout issues */
+  max-width: none;
+  margin: 0;
+}
+
+
+
+.service-block {
+  /* 1) Remove white background so icons appear "borderless" or floating */
+  background-color: transparent; 
   
-  /* Style for the header 'What We Do' */
-  .wwd-header {
-    font-size: 2em; /* Large font size for the header */
-    color: #333; /* Dark text color */
-    margin-bottom: 30px; /* Space below the header */
-  }
+  /* 2) No shadow means no card-like effect, closer to the style you want */
+  box-shadow: none;
   
-  /* Container for all services */
+  /* 3) Remove rounded corners, since there's no visible box to round */
+  border-radius: 0; 
+  
+  /* 5) Automatic width so the icon and text can size naturally; or define a width if you prefer */
+  width: auto; 
+  
+  /* 6) Align text and icons in the center, similar to the Salvation Army layout */
+  text-align: center; 
+}
+
+.service-block:hover {
+  /* 7) Remove or reduce hover effects to keep it simple and consistent 
+        (no "lift" or extra shadow on hover) */
+  transform: none; 
+  box-shadow: none;
+}
+
+.service-block img {
+  /* 8) Control how big the icon appears; 
+        'width' ensures consistent sizing while preserving aspect ratio */
+  width: 90px;  
+  height: auto;
+  
+  /* 9) Display the image as a block and center it horizontally */
+  display: block; 
+  margin: 0 auto 10px; 
+}
+
+.service-block h3 {
+  display: inline-block; 
+  width: 180px; /* or whatever suits all headings */
+  text-align: center;
+}
+
+/* 11) If you have a description <p>, style it minimally. 
+       Remove or reduce margin as needed. */
+.service-block p {
+  margin: 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* 9. "Read More" button styling */
+.wwd-read-more {
+  background-color: gold; /* Bold orange background color */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-top: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* 10. Hover effect for the "Read More" button */
+.wwd-read-more:hover {
+  background-color: #cc5200; /* Darker shade of orange */
+  transform: translateY(-5px);
+}
+
+/* 
+  11. For smaller screens, let flex items stack or auto-size 
+  This is "Responsive Design" with a media query
+*/
+@media (max-width: 768px) {
   .services-container {
-    display: flex; /* Align service blocks in a row */
-    justify-content: center; /* Center the blocks */
-    flex-wrap: wrap; /* Allow the blocks to wrap on smaller screens */
-    gap: 20px; /* Space between the blocks */
+    flex-direction: column; 
   }
-  
-  /* Individual service block styling */
   .service-block {
-    background-color: #fff; /* White background for each block */
-    border-radius: 8px; /* Rounded corners for the blocks */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-    padding: 20px; /* Padding inside each block */
-    width: 200px; /* Fixed width, adjust as needed */
-    margin: 0 10px; /* Horizontal margin for spacing between blocks */
+    width: auto; 
+    margin: 20px auto; /* Center them vertically and horizontally */
   }
-  
-  /* Icon styling */
-  .service-block img {
-    height: 60px; /* Fixed height for icons */
-    margin-bottom: 15px; /* Space below the icons */
-  }
-  
-  /* Title styling */
-  .service-block h3 {
-    font-size: 1.2em; /* Slightly larger font size for titles */
-    color: #333; /* Dark text color for titles */
-    margin-bottom: 10px; /* Space below the titles */
-  }
-  
-  /* Description styling */
-  .service-block p {
-    font-size: 1em; /* Standard font size for description */
-    color: #666; /* Lighter text color for descriptions */
-  }
-  
-  /* Read more button */
-  .wwd-read-more {
-    background-color: #0044cc; /* Orange background color for the button */
-    color: white; /* White text color */
-    border: none; /* No border */
-    border-radius: 4px; /* Rounded corners for the button */
-    padding: 10px 20px; /* Padding inside the button */
-    font-size: 1em; /* Standard font size for button text */
-    cursor: pointer; /* Pointer cursor on hover */
-    margin-top: 30px; /* Space above the button */
-    text-transform: uppercase; /* Uppercase text for styling */
-    letter-spacing: 1px; /* Spacing between letters for styling */
-  }
-  
-  /* Style adjustments for responsiveness */
-  @media (max-width: 768px) {
-    .services-container {
-      flex-direction: column; /* Stack blocks vertically on small screens */
-    }
-    
-    .service-block {
-      width: auto; /* Auto width to fit smaller screens */
-      margin: 10px; /* Adjust margin for vertical layout */
-    }
-  }
-  
+}
+
+/* 12. Focus outline for keyboard navigation (ADA compliance) */
+a:focus, button:focus {
+  outline: 3px solid #ff7f50; 
+  outline-offset: 2px;
+  border-radius: 5px;
+}
+
+

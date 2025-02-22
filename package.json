@@ -10,12 +10,13 @@
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "faker": "^6.6.6",
-    "mongodb": "^6.6.2",
+    "mongodb": "^6.8.0",
     "mongoose": "^8.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.5",
     "react-router-dom": "^6.21.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
@@ -26,7 +27,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:5000",
+  "options": {
+    "allowedHosts": ["localhost", ".localhost"],
+    "proxy": "https://localhost:5000/"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -48,5 +52,8 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0"
+  }
 }
