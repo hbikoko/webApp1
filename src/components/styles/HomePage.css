@@ -1,21 +1,47 @@
+/* HomePage Slider Section */
+.slider-container {
 
-.homePage {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    display: flex;
-  }
+  width: 100%; /* Ensure the container uses the full available width */
+  max-width: 100%; /* Remove the limit on container width */
+  margin-top: 40px;
+  margin-bottom: 10px;
+  overflow: hidden; /* Prevent the container from overflowing into other areas */
+}
 
-/* Style for the container of each slide */
-.slick-slide {
-    padding: 0;
-    margin: 0;
-  }
+.homepage-slider img {
+  width: 60%; /* Reduce width to 60% to achieve a 40% size reduction */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Keep the image visually appealing */
+  margin: 0 auto; /* Center the image within the slider */
+  display: block; /* Ensure proper centering */
+}
 
-  
-  /* Style for the images within the slides */
-.slick-slide img {
-    width: 100%;  /* Make images take up full width of the slide */
-    height: auto; /* Maintain aspect ratio of images */
+
+.homepage-slider {
+  width: 100%; /* Take up the entire available width of the screen */
+  margin: 0; /* Remove any default margin to avoid unnecessary whitespace */
+}
+
+/* Ensuring responsive adjustments */
+@media (max-width: 768px) {
+  .slider-container {
+    width: 100%; /* Maintain full width on smaller screens */
   }
-  
-  
+}
+
+/* HomePage General Layout */
+.homepage {
+  max-width: 1200px; /* Set a max width for better readability */
+  margin: 0 auto; /* Center the content */
+  padding: 0 20px; /* Add some padding for better spacing */
+  padding-top: 100px; 
+}
+
+body {
+  background: linear-gradient(120deg, #f0f8ff, #e6f7ff);
+}
+
+a:focus {
+  outline: 2px solid #ffdd00;
+  outline-offset: 2px;
+}

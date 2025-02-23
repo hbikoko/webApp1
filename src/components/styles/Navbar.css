@@ -1,56 +1,151 @@
-/* Style for the navigation bar */
 nav {
-    background-color: #0044cc; /* Navbar background color */
-    color: white;
-    padding: 10px 20px; /* Padding inside the navbar */
-    display: flex;
-    justify-content: space-between; /* Space out logo and navigation items */
-    align-items: center; /* Align items vertically */
+  background-color: gold;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 60px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;  /* or something suitably high */
+}
+
+
+/* Logo container (no fixed width/height) */
+.nav-brand {
+  margin-right: 1rem;
+  padding-left: 10px;
+}
+
+/* Control the actual logo size here */
+.nav-logo {
+  width: 175px;  /* 25% smaller than the original 400px */
+  height: auto;
+}
+
+.nav-logo-container {
+  position: relative; /* Establishes a positioning context for the tooltip */
+  display: inline-block; /* Ensures the container wraps only its content */
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: left;        /* Align text to the left */
+  padding: 5px 8px;
+  border-radius: 4px;
+
+  position: absolute;
+  z-index: 999999;         /* Higher than the navbar’s z-index */
+  top: 100%;               /* Position below the .nav-logo-container */
+  left: 0;                 /* Anchor the tooltip to the container’s left edge */
+  margin-top: 8px;         /* Space between logo and tooltip */
+  white-space: nowrap;     /* Keep text on one line (remove if you want wrapping) */
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Show tooltip on hover */
+.nav-logo-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Prevent tooltip from overflowing left */
+@media (max-width: 600px) { /* Adjust breakpoint as needed */
+  .nav-logo-container .tooltip-text {
+    left: 0;
+    transform: none;
+    white-space: normal; /* Allow text wrapping if necessary */
+    max-width: 200px; /* Adjust for small screens */
   }
-  
-  /* Style for the list of navigation links */
+}
+
+
+
+
+
+/* Nav list styles */
+nav ul {
+  list-style-type: none;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0 20px;
+  position: relative;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  color: #ff6600;
+  transform: translateY(-3px);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  min-width: 200px;
+  padding: 10px 0;
+  z-index: 1001;
+  border-radius: 8px;
+}
+
+nav li:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu li a {
+  color: white;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #444;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
   nav ul {
-    list-style-type: none; /* Remove default list styling */
-    justify-content: flex-end;
-    margin: 0;
-    padding: 0;
-    display: flex; /* Display list items in a row */
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  /* Style for each list item */
   nav li {
-    margin: 0 15px; /* Margin between each list item */
+    margin: 10px 0;
   }
-  
-  /* Style for links inside the navbar */
-  nav a {
-    color: white; /* Text color for links */
-    text-decoration: none; /* Remove underline from links */
-    font-size: 1.1em; /* Increase font size */
-    transition: color 0.3s; /* Smooth transition for hover effect */
-  }
-  
-  /* Hover effect for links */
-  nav a:hover {
-    color: #ffdd00; /* Change color when hovering over links */
-  }
-  
-  /* Style for the brand/logo */
-  .nav-brand {
-    font-size: 2.0em; /* Larger font size for the brand */
-    font-weight: bold; /* Make the brand text bold */
-    margin-right: auto;
-  }
-  
-  /* Responsive styling for smaller screens */
-  @media (max-width: 600px) {
-    nav ul {
-      flex-direction: column; /* Stack the items vertically */
-      align-items: flex-start; /* Align items to the start */
-    }
-  
-    nav li {
-      margin: 5px 0; /* Adjust margin for list items */
-    }
-  }
-  
+}
+
+a:focus {
+  outline: 2px solid #ff7f50;
+  border-radius: 5px;
+}
