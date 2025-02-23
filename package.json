@@ -28,7 +28,10 @@
     "eject": "react-scripts eject"
   },
   "options": {
-    "allowedHosts": ["localhost", ".localhost"],
+    "allowedHosts": [
+      "localhost",
+      ".localhost"
+    ],
     "proxy": "https://localhost:5000/"
   },
   "eslintConfig": {
@@ -54,6 +57,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@svgr/webpack": "^8.1.0"
   }
 }
