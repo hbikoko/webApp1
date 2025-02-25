@@ -1,60 +1,38 @@
-import React, { useState } from "react";
-import "./styles/Navbar.css";
-import { Link } from "react-router-dom";
-import webAppLogo from "../assets/thandiwe4.png";
+import React, { useState } from 'react';
+import './styles/Navbar.css';
+import logo from '../assets/thandiwe4.png'; // Update with your actual logo path
 
 function Navbar() {
-  const [showDropdown, setShowDropdown] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleMouseEnter = () => setShowDropdown(true);
-  const handleMouseLeave = () => setShowDropdown(false);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
-    <nav>
+    <nav className="navbar">
+      {/* Logo / Brand */}
       <div className="nav-brand">
-      <Link to="/" className="nav-logo-container">
-        <img 
-          src={webAppLogo} 
-          alt="Web App Logo" 
-          className="nav-logo" 
-        />
-        <span className="tooltip-text">African Heritage Education And Empowerment Community</span>
-      </Link>
+        <img src={logo} alt="AFRHEEC Logo" className="nav-logo" />
       </div>
-      <ul>
-        <li>
-          <Link to="/our-story">About Us</Link>
-        </li>
-        <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          <Link to="/services">Services</Link>
-          {showDropdown && (
-            <ul className="dropdown-menu">
-              <li>
-                <Link to="/services/heritage-history">Heritage &amp; History</Link>
-              </li>
-              <li>
-                <Link to="/services/community">Community</Link>
-              </li>
-              <li>
-                <Link to="/services/current-projects">Current Projects</Link>
-              </li>
-              <li>
-                <Link to="/services/policy-positions">Policy and Positions</Link>
-              </li>
-            </ul>
-          )}
-        </li>
-        <li>
-          <Link to="/support">Support</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact Us</Link>
-        </li>
+
+      {/* Hamburger Icon */}
+      <button className="hamburger" onClick={toggleMenu} aria-label="Toggle Menu">
+        &#9776; {/* Simple “three bars” icon */}
+      </button>
+
+      {/* Nav Links */}
+      <ul className={`nav-menu ${menuOpen ? 'show' : ''}`}>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#support">Support</a></li>
+        <li><a href="#contact">Contact Us</a></li>
       </ul>
     </nav>
   );
 }
 
 export default Navbar;
+
 
 
