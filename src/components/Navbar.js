@@ -1,38 +1,54 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './styles/Navbar.css';
-import logo from '../assets/thandiwe4.png'; // Update with your actual logo path
+import logo from '../assets/thandiwe4.png'; // Ensure this path is correct
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
+  const handleLinkClick = () => setMenuOpen(false);
 
   return (
     <nav className="navbar">
-      {/* Logo / Brand */}
       <div className="nav-brand">
-        <img src={logo} alt="AFRHEEC Logo" className="nav-logo" />
+        <Link to="/" onClick={handleLinkClick}>
+          <img src={logo} alt="AFRHEEC Logo" className="nav-logo" />
+        </Link>
       </div>
 
-      {/* Hamburger Icon */}
       <button className="hamburger" onClick={toggleMenu} aria-label="Toggle Menu">
-        &#9776; {/* Simple “three bars” icon */}
+        &#9776;
       </button>
 
-      {/* Nav Links */}
       <ul className={`nav-menu ${menuOpen ? 'show' : ''}`}>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#support">Support</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+        <li>
+          <Link to="/our-story" onClick={handleLinkClick}>
+            About Us
+          </Link>
+        </li>
+        <li>
+          <Link to="/services" onClick={handleLinkClick}>
+            Services
+          </Link>
+        </li>
+        <li>
+          <Link to="/support" onClick={handleLinkClick}>
+            Support
+          </Link>
+        </li>
+        <li>
+          <Link to="/contact" onClick={handleLinkClick}>
+            Contact Us
+          </Link>
+        </li>
       </ul>
     </nav>
   );
 }
 
 export default Navbar;
+
 
 
 
