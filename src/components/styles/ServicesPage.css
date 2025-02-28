@@ -50,11 +50,16 @@
   transform-origin: center center;
 }
 
-/* On devices that support hover, enable flip effect */
+/* On devices that support hover, enable flip effect on hover */
 @media (hover: hover) {
   .service-item:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
+}
+
+/* When the "flipped" class is added (by tap on mobile) */
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
 }
 
 /* Both Front and Back Sides */
@@ -115,11 +120,8 @@
   .flip-card {
     height: 250px; /* reduced height on mobile */
   }
-  /* Disable hover flip on mobile; the card remains front-facing */
-  .flip-card-inner {
-    transform: none !important;
-  }
   .flip-card-front img {
     width: 80%; /* slightly larger image on mobile */
   }
 }
+
