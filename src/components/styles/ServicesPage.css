@@ -35,9 +35,10 @@
 .flip-card {
   position: relative;
   width: 100%;
-  height: 350px; /* fixed height on desktop */
+  height: 450px; /* Increased height for more text space */
   perspective: 1000px;
   perspective-origin: center center;
+  margin-bottom: 1rem; /* Some spacing under each card */
 }
 
 /* Flip Card Inner */
@@ -50,14 +51,14 @@
   transform-origin: center center;
 }
 
-/* On devices that support hover, enable flip effect on hover */
+/* Hover flip on desktop devices (those that support hover) */
 @media (hover: hover) {
   .service-item:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
 }
 
-/* When the "flipped" class is added (by tap on mobile) */
+/* If you have a "flipped" class for mobile, it can rotate the card as well */
 .flip-card-inner.flipped {
   transform: rotateY(180deg);
 }
@@ -70,9 +71,10 @@
   height: 100%;
   backface-visibility: hidden;
   border-radius: 6px;
-  overflow: hidden;
-  padding: 1.5rem;
   box-sizing: border-box;
+  padding: 1.5rem;
+  /* Remove overflow: hidden to prevent cutting off letters */
+  overflow: visible;
 }
 
 /* Front Side Styling */
@@ -82,7 +84,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
 }
 
 .flip-card-front img {
@@ -94,6 +95,7 @@
 
 .flip-card-front h2 {
   font-size: 1.2rem;
+  line-height: 1.3; /* Ensure letters like 'y' aren't clipped */
   color: #333;
   margin: 0.5rem 0;
 }
@@ -104,24 +106,26 @@
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 1rem;
-  overflow-y: auto;
+  justify-content: flex-start; /* Start text at the top */
+  overflow-y: auto; /* Allow scrolling if text is long */
 }
 
+/* Paragraph spacing on the back */
 .flip-card-back p {
-  font-size: 0.95rem;
-  line-height: 1.3;
-  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 /* Responsive adjustments for mobile devices */
 @media (max-width: 768px) {
   .flip-card {
-    height: 250px; /* reduced height on mobile */
+    height: 350px; /* Slightly smaller on mobile, but still enough for text */
   }
   .flip-card-front img {
-    width: 80%; /* slightly larger image on mobile */
+    width: 80%; /* bigger image on mobile if desired */
   }
 }
+
 
