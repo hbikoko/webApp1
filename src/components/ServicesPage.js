@@ -4,6 +4,8 @@ import sankofa from "../assets/sankofa.png";
 import africa from "../assets/africaMap.png";
 import baobab from "../assets/baobabTree.png";
 import adin from "../assets/adin.png";
+import { Link } from 'react-router-dom';
+
 
 function FlipCard({ frontContent, backContent }) {
   // Determine if the device does not support hover (i.e. touch-only)
@@ -46,9 +48,25 @@ function ServicesPage() {
     AFRHEEC, the African Heritage Education and Empowerment Community, is dedicated to uplifting the Black community through education, culture, and empowerment. To learn more about our current projects and initiatives, including our culturally responsive work, click the icon below.
   `;
 
-  const policyText = `
-    AFRHEEC is committed to advocating for policies that promote justice, equity, and empowerment for the Black community. To learn more about our stance on critical issues such as immigration reform, Black civil rights, voter rights, and more, click the icon below to explore our policy positions and advocacy efforts.
-  `;
+  const policyText = (
+    <>
+      <p>
+        AFRHEEC is committed to advocating for policies that promote justice, equity, and empowerment for the Black community.
+      </p>
+      <p>
+        To learn more about our stance on critical issues such as{" "}
+        <Link to="/services/policy-and-positions/immigration-reform">
+          immigration reform
+        </Link>,{" "}
+        <Link to="/services/policy-and-positions/black-civil-rights">
+          Black civil rights
+        </Link>,{" "}
+        <Link to="/services/policy-and-positions/voter-rights">
+          voter rights
+        </Link>, and more, click the icon below to explore our policy positions and advocacy efforts.
+      </p>
+    </>
+  );
 
   return (
     <div className="services-page">
