@@ -27,6 +27,30 @@
   height: auto;
 }
 
+/* Language Switcher Styling */
+.language-switcher {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Replacing the old .language-switcher button rules with .language-switcher select */
+.language-switcher select {
+  background: none;
+  border: 1px solid black;
+  padding: 4px 8px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  appearance: none; /* remove default arrow if desired */
+}
+
+.language-switcher select:hover,
+.language-switcher select:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
 /* Hamburger button hidden by default on larger screens */
 .hamburger {
   display: none;
@@ -66,17 +90,27 @@
     display: block;
   }
 
+  /* Adjust language switcher spacing on smaller screens */
+  .language-switcher {
+    gap: 5px;
+  }
+  /* Smaller padding & font for the select on mobile */
+  .language-switcher select {
+    padding: 2px 4px;
+    font-size: 0.8em;
+  }
+
   /* Position the nav menu off-screen by default */
   .nav-menu {
     position: absolute;
-    top: 60px;      /* Just below the fixed navbar */
+    top: 60px; /* Just below the fixed navbar */
     right: 0;
     background-color: gold;
     flex-direction: column;
     width: 200px;
     gap: 0;
     padding: 10px 0;
-    transform: translateX(100%);  /* Hidden to the right */
+    transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
   }
 
@@ -92,7 +126,7 @@
 }
 
 /* Focus outlines for accessibility (ADA compliance) */
-a:focus, button:focus {
+a:focus, button:focus, select:focus {
   outline: 2px solid #ff7f50;
   border-radius: 5px;
 }

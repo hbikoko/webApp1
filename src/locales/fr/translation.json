@@ -1,0 +1,50 @@
+{
+    "homepage": {
+      "title": "AFRHEEC - Donner du Pouvoir aux Communautés",
+      "description": "Découvrez comment AFRHEEC donne du pouvoir aux communautés grâce à la préservation du patrimoine, l’éducation et des projets innovants.",
+      "sliderAlt1": "Une communauté joyeuse célébrant sous le ciel ouvert",
+      "sliderAlt2": "Événement de projet AFRHEEC montrant des participants heureux"
+    },
+    "navbar": {
+      "logoAlt": "Logo AFRHEEC",
+      "about": "À Propos",
+      "services": "Services",
+      "support": "Soutien",
+      "contact": "Contactez-Nous"
+    },
+    "story": {
+      "header": "Page d'Histoire"
+    },
+    "services": {
+      "heritageText": "AFRHEEC, la Communauté d'Éducation et d'Empowerment du Patrimoine Africain, se consacre à l'exploration de la riche histoire et du patrimoine culturel de l'Afrique et de son impact durable sur l'expérience afro-américaine.",
+      "heritageText2": "En explorant le parcours historique des Africains brutalement opprimés pour devenir Américains, AFRHEEC vise à approfondir la compréhension des défis et des triomphes auxquels sont confrontées les communautés noires aujourd'hui.",
+      "heritageText3": "Grâce à des initiatives axées sur la redécouverte des racines ancestrales, la restauration des pratiques culturelles, la construction de communautés solides et la revendication d'identités authentiques, AFRHEEC permet aux individus de se connecter à leur héritage africain et de naviguer dans les complexités de la société moderne.",
+      "communityText": "AFRHEEC reconnaît le rôle vital de la communauté dans la culture africaine. Nous nous efforçons de construire des communautés noires solides et solidaires où les enfants peuvent prospérer dans un environnement sûr et encourageant. En créant des espaces exempts de peur et de discrimination, notre mission est de permettre aux parents d'élever des enfants confiants et équilibrés. AFRHEEC s'engage à concevoir un havre qui enveloppe la communauté noire d'un sentiment d'appartenance et de but. Par le biais d'expériences partagées, de traditions culturelles et d'un soutien mutuel, nous croyons en l'élévation collective et en l'inspiration des générations futures.",
+      "currentProjectsText": "AFRHEEC, la Communauté d'Éducation et d'Empowerment du Patrimoine Africain, se consacre à l'élévation de la communauté noire par l'éducation, la culture et l'empowerment. Pour en savoir plus sur nos projets et initiatives actuels, y compris notre travail culturellement réactif, cliquez sur l'icône ci-dessous.",
+      "policyText": {
+        "p1": "AFRHEEC s'engage à défendre des politiques qui favorisent la justice, l'équité et l'empowerment de la communauté noire.",
+        "p2": "Pour en savoir plus sur notre position sur des enjeux critiques tels que ",
+        "immigration": "la réforme migratoire",
+        "blackCivilRights": "les droits civils des Noirs",
+        "voterRights": "les droits de vote",
+        "andMore": "et plus, cliquez sur l'icône ci-dessous pour explorer nos positions politiques et nos efforts de plaidoyer."
+      },
+      "heritageAlt": "Héritage & Histoire",
+      "heritageTitle": "Héritage & Histoire",
+      "communityAlt": "Communauté",
+      "communityTitle": "Communauté",
+      "currentProjectsAlt": "Projets Actuels",
+      "currentProjectsTitle": "Projets Actuels",
+      "policyAlt": "Politiques & Positions",
+      "policyTitle": "Politiques & Positions"
+    },
+    "wwd": {
+      "header": "Ce Que Nous Faisons",
+      "readMore": "En Savoir Plus Sur Ce Que Nous Faisons",
+      "heritageandhistory": "Héritage et Histoire",
+      "community": "Communauté",
+      "currentprojects": "Projets Actuels",
+      "policyandpositions": "Politiques et Positions"
+    }
+  }
+  

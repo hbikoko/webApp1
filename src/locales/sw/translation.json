@@ -1,0 +1,50 @@
+{
+    "homepage": {
+      "title": "AFRHEEC - Kuwawezesha Jamii",
+      "description": "Gundua jinsi AFRHEEC inavyowawezesha jamii kupitia uhifadhi wa urithi, elimu, na miradi bunifu.",
+      "sliderAlt1": "Jamii yenye furaha ikisherehekea chini ya anga wazi",
+      "sliderAlt2": "Tukio la mradi wa AFRHEEC linaloonyesha washiriki wenye furaha"
+    },
+    "navbar": {
+      "logoAlt": "Nembo ya AFRHEEC",
+      "about": "Kuhusu Sisi",
+      "services": "Huduma",
+      "support": "Msaada",
+      "contact": "Wasiliana Nasi"
+    },
+    "story": {
+        "header": "Ukurasa wa Hadithi"
+    },
+    "services": {
+      "heritageText": "AFRHEEC, Jumuiya ya Elimu na Uwezeshaji wa Urithi wa Kiafrika, imejitolea kuchunguza historia tajiri na utamaduni wa Afrika na athari zake kwa uzoefu wa Wamarekani Weusi.",
+      "heritageText2": "Kupitia kuchunguza safari ya kihistoria ya Waafrika walioteswa na kulazimishwa kuwa Wamarekani, AFRHEEC inalenga kukuza uelewa wa kina wa changamoto na mafanikio yanayokabili jamii za Weusi leo.",
+      "heritageText3": "Kupitia mipango inayolenga kurejesha mizizi ya mababu, kurejesha desturi za kitamaduni, kujenga jamii imara, na kudai utambulisho halisi, AFRHEEC inawapa watu uwezo wa kuungana na urithi wao wa Kiafrika na kukabiliana na changamoto za jamii ya kisasa.",
+      "communityText": "AFRHEEC inatambua nafasi muhimu ya jamii katika utamaduni wa Kiafrika. Tunajitahidi kujenga jamii za Weusi imara na zenye mshikamano ambamo watoto wanaweza kustawi katika mazingira salama na yanayowapa msaada. Kwa kuunda maeneo yasiyo na hofu na ubaguzi, dhamira yetu ni kuwawezesha wazazi kulea watoto wenye kujiamini na uwiano. AFRHEEC imejitolea kubuni kimbilio linalokumbatia jamii ya Weusi kwa hisia ya mali na kusudi. Kupitia uzoefu wa pamoja, mila za kitamaduni, na msaada wa pande zote, tunaamini katika kuinua kila mmoja na kuhamasisha vizazi vijavyo.",
+      "currentProjectsText": "AFRHEEC, Jumuiya ya Elimu na Uwezeshaji wa Urithi wa Kiafrika, imejitolea kuinua jamii ya Weusi kupitia elimu, utamaduni, na uwezeshaji. Ili kujifunza zaidi kuhusu miradi na mipango yetu ya sasa, pamoja na kazi yetu ya kuzingatia tamaduni, bonyeza ikoni hapa chini.",
+      "policyText": {
+        "p1": "AFRHEEC imejitolea kutetea sera zinazokuza haki, usawa, na uwezeshaji wa jamii ya Weusi.",
+        "p2": "Ili kujifunza zaidi kuhusu msimamo wetu kuhusu masuala muhimu kama ",
+        "immigration": "marekebisho ya uhamiaji",
+        "blackCivilRights": "haki za kiraia za Weusi",
+        "voterRights": "haki za wapiga kura",
+        "andMore": "na mengine, bonyeza ikoni hapa chini ili kuchunguza sera zetu na juhudi zetu za utetezi."
+      },
+      "heritageAlt": "Urithi & Historia",
+      "heritageTitle": "Urithi & Historia",
+      "communityAlt": "Jamii",
+      "communityTitle": "Jamii",
+      "currentProjectsAlt": "Miradi ya Sasa",
+      "currentProjectsTitle": "Miradi ya Sasa",
+      "policyAlt": "Sera & Misimamo",
+      "policyTitle": "Sera & Misimamo"
+    },
+    "wwd": {
+      "header": "Tunachofanya",
+      "readMore": "Soma Zaidi Kuhusu Tunachofanya",
+      "heritageandhistory": "Urithi na Historia",
+      "community": "Jamii",
+      "currentprojects": "Miradi ya Sasa",
+      "policyandpositions": "Sera na Misimamo"
+    }
+  }
+  

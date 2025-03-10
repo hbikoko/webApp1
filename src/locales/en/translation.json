@@ -1,0 +1,50 @@
+{
+    "homepage": {
+      "title": "AFRHEEC - Empowering Communities",
+      "description": "Discover how AFRHEEC empowers communities through heritage preservation, education, and innovative projects.",
+      "sliderAlt1": "A joyful community celebrating under the open sky",
+      "sliderAlt2": "AFRHEEC project event showcasing happy participants"
+    },
+    "navbar": {
+      "logoAlt": "AFRHEEC Logo",
+      "about": "About Us",
+      "services": "Services",
+      "support": "Support",
+      "contact": "Contact Us"
+    },
+    "story": {
+      "header": "Story Page"
+    },
+    "services": {
+      "heritageText": "AFRHEEC, the African Heritage Education and Empowerment Community, is dedicated to exploring the rich history and cultural heritage of Africa and its enduring impact on the Black American experience.",
+      "heritageText2": "By exploring the historical journey of brutalized Africans terrorized into becoming Americans, AFRHEEC aims to foster a deeper understanding of the challenges and triumphs faced by Black communities today.",
+      "heritageText3": "Through initiatives focused on retracing ancestral roots, restoring cultural practices, building strong communities, and reclaiming authentic identities, AFRHEEC empowers individuals to connect with their African heritage and navigate the complexities of modern society. No matter their geographical displacement spurred by the African Diaspora.",
+      "communityText": "AFRHEEC recognizes the vital role of community in African culture. We strive to build strong, supportive Black communities where children can thrive in safe, nurturing environments. By creating spaces free from fear and discrimination, our mission is to empower parents to raise confident, well-rounded children without fear for their safety. AFRHEEC is committed to designing a haven that envelopes the Black community with a sense of belonging and purpose. Through shared experiences, cultural traditions, and mutual support, we believe in uplifting one another and inspiring our future generations.",
+      "currentProjectsText": "AFRHEEC, the African Heritage Education and Empowerment Community, is dedicated to uplifting the Black community through education, culture, and empowerment. To learn more about our current projects and initiatives, including our culturally responsive work, click the icon below.",
+      "policyText": {
+        "p1": "AFRHEEC is committed to advocating for policies that promote justice, equity, and empowerment for the Black community.",
+        "p2": "To learn more about our stance on critical issues such as ",
+        "immigration": "immigration reform",
+        "blackCivilRights": "Black civil rights",
+        "voterRights": "voter rights",
+        "andMore": "and more, click the icon below to explore our policy positions and advocacy efforts."
+      },
+      "heritageAlt": "Heritage & History",
+      "heritageTitle": "Heritage & History",
+      "communityAlt": "Community",
+      "communityTitle": "Community",
+      "currentProjectsAlt": "Current Projects",
+      "currentProjectsTitle": "Current Projects",
+      "policyAlt": "Policy & Positions",
+      "policyTitle": "Policy & Positions"
+    },
+    "wwd": {
+      "header": "What We Do",
+      "readMore": "Read More About What We Do",
+      "heritageandhistory": "Heritage and History",
+      "community": "Community",
+      "currentprojects": "Current Projects",
+      "policyandpositions": "Policy and Positions"
+    }
+  }
+  

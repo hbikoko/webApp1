@@ -1,0 +1,50 @@
+{
+    "homepage": {
+      "title": "AFRHEEC - Ukunika Amandla Emiphakathini",
+      "description": "Thola ukuthi i-AFRHEEC inikeza kanjani amandla emiphakathini ngokugcinwa kwamagugu, imfundo, namaphrojekthi amasha.",
+      "sliderAlt1": "Umphakathi ojabulayo ogubha ngaphansi kwesibhakabhaka esivulekile",
+      "sliderAlt2": "Umcimbi wephrojekthi ye-AFRHEEC okhombisa ababambiqhaza abajabulayo"
+    },
+    "navbar": {
+      "logoAlt": "Ilogo ye-AFRHEEC",
+      "about": "Mayelana Nathi",
+      "services": "Izinsiza",
+      "support": "Ukusekela",
+      "contact": "Xhumana Nathi"
+    },
+    "story": {
+        "header": "Ikhasi Lembali"
+    },
+    "services": {
+      "heritageText": "I-AFRHEEC, Umphakathi Wezemfundo Nokugqugquzelwa Kwamagugu Ase-Afrika, uzinikele ekucwaningeni umlando ocebile namasiko ase-Afrika kanye nomthelela wawo ekuphileni kwabantu abamnyama baseMelika.",
+      "heritageText2": "Ngokucwaninga uhambo lwabantu base-Afrika abaphathwa kabi futhi banyanzelwa ukuba abezwe baseMelika, i-AFRHEEC ihlose ukukhulisa ukuqonda okujulile kwezinselelo nezimpumelelo umphakathi wabantu abamnyama obhekene nazo namuhla.",
+      "heritageText3": "Ngemizamo egxile ekulandeleni imvelaphi yabokhokho, ukubuyisela amasiko esintu, ukwakha imiphakathi eqinile, nokufuna ubunikazi beqiniso, i-AFRHEEC inikeza abantu amandla okuhlangana namagugu abo ase-Afrika futhi babhekane nobunzima bomphakathi wesimanje.",
+      "communityText": "I-AFRHEEC ibona indima ebalulekile yomphakathi emasikweni ase-Afrika. Silwela ukwakha imiphakathi eqinile, esekelayo yabantu abamnyama lapho izingane zingakhula endaweni ephephile nenokusekelwa. Ngokudala izindawo ezingenakho ukwesaba nokucwasa, umgomo wethu wukuqinisekisa ukuthi abazali bangakhulisa izingane ezinokuzethemba nezibanzi. I-AFRHEEC izibophezele ekwakheni indawo yokuphephela ebamba umphakathi wabantu abamnyama emoyeni wobumbano nenhloso. Ngokuhlangenwe nakho, amasiko esintu, nokwesekwa okuvela kubantu abahlukene, sikholwa ekuvuseleleni omunye nomunye nasekukhuthazeni izizukulwane ezizayo.",
+      "currentProjectsText": "I-AFRHEEC, Umphakathi Wezemfundo Nokugqugquzelwa Kwamagugu Ase-Afrika, uzinikele ekuphakamiseni umphakathi wabantu abamnyama ngemfundo, isiko, nokugqugquzelwa. Ukuze uthole ulwazi olwengeziwe mayelana namaphrojekthi ethu amanje nemizamo, okuhlanganisa nomsebenzi wethu wokusiza abaswele, chofoza uphawu olungezansi.",
+      "policyText": {
+        "p1": "I-AFRHEEC izibophezele ekusekeleni izinqubomgomo ezisekela ubulungisa, ukulingana, nokugqugquzela umphakathi wabantu abamnyama.",
+        "p2": "Ukuze uthole ulwazi olwengeziwe mayelana nombono wethu ezindabeni ezibalulekile ezifana ",
+        "immigration": "nezinguquko ezihlobene nokufuduka",
+        "blackCivilRights": "amalungelo abantu abamnyama",
+        "voterRights": "amalungelo okuvota",
+        "andMore": "nokunye, chofoza uphawu olungezansi ukuze ubone izinqubomgomo zethu nemizamo yethu yokumela umphakathi."
+      },
+      "heritageAlt": "Amagugu & Umlando",
+      "heritageTitle": "Amagugu & Umlando",
+      "communityAlt": "Umphakathi",
+      "communityTitle": "Umphakathi",
+      "currentProjectsAlt": "Amaphrojekthi Amasha",
+      "currentProjectsTitle": "Amaphrojekthi Amasha",
+      "policyAlt": "Izinqubomgomo & Izikhundla",
+      "policyTitle": "Izinqubomgomo & Izikhundla"
+    },
+    "wwd": {
+      "header": "Esikwenzayo",
+      "readMore": "Funda Okuningi Ngalokho Esikwenzayo",
+      "heritageandhistory": "Amagugu noMlando",
+      "community": "Umphakathi",
+      "currentprojects": "Amaphrojekthi Amasha",
+      "policyandpositions": "Izinqubomgomo neZikhundla"
+    }
+  }
+  

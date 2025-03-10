@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -7,23 +7,10 @@ import testSliderPic2 from '../assets/testSliderPic2.png';
 import './styles/HomePage.css';
 import WWD from './WWD';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 
 function HomePage() {
-  useEffect(() => {
-    // Define the callback that Google Translate will call once the script loads
-    window.googleTranslateElementInit = () => {
-      new window.google.translate.TranslateElement({
-        pageLanguage: 'en',
-        layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
-      }, 'google_translate_element');
-    };
-
-    // Create and inject the Google Translate script
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    document.body.appendChild(script);
-  }, []);
+  const { t } = useTranslation();
 
   const sliderSettings = {
     dots: true,
@@ -39,34 +26,24 @@ function HomePage() {
   return (
     <div className="homepage">
       <Helmet>
-        <title>AFRHEEC - Empowering Communities</title>
+        <title>{t('homepage.title', 'AFRHEEC - Empowering Communities')}</title>
         <meta
           name="description"
-          content="Discover how AFRHEEC empowers communities through heritage preservation, education, and innovative projects."
+          content={t('homepage.description', 'Discover how AFRHEEC empowers communities through heritage preservation, education, and innovative projects.')}
         />
       </Helmet>
 
-      {/* Google Translate widget container positioned at top right */}
-      <div 
-        id="google_translate_element" 
-        style={{ position: 'absolute', top: 10, right: 10, zIndex: 1000 }}
-      ></div>
-
-      {/* Image Slider */}
       <div className="slider-container">
         <Slider {...sliderSettings} className="homepage-slider">
           <div>
-            <img src={testSliderPic1} alt="A joyful community celebrating under the open sky" />
+            <img src={testSliderPic1} alt={t('homepage.sliderAlt1', 'A joyful community celebrating under the open sky')} />
           </div>
           <div>
-            <img src={testSliderPic2} alt="AFRHEEC project event showcasing happy participants" />
+            <img src={testSliderPic2} alt={t('homepage.sliderAlt2', 'AFRHEEC project event showcasing happy participants')} />
           </div>
         </Slider>
       </div>
 
-      {/* Other sections */}
-      {/* <OrganizationOverview /> */}
-      {/* <BlogPosts /> */}
       <WWD />
     </div>
   );
