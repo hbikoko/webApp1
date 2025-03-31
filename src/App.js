@@ -9,6 +9,7 @@ import EventsPage from './components/EventsPage';
 import ServicesPage from './components/ServicesPage';
 import DonatePage from './components/DonatePage';
 import ContactPage from './components/ContactPage';
+import ComingSoon from './components/comingSoon';
 
 // Import new pages
 import HeritageHistoryPage from './components/HeritageHistoryPage';
@@ -37,6 +38,7 @@ function App() {
 
         <Route path="/donate" element={<DonatePage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/comingsoon" element={<ComingSoon />} />
       </Routes>
     </Router>
   );
