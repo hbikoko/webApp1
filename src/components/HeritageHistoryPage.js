@@ -1,7 +1,5 @@
-// src/components/HeritageHistoryPage.js
-import { Helmet } from 'react-helmet-async';
-
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import AfricaMap from './AfricaMap';
 import './styles/HeritageHistoryPage.css';
@@ -14,6 +12,12 @@ function HeritageHistoryPage() {
       <Helmet>
         <title>{t('heritage.pageTitle', 'African Heritage and History')}</title>
       </Helmet>
+
+      {/* Map container placed at the top */}
+      <div className="africa-map-wrapper">
+        <AfricaMap />
+      </div>
+
       <h1>{t('heritage.header', 'African Heritage and History: A Journey of Resilience, Identity, and Transformation')}</h1>
       <h2>{t('heritage.subheader', 'The Unbroken Thread of African Civilization')}</h2>
       <p>
@@ -60,15 +64,11 @@ function HeritageHistoryPage() {
       <p>
         {t('heritage.paragraph7', "The exploration of African heritage is about creating a more just and equitable future—a continuous process of rediscovery, healing, and transformation. Every story recovered, every tradition remembered, and every historical truth acknowledged is an act of resistance and restoration.")}
       </p>
-
-      {/* 2D Map of Africa with clickable countries */}
-      <div className="africa-map-container">
-        <AfricaMap />
-      </div>
     </div>
   );
 }
 
 export default HeritageHistoryPage;
+
 
 
