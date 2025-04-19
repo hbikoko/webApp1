@@ -13,17 +13,22 @@ function HeritageHistoryPage() {
         <title>{t('heritage.pageTitle', 'African Heritage and History')}</title>
       </Helmet>
 
-      {/* Map section with fixed height container */}
-      <div className="map-section">
-        <div className="africa-map-wrapper">
-          <AfricaMap />
-        </div>
+      {/* Fixed map container with explicit styles - added top padding */}
+      <div 
+        className="map-container" 
+        style={{
+          width: "100%", 
+          height: "580px", 
+          marginBottom: "40px",
+          paddingTop: "20px",
+          position: "relative",
+          overflow: "hidden"
+        }}
+      >
+        <AfricaMap />
       </div>
 
-      {/* Clear separation between map and content */}
-      <div className="content-spacer"></div>
-
-      {/* Content section starts here, completely separated from map */}
+      {/* Content section with all paragraphs */}
       <div className="heritage-content">
         <h1>{t('heritage.header', 'African Heritage and History: A Journey of Resilience, Identity, and Transformation')}</h1>
         <h2>{t('heritage.subheader', 'The Unbroken Thread of African Civilization')}</h2>
