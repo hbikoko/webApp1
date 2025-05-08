@@ -1,0 +1,132 @@
+/* NAVBAR.CSS */
+
+/* Fixed navbar container */
+.navbar {
+  background-color: gold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 60px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  box-sizing: border-box;
+}
+
+/* Brand/logo area */
+.nav-brand {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 150px;
+  height: auto;
+}
+
+/* Language Switcher Styling */
+.language-switcher {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Replacing the old .language-switcher button rules with .language-switcher select */
+.language-switcher select {
+  background: none;
+  border: 1px solid black;
+  padding: 4px 8px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  appearance: none; /* remove default arrow if desired */
+}
+
+.language-switcher select:hover,
+.language-switcher select:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+/* Hamburger button hidden by default on larger screens */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: black;
+}
+
+/* Main nav menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #ff6600;
+  transform: translateY(-3px);
+}
+
+/* ---------- MEDIA QUERIES FOR MOBILE ---------- */
+@media (max-width: 768px) {
+  /* Show the hamburger button on small screens */
+  .hamburger {
+    display: block;
+  }
+
+  /* Adjust language switcher spacing on smaller screens */
+  .language-switcher {
+    gap: 5px;
+  }
+  /* Smaller padding & font for the select on mobile */
+  .language-switcher select {
+    padding: 2px 4px;
+    font-size: 0.8em;
+  }
+
+  /* Position the nav menu off-screen by default */
+  .nav-menu {
+    position: absolute;
+    top: 60px; /* Just below the fixed navbar */
+    right: 0;
+    background-color: gold;
+    flex-direction: column;
+    width: 200px;
+    gap: 0;
+    padding: 10px 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* When toggled open, slide in */
+  .nav-menu.show {
+    transform: translateX(0);
+  }
+
+  .nav-menu li {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+/* Focus outlines for accessibility (ADA compliance) */
+a:focus, button:focus, select:focus {
+  outline: 2px solid #ff7f50;
+  border-radius: 5px;
+}

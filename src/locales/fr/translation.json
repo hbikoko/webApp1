@@ -1,0 +1,70 @@
+{
+  "homepage": {
+    "title": "AFRHEEC - Donner du Pouvoir aux Communautés",
+    "description": "Découvrez comment AFRHEEC donne du pouvoir aux communautés grâce à la préservation du patrimoine, l’éducation et des projets innovants.",
+    "sliderAlt1": "Une communauté joyeuse célébrant sous le ciel ouvert",
+    "sliderAlt2": "Événement de projet AFRHEEC montrant des participants heureux"
+  },
+  "navbar": {
+    "logoAlt": "Logo AFRHEEC",
+    "about": "À Propos",
+    "services": "Services",
+    "support": "Soutien",
+    "contact": "Contactez-Nous"
+  },
+  "story": {
+    "header": "Page d'Histoire"
+  },
+  "services": {
+    "heritageText": "AFRHEEC, la Communauté d'Éducation et d'Empowerment du Patrimoine Africain, se consacre à l'exploration de la riche histoire et du patrimoine culturel de l'Afrique et de son impact durable sur l'expérience afro-américaine.",
+    "heritageText2": "En explorant le parcours historique des Africains brutalement opprimés pour devenir Américains, AFRHEEC vise à approfondir la compréhension des défis et des triomphes auxquels sont confrontées les communautés noires aujourd'hui.",
+    "heritageText3": "Grâce à des initiatives axées sur la redécouverte des racines ancestrales, la restauration des pratiques culturelles, la construction de communautés solides et la revendication d'identités authentiques, AFRHEEC permet aux individus de se connecter à leur héritage africain et de naviguer dans les complexités de la société moderne.",
+    "communityText": "AFRHEEC reconnaît le rôle vital de la communauté dans la culture africaine. Nous nous efforçons de construire des communautés noires solides et solidaires où les enfants peuvent prospérer dans un environnement sûr et encourageant. En créant des espaces exempts de peur et de discrimination, notre mission est de permettre aux parents d'élever des enfants confiants et équilibrés. AFRHEEC s'engage à concevoir un havre qui enveloppe la communauté noire d'un sentiment d'appartenance et de but. Par le biais d'expériences partagées, de traditions culturelles et d'un soutien mutuel, nous croyons en l'élévation collective et en l'inspiration des générations futures.",
+    "currentProjectsText": "AFRHEEC, la Communauté d'Éducation et d'Empowerment du Patrimoine Africain, se consacre à l'élévation de la communauté noire par l'éducation, la culture et l'empowerment. Pour en savoir plus sur nos projets et initiatives actuels, y compris notre travail culturellement réactif, cliquez sur l'icône ci-dessous.",
+    "policyText": {
+      "p1": "AFRHEEC s'engage à défendre des politiques qui favorisent la justice, l'équité et l'empowerment de la communauté noire.",
+      "p2": "Pour en savoir plus sur notre position sur des enjeux critiques tels que ",
+      "immigration": "la réforme migratoire",
+      "blackCivilRights": "les droits civils des Noirs",
+      "voterRights": "les droits de vote",
+      "andMore": "et plus, cliquez sur l'icône ci-dessous pour explorer nos positions politiques et nos efforts de plaidoyer."
+    },
+    "heritageAlt": "Héritage & Histoire",
+    "heritageTitle": "Héritage & Histoire",
+    "communityAlt": "Communauté",
+    "communityTitle": "Communauté",
+    "currentProjectsAlt": "Projets Actuels",
+    "currentProjectsTitle": "Projets Actuels",
+    "policyAlt": "Politiques & Positions",
+    "policyTitle": "Politiques & Positions"
+  },
+  "wwd": {
+    "header": "Ce Que Nous Faisons",
+    "readMore": "En Savoir Plus Sur Ce Que Nous Faisons",
+    "heritageandhistory": "Héritage et Histoire",
+    "community": "Communauté",
+    "currentprojects": "Projets Actuels",
+    "policyandpositions": "Politiques et Positions"
+  },
+  "heritage": {
+    "pageTitle": "Héritage et Histoire Africains: Un Voyage de Résilience, d'Identité et de Transformation",
+    "header": "Héritage et Histoire Africains: Un Voyage de Résilience, d'Identité et de Transformation",
+    "subheader": "Le Fil Ininterrompu de la Civilisation Africaine",
+    "paragraph1": "L'histoire de l'héritage africain est un récit d'une complexité extraordinaire, d'une profondeur et d'une résilience qui s'étend sur des millénaires. Bien avant la colonisation européenne, le continent africain abritait certaines des civilisations les plus avancées au monde. Des royaumes magnifiques du Mali et du Zimbabwe aux réalisations scientifiques et mathématiques de l'Égypte antique, l'Afrique était le berceau de l'innovation humaine, de la sophistication culturelle et d'une organisation sociale profonde.",
+    "section2": "Le Passage Traumatique: Migration Forcée et Esclavage",
+    "paragraph2": "La traite transatlantique des esclaves représente l'un des chapitres les plus dévastateurs de l'histoire humaine. Entre le XVe et le XIXe siècle, environ 12,5 millions d'Africains furent arrachés de force de leurs terres natales, dont environ 10,7 millions survécurent au passage brutal vers les Amériques. Ce n'était pas seulement un déplacement de corps, mais une destruction systématique des cultures, des familles et des identités.",
+    "paragraph3": "Les Africains furent violemment dépouillés de leurs langues, de leurs pratiques spirituelles, de leurs structures familiales et de leurs identités culturelles. Les personnes réduites en esclavage furent délibérément séparées de celles qui parlaient la même langue, rendant presque impossible la préservation culturelle. Pourtant, malgré cette oppression systématique, le peuple africain a maintenu des formes remarquables de résistance et de préservation culturelle.",
+    "section3": "Préservation de la Culture: Résistance et Résilience",
+    "paragraph4": "À travers les Amériques, du Brésil aux États-Unis, les Africains réduits en esclavage et leurs descendants ont trouvé des moyens extraordinaires de préserver et de transformer leur patrimoine culturel. Des pratiques spirituelles telles que le Vodou en Haïti, la Santeria à Cuba et le Candomblé au Brésil sont de puissants exemples de la manière dont les traditions religieuses africaines ont été maintenues et adaptées. Les traditions musicales, du blues et du jazz à la samba et au reggae, représentent des continuités culturelles profondes qui remontent directement aux racines musicales africaines.",
+    "section4": "L'Importance de la Compréhension Historique",
+    "paragraph5": "Comprendre l'héritage africain est crucial pour plusieurs raisons fondamentales :",
+    "reason1": "Libération Psychologique: Connaître la profondeur et la complexité des civilisations africaines avant la colonisation est un antidote puissant aux récits d'infériorité noire.",
+    "reason2": "Transformation Systémique: Reconnaître les mécanismes historiques d'oppression permet des stratégies ciblées pour la libération.",
+    "reason3": "Identité Culturelle et Fierté: Comprendre l'histoire ancestrale favorise la continuité, la dignité et la force collective.",
+    "reason4": "Interconnexion Globale: Les contributions africaines ont été fondamentales pour le progrès de l'humanité.",
+    "section5": "Implications Pratiques pour la Transformation Moderne",
+    "paragraph6": "Explorer l'héritage africain n'est pas un exercice académique, mais une stratégie critique pour l'autonomisation collective. En comprenant les contextes historiques, les communautés noires peuvent élaborer des programmes éducatifs, créer des stratégies économiques, construire des réseaux de solidarité, défier le racisme systémique et favoriser la guérison psychologique.",
+    "section6": "Conclusion: Un Voyage Continu",
+    "paragraph7": "L'exploration de l'héritage africain ne consiste pas à s'attarder sur le passé, mais à construire un avenir plus juste et équitable — un processus continu de redécouverte, de guérison et de transformation. Chaque histoire retrouvée, chaque tradition rappelée, et chaque vérité historique reconnue est un acte de résistance et de restauration."
+  }
+}

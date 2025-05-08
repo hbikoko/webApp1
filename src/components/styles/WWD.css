@@ -1,0 +1,111 @@
+/* === WWD.css === */
+
+/* 1. Container with enough top padding to clear the fixed navbar */
+.wwd-container {
+  background: linear-gradient(120deg, #f0f8ff, #e6f7ff);
+  text-align: center;
+  padding: 80px 20px;
+  box-sizing: border-box;
+}
+
+/* 2. Header */
+.wwd-header {
+  font-size: 2.5em;
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* 3. Grid container for 4 columns */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px 80px; /* Increased from 20px - first value is row gap, second is column gap */
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* 4. Individual service blocks */
+.service-block {
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  width: auto;
+  text-align: center;
+}
+
+.service-block img {
+  width: 90px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.service-block h3 {
+  display: inline-block;
+  width: 180px;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.service-block p {
+  margin: 0 auto;
+  color: #555;
+  font-size: 1rem;
+  max-width: 220px;
+}
+
+/* 5. Styled “Read More” link as button */
+.wwd-read-more {
+  display: inline-block;
+  margin-top: 40px;
+  background-color: gold;
+  color: black;
+  text-decoration: none;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+/* override default link-colors */
+.wwd-read-more:link,
+.wwd-read-more:visited,
+.wwd-read-more:active {
+  color: black;
+}
+
+/* hover/focus: green bg + red text */
+.wwd-read-more:hover,
+.wwd-read-more:focus {
+  background-color: green;
+  color: red;
+  transform: translateY(-5px);
+}
+
+/* 6. Accessibility focus outline */
+a:focus,
+button:focus {
+  outline: 3px solid #ff7f50;
+  outline-offset: 2px;
+  border-radius: 5px;
+}
+
+/* 7. Responsive: fewer columns */
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+}
+

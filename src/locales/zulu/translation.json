@@ -1,0 +1,72 @@
+{
+  "homepage": {
+    "title": "AFRHEEC - Ukunika Amandla Emiphakathini",
+    "description": "Thola ukuthi i-AFRHEEC inikeza kanjani amandla emiphakathini ngokugcinwa kwamagugu, imfundo, namaphrojekthi amasha.",
+    "sliderAlt1": "Umphakathi ojabulayo ogubha ngaphansi kwesibhakabhaka esivulekile",
+    "sliderAlt2": "Umcimbi wephrojekthi ye-AFRHEEC okhombisa ababambiqhaza abajabulayo"
+  },
+  "navbar": {
+    "logoAlt": "Ilogo ye-AFRHEEC",
+    "about": "Mayelana Nathi",
+    "services": "Izinsiza",
+    "support": "Ukusekela",
+    "contact": "Xhumana Nathi"
+  },
+  "story": {
+    "header": "Ikhasi Lezindaba"
+  },
+  "services": {
+    "heritageText": "I-AFRHEEC, umphakathi wokufundisa nokunika amandla ifa lase-Afrika, uzinikele ekuhloleni umlando ocebile kanye namasiko ase-Afrika kanye nomthelela wawo emphakathini wabantu abamnyama baseMelika.",
+    "heritageText2": "Ngokuhlola uhambo lwabantu base-Afrika abaphathwa kabi ukuze babe ngabantu baseMelika, i-AFRHEEC ihlose ukukhulisa ukuqonda kwezinkinga nezimpumelelo ezibhekene nomphakathi wabantu abamnyama namuhla.",
+    "heritageText3": "Ngezinhloso zokubuyisela imvelaphi, ukubuyisela amasiko, ukwakha imiphakathi eqinile, nokudinga ubunikazi bokwethembeka, i-AFRHEEC inika abantu amandla okuhlangana nefa labo lase-Afrika nokubhekana nezinselelo zesimanje.",
+    "communityText": "I-AFRHEEC iyabona indima ebalulekile yomphakathi emasikweni ase-Afrika. Sifuna ukwakha imiphakathi eqinile, esekelayo lapho izingane zingakhula endaweni ephephile. Ngokudala izindawo ezingekho ngaphansi kokwesaba nokucwaswa, injongo yethu ukuvumela abazali ukuba bakhule izingane ezinomusa nokuzethemba. I-AFRHEEC izibophezele ekwakheni indawo yokuphepha ebamba umphakathi ngokuqinile. Ngokuhlanganyela, amasiko esintu, nokusekelwa, siyakholwa ekukhuphukeni komunye nomunye nasekukhuthazeni izizukulwane ezizayo.",
+    "currentProjectsText": "I-AFRHEEC, umphakathi wokufundisa nokunika amandla ifa lase-Afrika, uzinikele ekuphakamiseni abantu abamnyama ngokufundisa, amasiko, nokunika amandla. Ukuze uthole ulwazi olwengeziwe mayelana namaphrojekthi ethu kanye nemizamo yethu, chofoza uphawu olungezansi.",
+    "policyText": {
+      "p1": "I-AFRHEEC izibophezele ekusekeleni izinqubomgomo ezikhuthaza ubulungiswa, ukulingana, nokunika amandla abantu abamnyama.",
+      "p2": "Ukuze ufunde kabanzi mayelana nombono wethu ngezindaba ezibalulekile ezifana ",
+      "immigration": "ukufuduka",
+      "blackCivilRights": "amalungelo abantu abamnyama",
+      "voterRights": "amalungelo okuvota",
+      "andMore": "futhi okuningi, chofoza uphawu olungezansi ukuze ubone izinqubomgomo zethu nemizamo yethu."
+    },
+    "heritageAlt": "Ifa Nezimbali",
+    "heritageTitle": "Ifa Nezimbali",
+    "communityAlt": "Umphakathi",
+    "communityTitle": "Umphakathi",
+    "currentProjectsAlt": "Amaphrojekthi Amasha",
+    "currentProjectsTitle": "Amaphrojekthi Amasha",
+    "policyAlt": "Izinqubomgomo",
+    "policyTitle": "Izinqubomgomo"
+  },
+  "wwd": {
+    "header": "Esikwenzayo",
+    "readMore": "Funda Okuningi Ngalokho Esikwenzayo",
+    "heritageandhistory": "Ifa Nezimbali",
+    "community": "Umphakathi",
+    "currentprojects": "Amaphrojekthi Amasha",
+    "policyandpositions": "Izinqubomgomo neZikhundla"
+  },
+  "heritage": {
+    "pageTitle": "Ifa Nezimbali Zase-Afrika: Uhambo Lokumelana, Ubunikazi, Nokuguquka",
+    "header": "Ifa Nezimbali Zase-Afrika: Uhambo Lokumelana, Ubunikazi, Nokuguquka",
+    "subheader": "Umugqa Ongaphazanyiswa Wobumbano Lase-Afrika",
+    "paragraph1": "Indaba yefa lase-Afrika iwumlando ojulile, onzima, futhi ogcwele ukumelana nezikhathi, ohamba izinkulungwane zeminyaka. Ngaphambi kokufika kwabamhlophe, izwekazi lase-Afrika laliyikhaya lezinye zezizwe eziphambili emhlabeni. Kusukela ezikhathini zobukhosi obuhle baseMali naseZimbabwe kuya ezimpumelelweni zesayensi nezibalo zaseGibhithe lasendulo, i-Afrika yabe iyisisekelo sobuchwepheshe bomuntu, ubuqotho besiko, nokuhleleka okujulile komphakathi.",
+    "section2": "Uhambo Olubuhlungu: Ukufuduka Ngokuphoqelela Nokuboshwa",
+    "paragraph2": "Ukuthengiselana kwabantu abathunjwe e-Atlantic kuyisahluko esibuhlungu kakhulu emlandweni wabantu. Phakathi nekhulu le-15 nelama-19, cishe abantu abayizigidi ezingama-12.5 base-Afrika bakhishwa ngamandla ezizweni zabo, kanti cishe abantu abayizigidi eziyi-10.7 basinda endleleni eyingozi eya emazweni aseMelika. Lokhu akuzange kube ukunyakaza kwamadolo kuphela, kodwa ukonakaliswa kohlelo lwamasiko, imindeni, nobunikazi.",
+    "paragraph3": "Abantu base-Afrika babekhumulelwa ngamandla izilimi zabo, imikhuba yabo yokomoya, izakhiwo zemindeni, nobunikazi babo bamasiko. Abathunjwe babekwa kude nalabo abakhuluma ulimi olufanayo, okwenza kube nzima kakhulu ukugcina amasiko. Kodwa, nakuba bekhonjwa ukuboshwa okuhleliwe, abantu base-Afrika baqhubeka bekhombisa izindlela zokumelana nokugcina ifa labo.",
+    "section3": "Ukugcinwa Kwamasiko: Ukumelana Nokumelana",
+    "paragraph4": "Emazweni aseMelika, kusukela eBrazil kuya e-United States, abantu abathunjwe base-Afrika kanye nezizukulwane zabo bathole izindlela ezimangalisayo zokugcina nokuguqula ifa labo. Imikhuba yomoya efana neVodou eHaiti, iSantería eCuba, neCandomblé eBrazil iyizibonelo eziqinile zokuthi amasiko ase-Afrika agcinwa futhi aguqulwe. Imidlalo yomculo, kusukela ku-blues ne-jazz kuya ku-samba ne-reggae, iveza ukuqhubeka kwezamasiko okuvela ngqo emizimbeni yomculo wase-Afrika.",
+    "section4": "Ukubaluleka Kokwazi Umlando",
+    "paragraph5": "Ukuqonda ifa lase-Afrika kubalulekile ngezizathu eziningi:",
+    "reason1": "Ukukhulula Ingqondo: Ukwazi ubukhulu nobunzima bezizwe zase-Afrika ngaphambi kokufika kwabamhlophe kuwumuthi onamandla wokulwa nokuncishiswa kwamaqiniso okuthi abantu abamnyama abakwazi.",
+    "reason2": "Ukuguqulwa Kohlelo: Ukuqonda indlela yokucindezelwa komlando kusiza ekwakheni izindlela ezikhethekile zokukhulula.",
+    "reason3": "Ubunikazi Nobuhlakani Besiko: Ukwazi umlando wabokhokho kudala ukuzinza, inhlonipho, namandla omphakathi.",
+    "reason4": "Ukuxhumana Komhlaba: Iminikelo yase-Afrika ibe yisisekelo sokuthuthuka kwabantu emhlabeni wonke.",
+    "section5": "Imiphumela Yokusebenza EkuGuqukeni Kwesimanje",
+    "paragraph6": "Ukucwaninga ifa lase-Afrika akuyona nje into yokufunda, kodwa kuyisu elibalulekile lokunika amandla umphakathi. Ngokwazi izizinda zomlando, abantu abamnyama bangakha izinhlelo zemfundo, benze amasu ezomnotho, bakhe amanethiwekhi okuhlangana, baphonsela inselelo izinhlelo zobandlululo, futhi bakhuthaze ukululama kwengqondo.",
+    "section6": "Isiphetho: Uhambo Olungapheli",
+    "paragraph7": "Ukucwaninga ifa lase-Afrika akugxili ekubukeni kwedlule kuphela kodwa ekwakheni ikusasa elilingene nelinobulungisa—inqubo eqhubekayo yokuthola kabusha, ukululama, nokuguquka. Wonke umlando otholakele, lonke isiko elikhunjulwayo, kanye neqiniso elivunywa ngabantu liyisenzo sokumelana nokubuyiselwa."
+  }
+}
+
+  

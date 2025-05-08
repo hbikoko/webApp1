@@ -1,0 +1,73 @@
+.heritage-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Removed map-container class */
+
+/* Ensure Africa map takes full container space */
+.africa-map-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Content styling */
+.heritage-content {
+  line-height: 1.6;
+  margin-top: 40px; /* Added margin to create spacing after map */
+}
+
+.heritage-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.heritage-content h2 {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.heritage-content p {
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.heritage-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.heritage-content li {
+  margin-bottom: 0.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .heritage-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .heritage-content h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heritage-content h1 {
+    font-size: 1.6rem;
+  }
+  
+  .heritage-content h2 {
+    font-size: 1.2rem;
+  }
+  
+  .heritage-page {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,172 @@
+/* ----- Layout & Container ----- */
+.services-page {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 200px; /* account for fixed navbar */
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive grid for smaller screens */
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ----- Service Item ----- */
+.service-item {
+  /* Optional additional styling if needed */
+}
+
+/* Flip Card Container */
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 450px; /* Increased height for more text space */
+  perspective: 1000px;
+  perspective-origin: center center;
+  margin-bottom: 1rem; /* Some spacing under each card */
+}
+
+/* Flip Card Inner */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+  transform-origin: center center;
+}
+
+/* Hover flip on desktop devices (those that support hover) */
+@media (hover: hover) {
+  .service-item:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+/* If you have a "flipped" class for mobile, it can rotate the card as well */
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Both Front and Back Sides */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  overflow: visible; /* avoid clipping letters */
+}
+
+/* FRONT SIDE */
+.flip-card-front {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-front img {
+  width: 60%; /* Desktop size */
+  max-height: 220px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.flip-card-front h2 {
+  font-size: 1.2rem;
+  line-height: 1.3; 
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+/* BACK SIDE */
+.flip-card-back {
+  background-color: #fff;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column; /* stack content + logo vertically */
+  overflow-y: auto; /* allow scrolling if text is long */
+}
+
+/* 1) Container for text on the back side */
+.flip-card-back-content {
+  flex: 1;              /* fill remaining space */
+  margin-bottom: 1rem;  /* spacing above the logo */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* 2) Container for the logo at the bottom */
+.flip-card-back-logo {
+  margin-top: auto;     /* push this container to the bottom */
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.flip-card-back-logo img {
+  width: 60px;          /* or adjust to your liking */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.flip-card-back-logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .flip-card {
+    height: 350px; /* Slightly smaller on mobile, but still enough for text */
+  }
+  .flip-card-front img {
+    width: 80%; /* bigger image on mobile if desired */
+  }
+}
+
+/* flip-card-back already has display: flex; flex-direction: column; */
+
+.flip-card-back-content {
+  flex: 1;               /* fill space above logo */
+  margin-bottom: 1rem;
+}
+
+.flip-card-back-logo {
+  margin-top: auto;      /* push to bottom */
+  text-align: center;
+}
+
+.flip-card-back-logo img {
+  width: 60px; /* or your preferred size */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.flip-card-back-logo img:hover {
+  transform: scale(1.1);
+}
+
+
+

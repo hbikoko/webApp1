@@ -1,0 +1,72 @@
+{
+  "homepage": {
+    "title": "AFRHEEC - Kuwawezesha Jamii",
+    "description": "Gundua jinsi AFRHEEC inavyowawezesha jamii kupitia uhifadhi wa urithi, elimu, na miradi bunifu.",
+    "sliderAlt1": "Jamii yenye furaha ikisherehekea chini ya anga wazi",
+    "sliderAlt2": "Tukio la mradi wa AFRHEEC linaloonyesha washiriki wenye furaha"
+  },
+  "navbar": {
+    "logoAlt": "Nembo ya AFRHEEC",
+    "about": "Kuhusu Sisi",
+    "services": "Huduma",
+    "support": "Msaada",
+    "contact": "Wasiliana Nasi"
+  },
+  "story": {
+    "header": "Ukurasa wa Hadithi"
+  },
+  "services": {
+    "heritageText": "AFRHEEC, Jumuiya ya Elimu na Uwezeshaji wa Urithi wa Kiafrika, imejitolea kuchunguza historia tajiri na utamaduni wa Afrika na athari zake kwa uzoefu wa Wamarekani Weusi.",
+    "heritageText2": "Kwa kuchunguza safari ya kihistoria ya Waafrika walioteswa kwa nguvu ili kuwa Wamarekani, AFRHEEC inalenga kuongeza uelewa wa kina wa changamoto na mafanikio yanayokabili jamii za Weusi leo.",
+    "heritageText3": "Kupitia jitihada za kufuatilia mizizi ya mababu, kurejesha desturi za kitamaduni, kujenga jamii imara na kudai utambulisho wa kweli, AFRHEEC huwapa watu nguvu ya kuungana na urithi wao na kukabiliana na changamoto za kisasa.",
+    "communityText": "AFRHEEC inatambua nafasi muhimu ya jamii katika utamaduni wa Kiafrika. Tunajitahidi kujenga jamii za Weusi zilizo na mshikamano ambapo watoto wanaweza kustawi katika mazingira salama. Kwa kuunda maeneo yasiyo na hofu na ubaguzi, dhamira yetu ni kuwawezesha wazazi kulea watoto wenye kujiamini. AFRHEEC imejitolea kubuni kimbilio linaloweka hisia ya umoja na malengo kwa jamii. Kupitia uzoefu wa pamoja, mila za kitamaduni, na msaada wa pamoja, tunaamini katika kuinua kila mmoja na kuhamasisha vizazi vijavyo.",
+    "currentProjectsText": "AFRHEEC, Jumuiya ya Elimu na Uwezeshaji wa Urithi wa Kiafrika, imejitolea kuinua jamii ya Weusi kupitia elimu, utamaduni, na uwezo. Ili kujifunza zaidi kuhusu miradi yetu ya sasa na mipango yetu, bonyeza ikoni ilivyo hapa chini.",
+    "policyText": {
+      "p1": "AFRHEEC imejitolea kutetea sera zinazokuza haki, usawa, na uwezo kwa jamii ya Weusi.",
+      "p2": "Ili kujifunza zaidi kuhusu msimamo wetu kuhusu masuala muhimu kama ",
+      "immigration": "marekebisho ya uhamiaji",
+      "blackCivilRights": "haki za kiraia za Weusi",
+      "voterRights": "haki za wapiga kura",
+      "andMore": "na mengine, bonyeza ikoni hapa chini ili kuchunguza sera zetu na juhudi za utetezi."
+    },
+    "heritageAlt": "Urithi & Historia",
+    "heritageTitle": "Urithi & Historia",
+    "communityAlt": "Jamii",
+    "communityTitle": "Jamii",
+    "currentProjectsAlt": "Miradi ya Sasa",
+    "currentProjectsTitle": "Miradi ya Sasa",
+    "policyAlt": "Sera & Misimamo",
+    "policyTitle": "Sera & Misimamo"
+  },
+  "wwd": {
+    "header": "Tunachofanya",
+    "readMore": "Soma Zaidi Kuhusu Tunachofanya",
+    "heritageandhistory": "Urithi na Historia",
+    "community": "Jamii",
+    "currentprojects": "Miradi ya Sasa",
+    "policyandpositions": "Sera na Misimamo"
+  },
+  "heritage": {
+    "pageTitle": "Urithi na Historia ya Kiafrika: Safari ya Uwezo, Utambulisho, na Mabadiliko",
+    "header": "Urithi na Historia ya Kiafrika: Safari ya Uwezo, Utambulisho, na Mabadiliko",
+    "subheader": "Mstari Usiokoma wa Utamaduni wa Kiafrika",
+    "paragraph1": "Hadithi ya urithi wa Kiafrika ni simulizi ya ugumu, kina, na ustahimilivu unaoendelea kwa karne nyingi. Kabla ya ukoloni, Afrika lilikuwa nyumbani kwa baadhi ya ustaarabu wa hali ya juu duniani. Kutoka kwa ufalme wa Mali na Zimbabwe hadi kwa mafanikio ya kisayansi na kihesabu ya Misri ya kale, Afrika ilikuwa chanzo cha ubunifu wa kibinadamu, ustaarabu wa kitamaduni, na mpangilio wa kijamii wa kina.",
+    "section2": "Safari ya Maumivu: Uhamiaji wa Lazima na Ubagaji",
+    "paragraph2": "Biashara ya watumwa ya Atlantiki ni moja ya sura za kusikitisha sana katika historia ya kibinadamu. Kati ya karne ya 15 hadi ya 19, takriban watumwa milioni 12.5 walitolewa kwa nguvu kutoka Afrika, na takriban milioni 10.7 walihimili safari ya katikati yenye ukali kuelekea Amerika. Hii haikuwa tu harakati ya miili, bali ni uharibifu wa mfumo wa mila, familia, na utambulisho.",
+    "paragraph3": "Waafrika walifukuzwa kwa nguvu ya lugha zao, desturi za kiroho, miundo ya familia, na utambulisho. Watumwa walitengwa kwa makusudi na wale waliokuwa wakiongea lugha ile ile, jambo lililofanya uhifadhi wa utamaduni uwezekane kidogo. Hata hivyo, watu wa Afrika waliendelea kuonyesha njia za upinzani na kuhifadhi urithi wao.",
+    "section3": "Uhifadhi wa Utamaduni: Upinzani na Ustahimilivu",
+    "paragraph4": "Katika Amerika, kutoka Brazil hadi Marekani, watumwa na wazao wao walipata njia za ajabu za kuhifadhi na kubadilisha urithi wao wa kitamaduni. Mazoezi ya kiroho kama Vodou, Santería, na Candomblé ni mifano ya nguvu ya jinsi tamaduni za dini za Kiafrika zilivyohifadhiwa na kubadilishwa. Muziki, kutoka kwa blues na jazz hadi samba na reggae, unaonyesha kuendelea kwa tamaduni za muziki za Afrika.",
+    "section4": "Umuhimu wa Uelewa wa Historia",
+    "paragraph5": "Kuelewa urithi wa Kiafrika ni muhimu kwa sababu kadhaa:",
+    "reason1": "Uhuru wa Akili: Kujua kina na ugumu wa ustaarabu wa Afrika kabla ya ukoloni ni dawa yenye nguvu dhidi ya simulizi za uduni.",
+    "reason2": "Mabadiliko ya Mfumo: Kutambua njia za kihistoria za ukandamizaji kunasaidia kubuni mikakati maalum ya ukombozi.",
+    "reason3": "Utambulisho na Fahari ya Kitamaduni: Uelewa wa historia ya mababu unatoa hisia ya mwendelezo, heshima, na nguvu ya pamoja.",
+    "reason4": "Muunganisho wa Dunia: Mchango wa Afrika umekuwa msingi wa maendeleo ya kibinadamu.",
+    "section5": "Matokeo ya Vitendo kwa Mabadiliko ya Kisasa",
+    "paragraph6": "Kuchunguza urithi wa Kiafrika siyo tu mazoezi ya kitaaluma bali ni mkakati muhimu wa kuwezesha jamii. Kwa kuelewa muktadha wa kihistoria, jamii zinaweza kuunda mtaala wa elimu, kuunda mikakati ya uchumi, kujenga mitandao ya mshikamano, kupinga ubaguzi, na kukuza uponesi wa kisaikolojia.",
+    "section6": "Hitimisho: Safari Isiyoisha",
+    "paragraph7": "Uchunguzi wa urithi wa Kiafrika siyo kuhusu kukaa kwenye yaliyopita bali ni juu ya kuunda mustakabali wenye haki na usawa—mchakato unaoendelea wa kugundua upya, uponesi, na mabadiliko. Kila hadithi inayopatikana, kila desturi inayokumbukwa, na kila ukweli wa kihistoria ni kitendo cha upinzani na urejesho."
+  }
+}
+
+  

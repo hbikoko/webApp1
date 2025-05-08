@@ -1,0 +1,58 @@
+/* Style for the entire Blog Posts section */
+.blog-posts-container {
+    background-color: #f8f8f8; /* Light background color */
+    text-align: center; /* Center-align the text */
+    padding: 40px 20px; /* Padding around the entire section */
+  }
+  
+  /* Style for the 'Our Blog' header */
+  .blog-posts-header {
+    font-size: 2em; /* Large font size for the header */
+    color: #333; /* Dark text color */
+    margin-bottom: 30px; /* Space below the header */
+  }
+  
+  /* Container for all blog post previews */
+  .blog-posts-preview-container {
+    display: flex; /* Align blog post blocks in a row */
+    justify-content: center; /* Center the blocks */
+    flex-wrap: wrap; /* Allow the blocks to wrap on smaller screens */
+    gap: 20px; /* Space between the blocks */
+  }
+  
+  /* Individual blog post preview styling */
+  .blog-post-preview {
+    background-color: #fff; /* White background for each block */
+    border-radius: 8px; /* Rounded corners for the blocks */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside each block */
+    width: 300px; /* Adjusted width, can adjust as needed */
+    margin: 0 10px; /* Horizontal margin for spacing between blocks */
+  }
+  
+  /* Image styling */
+  .blog-post-preview img {
+    width: 100%; /* Make image width responsive to container */
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 15px; /* Space below the image */
+  }
+  
+  /* Title styling */
+  .blog-post-preview h3 {
+    font-size: 1.2em; /* Slightly larger font size for titles */
+    color: #333; /* Dark text color for titles */
+    margin-bottom: 10px; /* Space below the titles */
+  }
+  
+  /* Style adjustments for responsiveness */
+  @media (max-width: 768px) {
+    .blog-posts-preview-container {
+      flex-direction: column; /* Stack blog post previews vertically on small screens */
+    }
+  
+    .blog-post-preview {
+      width: auto; /* Auto width to fit smaller screens */
+      margin: 10px; /* Adjust margin for vertical layout */
+    }
+  }
+  
