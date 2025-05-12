@@ -59,7 +59,7 @@ const NewsletterSignup = () => {
   return (
     <section className="newsletter-section">
       <div className="newsletter-container">
-        <h2>{t('newsletter.title', 'Stay Connected with African Heritage & History')}</h2>
+        <h2>{t('newsletter.title', 'Stay Connected with AFRHEEC')}</h2>
         <p>{t('newsletter.description', 'Subscribe to our newsletter to receive updates about our projects, events, and resources that celebrate and preserve African heritage.')}</p>
 
         {status === 'success' ? (
