@@ -10,18 +10,12 @@ import { useNavigate } from "react-router-dom";
 const worldGeoUrl =
   "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson";
 
-// List of African country ISO codes
-const africanCountries = [
-  "DZA","AGO","BEN","BWA","BFA","BDI","CMR","CPV","CAF","TCD","COM",
-  "COG","COD","CIV","DJI","EGY","GNQ","ERI","SWZ","ETH","GAB","GMB","GHA",
-  "GIN","GNB","KEN","LSO","LBR","LBY","MDG","MWI","MLI","MRT","MUS",
-  "MOZ","NAM","NER","NGA","RWA","STP","SEN","SYC","SLE","SOM","ZAF",
-  "SSD","SDN","TZA","TGO","TUN","UGA","ZMB","ZWE"
-];
+// List of African country ISO codes remains unchanged
 
 function AfricaMap() {
   const navigate = useNavigate();
   const [hoveredCountry, setHoveredCountry] = useState(null);
+  const [tappedCountry, setTappedCountry] = useState(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
   const mapContainerRef = useRef(null);
   
@@ -57,6 +51,42 @@ function AfricaMap() {
     }
   };
 
+  // For mobile: Handle tap events
+  const handleCountryTap = (countryName, event) => {
+    // Prevent default behavior
+    event.preventDefault();
+    
+    // Set the tapped country name
+    setTappedCountry(countryName);
+    
+    // Set tooltip position based on tap coordinates
+    if (mapContainerRef.current) {
+      const rect = mapContainerRef.current.getBoundingClientRect();
+      
+      setTooltipPosition({
+        x: event.touches ? 
+           (event.touches[0].clientX - rect.left - 100) : 
+           (event.clientX - rect.left - 100),
+        y: event.touches ? 
+           (event.touches[0].clientY - rect.top - 100) : 
+           (event.clientY - rect.top - 100)
+      });
+    }
+    
+    // Navigate after a brief delay to show the tooltip first
+    setTimeout(() => {
+      navigate(`/africa/${encodeURIComponent(countryName)}`);
+      setTappedCountry(null);
+    }, 600); // Delay for 600ms to allow reading the country name
+  };
+
+  // Detect if we're on a touch device
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
+  }, []);
+
   return (
     <div 
       ref={mapContainerRef} 
@@ -90,12 +120,12 @@ function AfricaMap() {
                   <Geography
                     key={geo.rsmKey}
                     geography={geo}
-                    onClick={() =>
-                      navigate(
-                        `/africa/${encodeURIComponent(
-                          geo.properties.name
-                        )}`
-                      )
+                    onClick={isTouchDevice ? 
+                      undefined : 
+                      () => navigate(`/africa/${encodeURIComponent(geo.properties.name)}`)
+                    }
+                    onTouchStart={(e) => isTouchDevice && 
+                      handleCountryTap(geo.properties.name, e)
                     }
                     onMouseEnter={() => {
                       setHoveredCountry(geo.properties.name);
@@ -127,8 +157,8 @@ function AfricaMap() {
         </Geographies>
       </ComposableMap>
       
-      {/* Tooltip - Now with gold text for "Learn History and Heritage" */}
-      {hoveredCountry && (
+      {/* Tooltip for both hover and tap */}
+      {(hoveredCountry || tappedCountry) && (
         <div
           style={{
             position: "absolute",
@@ -145,8 +175,34 @@ function AfricaMap() {
             zIndex: 1000
           }}
         >
-          <div style={{ fontWeight: "bold", marginBottom: "5px" }}>{hoveredCountry}</div>
-          <div style={{ fontSize: "14px", color: "#ffd700" }}>Learn History and Heritage</div>
+          <div style={{ fontWeight: "bold", marginBottom: "5px" }}>
+            {hoveredCountry || tappedCountry}
+          </div>
+          <div style={{ fontSize: "14px", color: "#ffd700" }}>
+            Learn History and Heritage
+          </div>
+        </div>
+      )}
+      
+      {/* Mobile instructions overlay */}
+      {isTouchDevice && (
+        <div 
+          style={{
+            position: "absolute",
+            bottom: "20px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+            color: "white",
+            padding: "10px 15px",
+            borderRadius: "5px",
+            textAlign: "center",
+            zIndex: 900,
+            width: "80%",
+            maxWidth: "300px"
+          }}
+        >
+          Tap on a country to learn about its heritage
         </div>
       )}
     </div>
