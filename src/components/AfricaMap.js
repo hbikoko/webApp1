@@ -10,7 +10,14 @@ import { useNavigate } from "react-router-dom";
 const worldGeoUrl =
   "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson";
 
-// List of African country ISO codes remains unchanged
+// List of African country ISO codes
+const africanCountries = [
+  "DZA","AGO","BEN","BWA","BFA","BDI","CMR","CPV","CAF","TCD","COM",
+  "COG","COD","CIV","DJI","EGY","GNQ","ERI","SWZ","ETH","GAB","GMB","GHA",
+  "GIN","GNB","KEN","LSO","LBR","LBY","MDG","MWI","MLI","MRT","MUS",
+  "MOZ","NAM","NER","NGA","RWA","STP","SEN","SYC","SLE","SOM","ZAF",
+  "SSD","SDN","TZA","TGO","TUN","UGA","ZMB","ZWE"
+];
 
 function AfricaMap() {
   const navigate = useNavigate();
