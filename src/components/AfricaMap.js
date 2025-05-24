@@ -22,9 +22,16 @@ const africanCountries = [
 function AfricaMap() {
   const navigate = useNavigate();
   const [hoveredCountry, setHoveredCountry] = useState(null);
-  const [tappedCountry, setTappedCountry] = useState(null);
+  const [selectedCountry, setSelectedCountry] = useState(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
   const mapContainerRef = useRef(null);
+  
+  // Detect if we're on a touch device
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
+  }, []);
   
   // Handle mouse move for tooltip positioning
   const handleMouseMove = (event) => {
@@ -58,13 +65,16 @@ function AfricaMap() {
     }
   };
 
-  // For mobile: Handle tap events
-  const handleCountryTap = (countryName, event) => {
-    // Prevent default behavior
-    event.preventDefault();
+  // Handle country interaction
+  const handleCountryInteraction = (countryName, event) => {
+    if (!isTouchDevice) {
+      // For desktop: navigate directly
+      navigate(`/africa/${encodeURIComponent(countryName)}`);
+      return;
+    }
     
-    // Set the tapped country name
-    setTappedCountry(countryName);
+    // For mobile: implement two-tap pattern
+    event.preventDefault();
     
     // Set tooltip position based on tap coordinates
     if (mapContainerRef.current) {
@@ -80,19 +90,30 @@ function AfricaMap() {
       });
     }
     
-    // Navigate after a brief delay to show the tooltip first
-    setTimeout(() => {
+    // If this country is already selected, navigate to it
+    if (selectedCountry === countryName) {
       navigate(`/africa/${encodeURIComponent(countryName)}`);
-      setTappedCountry(null);
-    }, 600); // Delay for 600ms to allow reading the country name
+      setSelectedCountry(null); // Reset selection
+    } else {
+      // First tap - just select the country
+      setSelectedCountry(countryName);
+    }
   };
-
-  // Detect if we're on a touch device
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
-
+  
+  // Close tooltip when clicking outside a country
   useEffect(() => {
-    setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
-  }, []);
+    if (isTouchDevice && selectedCountry) {
+      const handleOutsideClick = () => {
+        setSelectedCountry(null);
+      };
+      
+      document.addEventListener('touchstart', handleOutsideClick);
+      
+      return () => {
+        document.removeEventListener('touchstart', handleOutsideClick);
+      };
+    }
+  }, [isTouchDevice, selectedCountry]);
 
   return (
     <div 
@@ -127,22 +148,21 @@ function AfricaMap() {
                   <Geography
                     key={geo.rsmKey}
                     geography={geo}
-                    onClick={isTouchDevice ? 
-                      undefined : 
-                      () => navigate(`/africa/${encodeURIComponent(geo.properties.name)}`)
-                    }
-                    onTouchStart={(e) => isTouchDevice && 
-                      handleCountryTap(geo.properties.name, e)
-                    }
+                    onClick={(e) => handleCountryInteraction(geo.properties.name, e)}
+                    onTouchStart={(e) => handleCountryInteraction(geo.properties.name, e)}
                     onMouseEnter={() => {
-                      setHoveredCountry(geo.properties.name);
+                      if (!isTouchDevice) {
+                        setHoveredCountry(geo.properties.name);
+                      }
                     }}
                     onMouseLeave={() => {
-                      setHoveredCountry(null);
+                      if (!isTouchDevice) {
+                        setHoveredCountry(null);
+                      }
                     }}
                     style={{
                       default: {
-                        fill: "#fff",
+                        fill: selectedCountry === geo.properties.name ? "#6a994e" : "#fff",
                         stroke: "#607D8B",
                         strokeWidth: 0.75
                       },
@@ -164,8 +184,8 @@ function AfricaMap() {
         </Geographies>
       </ComposableMap>
       
-      {/* Tooltip for both hover and tap */}
-      {(hoveredCountry || tappedCountry) && (
+      {/* Tooltip for hover on desktop or selection on mobile */}
+      {((!isTouchDevice && hoveredCountry) || (isTouchDevice && selectedCountry)) && (
         <div
           style={{
             position: "absolute",
@@ -183,16 +203,16 @@ function AfricaMap() {
           }}
         >
           <div style={{ fontWeight: "bold", marginBottom: "5px" }}>
-            {hoveredCountry || tappedCountry}
+            {isTouchDevice ? selectedCountry : hoveredCountry}
           </div>
           <div style={{ fontSize: "14px", color: "#ffd700" }}>
-            Learn History and Heritage
+            {isTouchDevice ? "Tap again to view details" : "Learn History and Heritage"}
           </div>
         </div>
       )}
       
       {/* Mobile instructions overlay */}
-      {isTouchDevice && (
+      {isTouchDevice && !selectedCountry && (
         <div 
           style={{
             position: "absolute",
@@ -209,7 +229,7 @@ function AfricaMap() {
             maxWidth: "300px"
           }}
         >
-          Tap on a country to learn about its heritage
+          Tap on a country to see its name, then tap again to learn more
         </div>
       )}
     </div>
