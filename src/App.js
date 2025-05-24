@@ -10,6 +10,7 @@ import ServicesPage from './components/ServicesPage';
 import DonatePage from './components/DonatePage';
 import ContactPage from './components/ContactPage';
 import ComingSoon from './components/comingSoon';
+import SummerReadingRegistration from './components/SummerReadingRegistration';
 
 // Import new pages
 import HeritageHistoryPage from './components/HeritageHistoryPage';
@@ -41,6 +42,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/comingsoon" element={<ComingSoon />} />
         <Route path="/africa/:countryName" element={<CountryPage />} />
+        <Route path="/summer-reading-program-registration-2025" element={<SummerReadingRegistration />} />
       </Routes>
     </Router>
   );

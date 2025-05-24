@@ -1,4 +1,19 @@
-/* Add to your existing StoryPage.css */
+/* Update your StoryPage.css */
+
+.story-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 40px 40px 40px; /* Top padding for navbar, left/right for margins */
+  min-height: calc(100vh - 120px);
+}
+
+.story-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
+}
 
 .board-members {
   margin-top: 40px;
@@ -32,6 +47,36 @@
 .story-text {
   margin-bottom: 15px;
   line-height: 1.6;
+  color: #444;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .story-container {
+    padding: 140px 20px 40px 20px; /* Reduced padding for mobile */
+  }
+  
+  .story-title {
+    font-size: 2rem;
+  }
+  
+  .member-name {
+    font-size: 1.5rem;
+  }
+  
+  .member-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-container {
+    padding: 160px 15px 40px 15px; /* Even less padding for very small screens */
+  }
+  
+  .story-title {
+    font-size: 1.8rem;
+  }
 }
 
 

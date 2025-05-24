@@ -1,0 +1,127 @@
+/* src/components/styles/CommunityPage.css */
+
+.community-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 150px 20px 40px 20px;
+    line-height: 1.6;
+  }
+  
+  .community-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .summer-reading-section {
+    margin-top: 30px;
+  }
+  
+  .program-title {
+    font-size: 1.8rem;
+    color: #6a994e;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .program-description {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  .program-link {
+    color: #6a994e;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+  }
+  
+  .program-link:hover {
+    border-bottom: 2px solid #6a994e;
+  }
+  
+  .features-title {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 30px 0 15px 0;
+    font-weight: bold;
+  }
+  
+  .features-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+  }
+  
+  .features-list li {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+  }
+  
+  .features-list li::before {
+    content: "🌿";
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+  }
+  
+  .location-info {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-left: 4px solid #6a994e;
+    border-radius: 5px;
+    margin: 25px 0;
+  }
+  
+  .cta-section {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .register-button {
+    display: inline-block;
+    background-color: #6a994e;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .register-button:hover {
+    background-color: #5a8742;
+    transform: translateY(-2px);
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .community-container {
+      padding: 140px 15px 40px 15px;
+    }
+    
+    .community-title {
+      font-size: 2rem;
+    }
+    
+    .program-title {
+      font-size: 1.5rem;
+    }
+    
+    .program-description {
+      font-size: 1rem;
+    }
+    
+    .features-list li {
+      font-size: 1rem;
+    }
+  }
