@@ -1,4 +1,4 @@
-// src/components/CountryPage.js
+// Update your CountryPage.js component (remove inline styles)
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { countryData } from '../data/countryData';
@@ -8,13 +8,9 @@ const CountryPage = () => {
   const { countryName } = useParams();
   const navigate = useNavigate();
   
-  // For the /africa/countryName route, extract the country name
   const decodedCountryName = decodeURIComponent(countryName);
-  
-  // Look up the country data
   const country = countryData[decodedCountryName];
   
-  // If country isn't found in our data
   if (!country) {
     return (
       <div className="country-not-found">

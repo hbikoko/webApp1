@@ -1,11 +1,10 @@
 /* src/components/styles/CountryPage.css */
-.country-page {
+.country-page,
+.country-not-found {
   max-width: 900px;
   margin: 0 auto;
-  padding: 40px 20px;
-  /* Increase padding-top for mobile to account for navbar */
-  padding-top: 120px;
-  min-height: 100vh;
+  padding: 120px 20px 40px 20px; /* Top padding accounts for navbar */
+  min-height: calc(100vh - 120px);
 }
 
 .country-header {
@@ -27,7 +26,7 @@
 
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   border-radius: 8px;
@@ -72,46 +71,23 @@
 
 .country-not-found {
   text-align: center;
-  padding: 50px 20px;
-  margin-top: 20px;
 }
 
 .country-not-found h1 {
   margin-top: 0;
   margin-bottom: 20px;
+  font-size: 2rem;
 }
 
-/* Mobile-specific adjustments */
+/* Mobile adjustments */
 @media (max-width: 768px) {
-  .country-page {
-    padding-top: 140px; /* Even more padding for mobile */
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  
-  .country-header h1 {
-    font-size: 2rem;
-  }
-  
-  .country-content {
-    gap: 20px;
-  }
-  
+  .country-page,
   .country-not-found {
-    padding: 30px 15px;
+    padding: 140px 15px 40px 15px;
   }
   
+  .country-header h1,
   .country-not-found h1 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .country-page {
-    padding-top: 160px; /* Maximum padding for very small screens */
-  }
-  
-  .country-header h1 {
     font-size: 1.8rem;
   }
 }
