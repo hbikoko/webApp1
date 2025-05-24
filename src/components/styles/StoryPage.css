@@ -1,23 +1,37 @@
-.story-container {
-  background-color: #f5f5f5;
-  padding: 2rem;
-  padding-top: 100px; /* Enough space to clear the fixed navbar */
-  font-family: 'Open Sans', sans-serif;
-  color: #333;
-  line-height: 1.6;
+/* Add to your existing StoryPage.css */
+
+.board-members {
+  margin-top: 40px;
 }
 
-.story-title {
-  font-size: 2.4rem;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
+.board-member {
+  margin-bottom: 60px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.board-member:last-child {
+  border-bottom: none;
+}
+
+.member-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.member-title {
+  font-size: 1.2rem;
+  color: #6a994e;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-style: italic;
 }
 
 .story-text {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  color: #555;
-  text-align: justify;
+  margin-bottom: 15px;
+  line-height: 1.6;
 }
 
 
