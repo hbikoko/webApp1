@@ -20,6 +20,7 @@ import PolicyPositionsPage from './components/PolicyPositionsPage';
 import CountryPage from './components/CountryPage';
 
 import './App.css';
+import CommunityEvents from './components/CommunityEvents';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <Route path="/comingsoon" element={<ComingSoon />} />
         <Route path="/africa/:countryName" element={<CountryPage />} />
         <Route path="/summer-reading-program-registration-2025" element={<SummerReadingRegistration />} />
+        <Route path="/community-events" element={<CommunityEvents />} />
       </Routes>
     </Router>
   );
