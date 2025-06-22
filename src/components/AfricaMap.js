@@ -6,18 +6,145 @@ import {
 } from "react-simple-maps";
 import { useNavigate } from "react-router-dom";
 
-// World GeoJSON URL
-const worldGeoUrl =
-  "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson";
+// Using Natural Earth data which includes all African countries
+const worldGeoUrl = "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson";
 
-// List of African country ISO codes
-const africanCountries = [
-  "DZA","AGO","BEN","BWA","BFA","BDI","CMR","CPV","CAF","TCD","COM",
-  "COG","COD","CIV","DJI","EGY","GNQ","ERI","SWZ","ETH","GAB","GMB","GHA",
-  "GIN","GNB","KEN","LSO","LBR","LBY","MDG","MWI","MLI","MRT","MUS",
-  "MOZ","NAM","NER","NGA","RWA","STP","SEN","SYC","SLE","SOM","ZAF",
-  "SSD","SDN","TZA","TGO","TUN","UGA","ZMB","ZWE"
-];
+// Comprehensive list of African countries with multiple identifiers
+const africanCountries = {
+  // North Africa
+  "DZA": ["Algeria", "DZ", "012"],
+  "EGY": ["Egypt", "EG", "818"],
+  "LBY": ["Libya", "LY", "434"],
+  "MAR": ["Morocco", "MA", "504"],
+  "SDN": ["Sudan", "SD", "729"],
+  "TUN": ["Tunisia", "TN", "788"],
+  "ESH": ["Western Sahara", "EH", "732"],
+  
+  // West Africa
+  "BEN": ["Benin", "BJ", "204"],
+  "BFA": ["Burkina Faso", "BF", "854"],
+  "CPV": ["Cape Verde", "CV", "132", "Cabo Verde"],
+  "CIV": ["Côte d'Ivoire", "CI", "384", "Ivory Coast"],
+  "GMB": ["Gambia", "GM", "270", "The Gambia"],
+  "GHA": ["Ghana", "GH", "288"],
+  "GIN": ["Guinea", "GN", "324"],
+  "GNB": ["Guinea-Bissau", "GW", "624"],
+  "LBR": ["Liberia", "LR", "430"],
+  "MLI": ["Mali", "ML", "466"],
+  "MRT": ["Mauritania", "MR", "478"],
+  "NER": ["Niger", "NE", "562"],
+  "NGA": ["Nigeria", "NG", "566"],
+  "SEN": ["Senegal", "SN", "686"],
+  "SLE": ["Sierra Leone", "SL", "694"],
+  "TGO": ["Togo", "TG", "768"],
+  
+  // Central Africa
+  "AGO": ["Angola", "AO", "024"],
+  "CMR": ["Cameroon", "CM", "120"],
+  "CAF": ["Central African Republic", "CF", "140"],
+  "TCD": ["Chad", "TD", "148"],
+  "COG": ["Congo", "CG", "178", "Republic of the Congo"],
+  "COD": ["Democratic Republic of the Congo", "CD", "180", "DRC", "Congo-Kinshasa"],
+  "GNQ": ["Equatorial Guinea", "GQ", "226"],
+  "GAB": ["Gabon", "GA", "266"],
+  "STP": ["São Tomé and Príncipe", "ST", "678", "Sao Tome and Principe"],
+  
+  // East Africa
+  "BDI": ["Burundi", "BI", "108"],
+  "COM": ["Comoros", "KM", "174"],
+  "DJI": ["Djibouti", "DJ", "262"],
+  "ERI": ["Eritrea", "ER", "232"],
+  "ETH": ["Ethiopia", "ET", "231"],
+  "KEN": ["Kenya", "KE", "404"],
+  "MDG": ["Madagascar", "MG", "450"],
+  "MWI": ["Malawi", "MW", "454"],
+  "MUS": ["Mauritius", "MU", "480"],
+  "MOZ": ["Mozambique", "MZ", "508"],
+  "RWA": ["Rwanda", "RW", "646"],
+  "SYC": ["Seychelles", "SC", "690"],
+  "SOM": ["Somalia", "SO", "706"],
+  "SSD": ["South Sudan", "SS", "728"],
+  "TZA": ["Tanzania", "TZ", "834", "United Republic of Tanzania"],
+  "UGA": ["Uganda", "UG", "800"],
+  "ZMB": ["Zambia", "ZM", "894"],
+  "ZWE": ["Zimbabwe", "ZW", "716"],
+  
+  // Southern Africa
+  "BWA": ["Botswana", "BW", "072"],
+  "SWZ": ["Eswatini", "SZ", "748", "Swaziland"],
+  "LSO": ["Lesotho", "LS", "426"],
+  "NAM": ["Namibia", "NA", "516"],
+  "ZAF": ["South Africa", "ZA", "710"]
+};
+
+// Helper function to check if a geography is an African country
+const isAfricanCountry = (geo) => {
+  if (!geo || !geo.properties) return false;
+  
+  // Check various property names that might contain country identifiers
+  const props = geo.properties;
+  const possibleIdentifiers = [
+    props.ISO_A3,
+    props.ISO_A2,
+    props.iso_a3,
+    props.iso_a2,
+    props.ADM0_A3,
+    props.NAME,
+    props.name,
+    props.ADMIN,
+    props.NAME_EN,
+    props.NAME_LONG,
+    props.SOVEREIGNT,
+    props.ISO_N3,
+    geo.id
+  ];
+  
+  // Check if any identifier matches our African countries
+  for (const [iso3, variations] of Object.entries(africanCountries)) {
+    for (const identifier of possibleIdentifiers) {
+      if (!identifier) continue;
+      
+      // Check against ISO code and all variations
+      if (identifier === iso3 || variations.includes(identifier)) {
+        return true;
+      }
+      
+      // Check if the identifier contains any of our variations (case-insensitive)
+      const lowerIdent = identifier.toLowerCase();
+      for (const variation of variations) {
+        if (lowerIdent === variation.toLowerCase() || 
+            lowerIdent.includes(variation.toLowerCase())) {
+          return true;
+        }
+      }
+    }
+  }
+  
+  return false;
+};
+
+// Get the display name for a country
+const getCountryName = (geo) => {
+  const props = geo.properties;
+  
+  // Try to match with our known countries first
+  for (const [iso3, variations] of Object.entries(africanCountries)) {
+    const identifiers = [
+      props.ISO_A3, props.iso_a3, props.ADM0_A3,
+      props.NAME, props.name, props.ADMIN, props.NAME_EN,
+      geo.id
+    ];
+    
+    for (const id of identifiers) {
+      if (id === iso3 || (variations && variations.includes(id))) {
+        return variations[0]; // Return the primary name
+      }
+    }
+  }
+  
+  // Fallback to whatever name property exists
+  return props.NAME || props.name || props.ADMIN || props.NAME_EN || "Unknown";
+};
 
 function AfricaMap() {
   const navigate = useNavigate();
@@ -95,145 +222,117 @@ function AfricaMap() {
       ref={mapContainerRef} 
       style={{ 
         width: "100%", 
-        maxWidth: "900px", 
+        maxWidth: "1000px", 
         margin: "0 auto",
+        marginTop: "60px",
         position: "relative",
         overflow: "hidden"
       }}
     >
-      <ComposableMap
-        projection="geoMercator"
-        projectionConfig={{
-          scale: 440,
-          center: [18, 5]
-        }}
-        style={{
-          width: "100%",
-          height: "800px",
-          margin: "0 auto"
-        }}
-        onMouseMove={handleMouseMove}
-      >
+      <div style={{
+        position: "relative",
+        width: "100%",
+        height: "850px",
+        overflow: "hidden"
+      }}>
+        <ComposableMap
+          projection="geoMercator"
+          projectionConfig={{
+            scale: 440,
+            center: [20, -3]
+          }}
+          width={1000}
+          height={850}
+          style={{
+            width: "100%",
+            height: "100%",
+            position: "absolute",
+            left: "0",
+            top: "0"
+          }}
+          onMouseMove={handleMouseMove}
+        >
         <Geographies geography={worldGeoUrl}>
-  {({ geographies }) => (
-    <>
-      {geographies
-        .filter(geo => africanCountries.includes(geo.id))
-        .map(geo => (
-          <Geography
-            key={geo.rsmKey}
-            geography={geo}
-            onClick={(e) => handleCountryInteraction(geo.properties.name, e)}
-            onTouchStart={(e) => handleCountryInteraction(geo.properties.name, e)}
-            onMouseEnter={() => {
-              if (!isTouchDevice) {
-                setHoveredCountry(geo.properties.name);
+          {({ geographies }) => {
+            console.log(`Total geographies: ${geographies.length}`);
+            
+            return geographies.map(geo => {
+              const isAfrican = isAfricanCountry(geo);
+              const countryName = isAfrican ? getCountryName(geo) : null;
+              const isSelected = selectedCountry === countryName;
+              
+              // Render non-African countries as transparent
+              if (!isAfrican) {
+                return (
+                  <Geography
+                    key={geo.rsmKey}
+                    geography={geo}
+                    style={{
+                      default: {
+                        fill: "transparent",
+                        stroke: "transparent",
+                        strokeWidth: 0,
+                        outline: "none"
+                      },
+                      hover: {
+                        fill: "transparent",
+                        stroke: "transparent",
+                        strokeWidth: 0,
+                        outline: "none"
+                      },
+                      pressed: {
+                        fill: "transparent",
+                        stroke: "transparent",
+                        strokeWidth: 0,
+                        outline: "none"
+                      }
+                    }}
+                  />
+                );
               }
-            }}
-            onMouseLeave={() => {
-              if (!isTouchDevice) {
-                setHoveredCountry(null);
-              }
-            }}
-            style={{
-              default: {
-                fill: selectedCountry === geo.properties.name ? "#6a994e" : "#fff",
-                stroke: "#607D8B",
-                strokeWidth: 0.75
-              },
-              hover: {
-                fill: "#6a994e",
-                stroke: "#607D8B",
-                strokeWidth: 1
-              },
-              pressed: {
-                fill: "#6a994e",
-                stroke: "#607D8B",
-                strokeWidth: 1
-              }
-            }}
-          />
-        ))}
-
-      {/* South Sudan overlay - INSIDE the <> tags */}
-      <Geography
-        key="south-sudan-overlay"
-        geography={{
-          type: "Feature",
-          properties: { name: "South Sudan" },
-          geometry: {
-            type: "Polygon",
-            coordinates: [[
-              [23.89, 12.25],
-              [24.5, 12.0],
-              [25.2, 11.8],
-              [26.0, 11.2],
-              [27.5, 10.5],
-              [28.5, 9.8],
-              [29.5, 9.5],
-              [30.5, 9.3],
-              [31.5, 9.0],
-              [32.5, 8.5],
-              [33.5, 8.0],
-              [34.0, 7.5],
-              [34.5, 7.0],
-              [35.0, 6.5],
-              [35.3, 6.0],
-              [35.0, 5.5],
-              [34.5, 5.0],
-              [34.0, 4.5],
-              [33.0, 4.0],
-              [32.0, 3.8],
-              [31.0, 3.6],
-              [30.0, 3.5],
-              [29.0, 3.6],
-              [28.0, 4.0],
-              [27.0, 4.5],
-              [26.0, 5.0],
-              [25.0, 6.0],
-              [24.5, 7.0],
-              [24.0, 8.0],
-              [23.9, 9.0],
-              [23.9, 10.0],
-              [23.9, 11.0],
-              [23.89, 12.25]
-            ]]
-          }
-        }}
-        onClick={(e) => handleCountryInteraction("South Sudan", e)}
-        onTouchStart={(e) => handleCountryInteraction("South Sudan", e)}
-        onMouseEnter={() => {
-          if (!isTouchDevice) {
-            setHoveredCountry("South Sudan");
-          }
-        }}
-        onMouseLeave={() => {
-          if (!isTouchDevice) {
-            setHoveredCountry(null);
-          }
-        }}
-        style={{
-          default: {
-            fill: selectedCountry === "South Sudan" ? "#6a994e" : "#fff",
-            stroke: "#607D8B",
-            strokeWidth: 0.75
-          },
-          hover: {
-            fill: "#6a994e",
-            stroke: "#607D8B", 
-            strokeWidth: 1
-          },
-          pressed: {
-            fill: "#6a994e",
-            stroke: "#607D8B",
-            strokeWidth: 1
-          }
-        }}
-      />
-    </>
-  )}
-</Geographies>
+              
+              // Render African countries with full interactivity
+              return (
+                <Geography
+                  key={geo.rsmKey}
+                  geography={geo}
+                  onClick={(e) => handleCountryInteraction(countryName, e)}
+                  onTouchStart={(e) => handleCountryInteraction(countryName, e)}
+                  onMouseEnter={() => {
+                    if (!isTouchDevice) {
+                      setHoveredCountry(countryName);
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (!isTouchDevice) {
+                      setHoveredCountry(null);
+                    }
+                  }}
+                  style={{
+                    default: {
+                      fill: isSelected ? "#6a994e" : "#fff",
+                      stroke: "#607D8B",
+                      strokeWidth: 0.75
+                    },
+                    hover: {
+                      fill: "#6a994e",
+                      stroke: "#607D8B",
+                      strokeWidth: 1
+                    },
+                    pressed: {
+                      fill: "#6a994e",
+                      stroke: "#607D8B",
+                      strokeWidth: 1
+                    }
+                  }}
+                />
+              );
+            });
+          }}
+        </Geographies>
       </ComposableMap>
+      </div>
+      
       {/* Tooltip for hover on desktop or selection on mobile */}
       {((!isTouchDevice && hoveredCountry) || (isTouchDevice && selectedCountry)) && (
         <div
@@ -260,6 +359,7 @@ function AfricaMap() {
           </div>
         </div>
       )}
+      
       {/* Mobile instructions overlay */}
       {isTouchDevice && !selectedCountry && (
         <div 
