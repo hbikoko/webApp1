@@ -13,7 +13,7 @@
       "contact": "Contact Us"
     },
     "story": {
-      "header": "Story Page"
+      "header": "Board of Directors"
     },
     "services": {
       "heritageText": "AFRHEEC, the African Heritage Education and Empowerment Community, is dedicated to exploring the rich history and cultural heritage of Africa and its enduring impact on the Black American experience.",
@@ -45,6 +45,10 @@
       "community": "Community",
       "currentprojects": "Current Projects",
       "policyandpositions": "Policy and Positions"
+    },
+    "newsletter": {
+      "title": "Grow Roots",
+      "description": "Subscribe to our newsletter to receive updates about our projects, events, and resources that celebrate and preserve African heritage."
     }
   }
   

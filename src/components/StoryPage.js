@@ -7,7 +7,7 @@ function StoryPage() {
 
   return (
     <div className="story-container">
-      <h1 className="story-title">{t('story.header', 'Our Story')}</h1>
+      <h1 className="story-title">{t('story.header', 'Board of Directors')}</h1>
 
       {/* Board Members Section */}
       <div className="board-members">

@@ -25,39 +25,26 @@ function AfricaMap() {
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
   const mapContainerRef = useRef(null);
-  
-  // Detect if we're on a touch device
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
     setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
   }, []);
-  
+
   // Handle mouse move for tooltip positioning
   const handleMouseMove = (event) => {
     if (mapContainerRef.current) {
       const rect = mapContainerRef.current.getBoundingClientRect();
       const containerWidth = rect.width;
-      
-      // Calculate tooltip width (200px) + some padding
       const tooltipWidth = 220;
-      
-      // Calculate x position, ensuring tooltip stays within container bounds
-      let xPos = event.clientX - rect.left - 100; // Center tooltip on cursor horizontally
-      
-      // Adjust if tooltip would go beyond right edge
+      let xPos = event.clientX - rect.left - 100;
       if (xPos + tooltipWidth > containerWidth) {
         xPos = containerWidth - tooltipWidth;
       }
-      
-      // Ensure tooltip doesn't go beyond left edge
       if (xPos < 0) {
         xPos = 0;
       }
-      
-      // Calculate y position
-      const yPos = event.clientY - rect.top - 100; // Position above cursor
-      
+      const yPos = event.clientY - rect.top - 100;
       setTooltipPosition({
         x: xPos,
         y: yPos
@@ -68,18 +55,12 @@ function AfricaMap() {
   // Handle country interaction
   const handleCountryInteraction = (countryName, event) => {
     if (!isTouchDevice) {
-      // For desktop: navigate directly
       navigate(`/africa/${encodeURIComponent(countryName)}`);
       return;
     }
-    
-    // For mobile: implement two-tap pattern
     event.preventDefault();
-    
-    // Set tooltip position based on tap coordinates
     if (mapContainerRef.current) {
       const rect = mapContainerRef.current.getBoundingClientRect();
-      
       setTooltipPosition({
         x: event.touches ? 
            (event.touches[0].clientX - rect.left - 100) : 
@@ -89,26 +70,20 @@ function AfricaMap() {
            (event.clientY - rect.top - 100)
       });
     }
-    
-    // If this country is already selected, navigate to it
     if (selectedCountry === countryName) {
       navigate(`/africa/${encodeURIComponent(countryName)}`);
-      setSelectedCountry(null); // Reset selection
+      setSelectedCountry(null);
     } else {
-      // First tap - just select the country
       setSelectedCountry(countryName);
     }
   };
-  
-  // Close tooltip when clicking outside a country
+
   useEffect(() => {
     if (isTouchDevice && selectedCountry) {
       const handleOutsideClick = () => {
         setSelectedCountry(null);
       };
-      
       document.addEventListener('touchstart', handleOutsideClick);
-      
       return () => {
         document.removeEventListener('touchstart', handleOutsideClick);
       };
@@ -140,50 +115,125 @@ function AfricaMap() {
         onMouseMove={handleMouseMove}
       >
         <Geographies geography={worldGeoUrl}>
-          {({ geographies }) => (
-            <>
-              {geographies
-                .filter(geo => africanCountries.includes(geo.id))
-                .map(geo => (
-                  <Geography
-                    key={geo.rsmKey}
-                    geography={geo}
-                    onClick={(e) => handleCountryInteraction(geo.properties.name, e)}
-                    onTouchStart={(e) => handleCountryInteraction(geo.properties.name, e)}
-                    onMouseEnter={() => {
-                      if (!isTouchDevice) {
-                        setHoveredCountry(geo.properties.name);
-                      }
-                    }}
-                    onMouseLeave={() => {
-                      if (!isTouchDevice) {
-                        setHoveredCountry(null);
-                      }
-                    }}
-                    style={{
-                      default: {
-                        fill: selectedCountry === geo.properties.name ? "#6a994e" : "#fff",
-                        stroke: "#607D8B",
-                        strokeWidth: 0.75
-                      },
-                      hover: {
-                        fill: "#6a994e",
-                        stroke: "#607D8B",
-                        strokeWidth: 1
-                      },
-                      pressed: {
-                        fill: "#6a994e",
-                        stroke: "#607D8B",
-                        strokeWidth: 1
-                      }
-                    }}
-                  />
-                ))}
-            </>
-          )}
-        </Geographies>
+  {({ geographies }) => (
+    <>
+      {geographies
+        .filter(geo => africanCountries.includes(geo.id))
+        .map(geo => (
+          <Geography
+            key={geo.rsmKey}
+            geography={geo}
+            onClick={(e) => handleCountryInteraction(geo.properties.name, e)}
+            onTouchStart={(e) => handleCountryInteraction(geo.properties.name, e)}
+            onMouseEnter={() => {
+              if (!isTouchDevice) {
+                setHoveredCountry(geo.properties.name);
+              }
+            }}
+            onMouseLeave={() => {
+              if (!isTouchDevice) {
+                setHoveredCountry(null);
+              }
+            }}
+            style={{
+              default: {
+                fill: selectedCountry === geo.properties.name ? "#6a994e" : "#fff",
+                stroke: "#607D8B",
+                strokeWidth: 0.75
+              },
+              hover: {
+                fill: "#6a994e",
+                stroke: "#607D8B",
+                strokeWidth: 1
+              },
+              pressed: {
+                fill: "#6a994e",
+                stroke: "#607D8B",
+                strokeWidth: 1
+              }
+            }}
+          />
+        ))}
+
+      {/* South Sudan overlay - INSIDE the <> tags */}
+      <Geography
+        key="south-sudan-overlay"
+        geography={{
+          type: "Feature",
+          properties: { name: "South Sudan" },
+          geometry: {
+            type: "Polygon",
+            coordinates: [[
+              [23.89, 12.25],
+              [24.5, 12.0],
+              [25.2, 11.8],
+              [26.0, 11.2],
+              [27.5, 10.5],
+              [28.5, 9.8],
+              [29.5, 9.5],
+              [30.5, 9.3],
+              [31.5, 9.0],
+              [32.5, 8.5],
+              [33.5, 8.0],
+              [34.0, 7.5],
+              [34.5, 7.0],
+              [35.0, 6.5],
+              [35.3, 6.0],
+              [35.0, 5.5],
+              [34.5, 5.0],
+              [34.0, 4.5],
+              [33.0, 4.0],
+              [32.0, 3.8],
+              [31.0, 3.6],
+              [30.0, 3.5],
+              [29.0, 3.6],
+              [28.0, 4.0],
+              [27.0, 4.5],
+              [26.0, 5.0],
+              [25.0, 6.0],
+              [24.5, 7.0],
+              [24.0, 8.0],
+              [23.9, 9.0],
+              [23.9, 10.0],
+              [23.9, 11.0],
+              [23.89, 12.25]
+            ]]
+          }
+        }}
+        onClick={(e) => handleCountryInteraction("South Sudan", e)}
+        onTouchStart={(e) => handleCountryInteraction("South Sudan", e)}
+        onMouseEnter={() => {
+          if (!isTouchDevice) {
+            setHoveredCountry("South Sudan");
+          }
+        }}
+        onMouseLeave={() => {
+          if (!isTouchDevice) {
+            setHoveredCountry(null);
+          }
+        }}
+        style={{
+          default: {
+            fill: selectedCountry === "South Sudan" ? "#6a994e" : "#fff",
+            stroke: "#607D8B",
+            strokeWidth: 0.75
+          },
+          hover: {
+            fill: "#6a994e",
+            stroke: "#607D8B", 
+            strokeWidth: 1
+          },
+          pressed: {
+            fill: "#6a994e",
+            stroke: "#607D8B",
+            strokeWidth: 1
+          }
+        }}
+      />
+    </>
+  )}
+</Geographies>
       </ComposableMap>
-      
       {/* Tooltip for hover on desktop or selection on mobile */}
       {((!isTouchDevice && hoveredCountry) || (isTouchDevice && selectedCountry)) && (
         <div
@@ -210,7 +260,6 @@ function AfricaMap() {
           </div>
         </div>
       )}
-      
       {/* Mobile instructions overlay */}
       {isTouchDevice && !selectedCountry && (
         <div 

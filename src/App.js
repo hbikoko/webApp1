@@ -21,6 +21,7 @@ import CountryPage from './components/CountryPage';
 
 import './App.css';
 import CommunityEvents from './components/CommunityEvents';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
         <Route path="/summer-reading-program-registration-2025" element={<SummerReadingRegistration />} />
         <Route path="/community-events" element={<CommunityEvents />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
