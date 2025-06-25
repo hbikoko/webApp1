@@ -77,9 +77,33 @@ const africanCountries = {
   "ZAF": ["South Africa", "ZA", "710"]
 };
 
+// Countries to explicitly exclude from rendering
+const excludedCountries = [
+  // Middle Eastern countries
+  "Saudi Arabia", "Yemen", "Oman", "United Arab Emirates", "Qatar", "Bahrain", "Kuwait",
+  "Iraq", "Iran", "Jordan", "Israel", "Palestine", "Lebanon", "Syria", "Turkey",
+  "Pakistan", "Afghanistan",
+  // European countries that might appear
+  "Spain", "Portugal", "France", "Italy", "Greece", "Malta",
+  // French territories
+  "French Southern and Antarctic Lands", "French Southern Territories",
+  "Terres australes et antarctiques françaises", "TAAF",
+  // Other islands/territories
+  "British Indian Ocean Territory", "Maldives", "Seychelles Islands"
+];
+
 // Helper function to check if a geography is an African country
 const isAfricanCountry = (geo) => {
   if (!geo || !geo.properties) return false;
+  
+  // First check if it's in the excluded list
+  const countryName = geo.properties.NAME || geo.properties.name || geo.properties.ADMIN || geo.properties.NAME_EN || "";
+  if (excludedCountries.some(excluded => 
+    countryName.toLowerCase().includes(excluded.toLowerCase()) ||
+    excluded.toLowerCase().includes(countryName.toLowerCase())
+  )) {
+    return false;
+  }
   
   // Check various property names that might contain country identifiers
   const props = geo.properties;
@@ -232,7 +256,7 @@ function AfricaMap() {
       <div style={{
         position: "relative",
         width: "100%",
-        height: "850px",
+        height: "720px",
         overflow: "hidden"
       }}>
         <ComposableMap
@@ -252,6 +276,12 @@ function AfricaMap() {
           }}
           onMouseMove={handleMouseMove}
         >
+        <defs>
+          <clipPath id="africa-clip">
+            <rect x="0" y="140" width="920" height="580" />
+          </clipPath>
+        </defs>
+        <g clipPath="url(#africa-clip)">
         <Geographies geography={worldGeoUrl}>
           {({ geographies }) => {
             console.log(`Total geographies: ${geographies.length}`);
@@ -261,34 +291,9 @@ function AfricaMap() {
               const countryName = isAfrican ? getCountryName(geo) : null;
               const isSelected = selectedCountry === countryName;
               
-              // Render non-African countries as transparent
+              // Render non-African countries as invisible
               if (!isAfrican) {
-                return (
-                  <Geography
-                    key={geo.rsmKey}
-                    geography={geo}
-                    style={{
-                      default: {
-                        fill: "transparent",
-                        stroke: "transparent",
-                        strokeWidth: 0,
-                        outline: "none"
-                      },
-                      hover: {
-                        fill: "transparent",
-                        stroke: "transparent",
-                        strokeWidth: 0,
-                        outline: "none"
-                      },
-                      pressed: {
-                        fill: "transparent",
-                        stroke: "transparent",
-                        strokeWidth: 0,
-                        outline: "none"
-                      }
-                    }}
-                  />
-                );
+                return null; // Don't render non-African countries at all
               }
               
               // Render African countries with full interactivity
@@ -330,6 +335,7 @@ function AfricaMap() {
             });
           }}
         </Geographies>
+        </g>
       </ComposableMap>
       </div>
       
