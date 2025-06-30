@@ -278,7 +278,7 @@ function AfricaMap() {
         >
         <defs>
           <clipPath id="africa-clip">
-            <rect x="0" y="140" width="920" height="580" />
+            <rect x="0" y="93" width="800" height="592" />
           </clipPath>
         </defs>
         <g clipPath="url(#africa-clip)">
