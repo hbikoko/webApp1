@@ -3,15 +3,14 @@
   color: #fff;
   padding: 40px 20px;
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   margin-top: 60px;
 }
 
 .footer-section {
-  flex: 1 1 200px;
-  margin: 0 20px;
+  text-align: center;
+  max-width: 500px;
 }
 
 .footer-section h4 {
@@ -23,16 +22,32 @@
 .footer-section p {
   color: #eee;
   font-size: 1rem;
-  margin: 0;
+  margin-bottom: 15px;
+}
+
+.footer-contact-link {
+  display: inline-block;
+  background-color: #6a994e;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.footer-contact-link:hover {
+  background-color: #5a8742;
+  color: white;
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
   .site-footer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    padding: 30px 15px;
   }
+  
   .footer-section {
-    margin: 20px 0;
+    max-width: 100%;
   }
 } 

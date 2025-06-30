@@ -18,6 +18,7 @@ import CommunityPage from './components/CommunityPage';
 import CurrentProjectsPage from './components/CurrentProjectsPage';
 import PolicyPositionsPage from './components/PolicyPositionsPage';
 import CountryPage from './components/CountryPage';
+import SupportPage from './components/SupportPage';
 
 import './App.css';
 import CommunityEvents from './components/CommunityEvents';
@@ -42,6 +43,7 @@ function App() {
 
         <Route path="/donate" element={<DonatePage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/support" element={<SupportPage />} />
         <Route path="/comingsoon" element={<ComingSoon />} />
         <Route path="/africa/:countryName" element={<CountryPage />} />
         <Route path="/summer-reading-program-registration-2025" element={<SummerReadingRegistration />} />
