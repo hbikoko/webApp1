@@ -85,43 +85,6 @@
   margin: 0;
 }
 
-/* Donors Section */
-.donors-info {
-  background: #f8f9fa;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-
-.donors-info h3 {
-  color: #2c5530;
-  margin-bottom: 15px;
-  font-size: 1.3rem;
-}
-
-.donors-info ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.donors-info li {
-  padding: 8px 0;
-  color: #444;
-  font-size: 1rem;
-  position: relative;
-  padding-left: 25px;
-}
-
-.donors-info li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #6a994e;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
 /* Grants Section */
 .grants-info {
   background: #f8f9fa;
@@ -272,4 +235,30 @@
   .support-cta h2 {
     font-size: 1.6rem;
   }
+}
+
+.wip-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 60px 20px;
+  margin-top: 80px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.wip-message h1 {
+  font-size: 2.2rem;
+  color: #6a994e;
+  margin-bottom: 20px;
+}
+
+.wip-message p {
+  font-size: 1.1rem;
+  color: #444;
+  text-align: center;
+  max-width: 500px;
 } 
