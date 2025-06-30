@@ -59,6 +59,7 @@
   border-radius: 5px;
   font-size: 1rem;
   transition: all 0.3s ease;
+  box-sizing: border-box; /* Add this line */
 }
 
 .form-group input:focus {
