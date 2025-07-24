@@ -103,6 +103,97 @@
     text-decoration: none;
   }
   
+  .summer-reading-album {
+  margin: 40px 0 0 0;
+  text-align: center;
+}
+
+.album-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.album-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  transition: transform 0.2s;
+}
+.album-photo:hover {
+  transform: scale(1.05);
+}
+
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  cursor: default;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #ff4757;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  z-index: 1001;
+}
+
+.close-button:hover {
+  background: #ff3742;
+  transform: scale(1.1);
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+}
+
+.modal-caption {
+  text-align: center;
+  margin-top: 1rem;
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+  
   /* Mobile responsiveness */
   @media (max-width: 768px) {
     .community-container {

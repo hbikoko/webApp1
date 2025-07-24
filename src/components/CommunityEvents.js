@@ -3,6 +3,15 @@ import './styles/CommunityEvents.css';
 import mdEnglish from '../assets/mdEnglish.png';
 import mdFrench from '../assets/mdFrench.jpg';
 import mdSwahili from '../assets/mdSwahili.jpg';
+import mDay1 from '../assets/mDay1.jpg';
+import mDay2 from '../assets/mDay2.jpg';
+import mDay3 from '../assets/mDay3.jpg';
+import mDay4 from '../assets/mDay4.jpg';
+import mDay5 from '../assets/mDay5.jpg';
+import mDay6 from '../assets/mDay6.jpg';
+import mDay7 from '../assets/mDay7.jpg';
+import mDay8 from '../assets/mDay8.jpg';
+import mDay9 from '../assets/mDay9.jpg';
 
 function CommunityEvents() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -56,6 +65,60 @@ function CommunityEvents() {
                 alt="Motherland Mother's Day - Elegant floral celebration" 
                 className="event-image clickable-image" 
                 onClick={() => handleImageClick(mdSwahili, 'Motherland Mother\'s Day - Elegant floral celebration')}
+              />
+              <img 
+                src={mDay1} 
+                alt="Motherland Mother's Day - Album Photo 1" 
+                className="event-image clickable-image" 
+                onClick={() => handleImageClick(mDay1, 'Motherland Mother\'s Day - Album Photo 1')}
+              />
+              <img 
+                src={mDay2} 
+                alt="Motherland Mother's Day - Album Photo 2" 
+                className="event-image clickable-image" 
+                onClick={() => handleImageClick(mDay2, 'Motherland Mother\'s Day - Album Photo 2')}
+              />
+              <img 
+                src={mDay3} 
+                alt="Motherland Mother's Day - Album Photo 3" 
+                className="event-image clickable-image" 
+                onClick={() => handleImageClick(mDay3, 'Motherland Mother\'s Day - Album Photo 3')}
+              />
+              <img 
+                src={mDay4} 
+                alt="Motherland Mother's Day - Album Photo 4" 
+                className="event-image clickable-image" 
+                onClick={() => handleImageClick(mDay4, 'Motherland Mother\'s Day - Album Photo 4')}
+              />
+              <img 
+                src={mDay5} 
+                alt="Motherland Mother's Day - Album Photo 5" 
+                className="event-image clickable-image" 
+                onClick={() => handleImageClick(mDay5, 'Motherland Mother\'s Day - Album Photo 5')}
+              />
+              <img 
+                src={mDay6} 
+                alt="Motherland Mother's Day - Album Photo 6" 
+                className="event-image clickable-image" 
+                onClick={() => handleImageClick(mDay6, 'Motherland Mother\'s Day - Album Photo 6')}
+              />
+              <img 
+                src={mDay7} 
+                alt="Motherland Mother's Day - Album Photo 7" 
+                className="event-image clickable-image" 
+                onClick={() => handleImageClick(mDay7, 'Motherland Mother\'s Day - Album Photo 7')}
+              />
+              <img 
+                src={mDay8} 
+                alt="Motherland Mother's Day - Album Photo 8" 
+                className="event-image clickable-image" 
+                onClick={() => handleImageClick(mDay8, 'Motherland Mother\'s Day - Album Photo 8')}
+              />
+              <img 
+                src={mDay9} 
+                alt="Motherland Mother's Day - Album Photo 9" 
+                className="event-image clickable-image" 
+                onClick={() => handleImageClick(mDay9, 'Motherland Mother\'s Day - Album Photo 9')}
               />
             </div>
             

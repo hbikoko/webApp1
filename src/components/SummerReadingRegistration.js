@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './styles/SummerReadingRegistration.css';
+import mmm2Logo from '../assets/mmm2Logo.png';
 
 function SummerReadingRegistration() {
   const [formData, setFormData] = useState({
@@ -91,6 +92,10 @@ function SummerReadingRegistration() {
 
   return (
     <div className="registration-container">
+      <div className="registration-sponsor">
+        <img src={mmm2Logo} alt="Meyer Memorial Trust Logo" />
+        <span className="sponsor-text">Sponsored by Meyer Memorial Trust</span>
+      </div>
       <div className="header-section">
         <div className="baobab-icon">🌳</div>
         <h1>Your Child Deserves a Summer of Growth, Joy, and Confidence—Start with Reading!</h1>

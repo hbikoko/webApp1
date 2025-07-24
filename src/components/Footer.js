@@ -12,7 +12,7 @@ function Footer() {
         <div className="contact-details">
           <p>Email: <a href="mailto:info@afrheec.org">info@afrheec.org</a></p>
           <p>Phone: (555) 123-4567</p>
-          <p>Address: N/A</p>
+          <p>Address: PO Box 2291 Salem, Oregon 97301</p>
         </div>
       </div>
     </footer>
