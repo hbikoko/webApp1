@@ -5,6 +5,7 @@ import {
   Geography
 } from "react-simple-maps";
 import { useNavigate } from "react-router-dom";
+import { countryData } from '../data/countryData';
 
 // Using Natural Earth data which includes all African countries
 const worldGeoUrl = "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson";
@@ -170,6 +171,11 @@ const getCountryName = (geo) => {
   return props.NAME || props.name || props.ADMIN || props.NAME_EN || "Unknown";
 };
 
+// Check if a country has content available
+const hasCountryContent = (countryName) => {
+  return countryData.hasOwnProperty(countryName);
+};
+
 function AfricaMap() {
   const navigate = useNavigate();
   const [hoveredCountry, setHoveredCountry] = useState(null);
@@ -205,10 +211,15 @@ function AfricaMap() {
 
   // Handle country interaction
   const handleCountryInteraction = (countryName, event) => {
+    const hasContent = hasCountryContent(countryName);
+    
     if (!isTouchDevice) {
-      navigate(`/africa/${encodeURIComponent(countryName)}`);
+      if (hasContent) {
+        navigate(`/africa/${encodeURIComponent(countryName)}`);
+      }
       return;
     }
+    
     event.preventDefault();
     if (mapContainerRef.current) {
       const rect = mapContainerRef.current.getBoundingClientRect();
@@ -221,8 +232,11 @@ function AfricaMap() {
            (event.clientY - rect.top - 100)
       });
     }
+    
     if (selectedCountry === countryName) {
-      navigate(`/africa/${encodeURIComponent(countryName)}`);
+      if (hasContent) {
+        navigate(`/africa/${encodeURIComponent(countryName)}`);
+      }
       setSelectedCountry(null);
     } else {
       setSelectedCountry(countryName);
@@ -297,6 +311,7 @@ function AfricaMap() {
               }
               
               // Render African countries with full interactivity
+              const hasContent = hasCountryContent(countryName);
               return (
                 <Geography
                   key={geo.rsmKey}
@@ -315,17 +330,17 @@ function AfricaMap() {
                   }}
                   style={{
                     default: {
-                      fill: isSelected ? "#6a994e" : "#fff",
+                      fill: isSelected ? "#6a994e" : (hasContent ? "#fff" : "#f0f0f0"),
                       stroke: "#607D8B",
                       strokeWidth: 0.75
                     },
                     hover: {
-                      fill: "#6a994e",
+                      fill: hasContent ? "#6a994e" : "#d0d0d0",
                       stroke: "#607D8B",
                       strokeWidth: 1
                     },
                     pressed: {
-                      fill: "#6a994e",
+                      fill: hasContent ? "#6a994e" : "#d0d0d0",
                       stroke: "#607D8B",
                       strokeWidth: 1
                     }
@@ -361,7 +376,16 @@ function AfricaMap() {
             {isTouchDevice ? selectedCountry : hoveredCountry}
           </div>
           <div style={{ fontSize: "14px", color: "#ffd700" }}>
-            {isTouchDevice ? "Tap again to view details" : "Learn History and Heritage"}
+            {(() => {
+              const countryName = isTouchDevice ? selectedCountry : hoveredCountry;
+              const hasContent = hasCountryContent(countryName);
+              
+              if (hasContent) {
+                return isTouchDevice ? "Tap again to view details" : "Learn History and Heritage";
+              } else {
+                return "Coming Soon!";
+              }
+            })()}
           </div>
         </div>
       )}
@@ -384,7 +408,7 @@ function AfricaMap() {
             maxWidth: "300px"
           }}
         >
-          Tap on a country to see its name, then tap again to learn more
+          Tap on a country to see its name and status
         </div>
       )}
     </div>
