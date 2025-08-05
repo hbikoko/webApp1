@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles/CommunityEvents.css';
 import mdEnglish from '../assets/mdEnglish.png';
 import mdFrench from '../assets/mdFrench.jpg';
@@ -15,6 +15,11 @@ import mDay9 from '../assets/mDay9.jpg';
 
 function CommunityEvents() {
   const [selectedImage, setSelectedImage] = useState(null);
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleImageClick = (imageSrc, imageAlt) => {
     setSelectedImage({ src: imageSrc, alt: imageAlt });
