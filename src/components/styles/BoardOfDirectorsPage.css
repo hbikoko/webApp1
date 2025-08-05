@@ -1,0 +1,83 @@
+.board-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 120px 20px 60px;
+  background: linear-gradient(120deg, #f0f8ff, #e6f7ff);
+  min-height: 100vh;
+}
+
+.board-title {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.board-members {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.board-member {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.member-name {
+  font-size: 1.8rem;
+  color: #2E7D32;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.member-title {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.board-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.board-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .board-container {
+    padding: 100px 15px 40px;
+  }
+  
+  .board-title {
+    font-size: 2rem;
+  }
+  
+  .board-member {
+    padding: 30px 20px;
+  }
+  
+  .member-name {
+    font-size: 1.5rem;
+  }
+  
+  .member-title {
+    font-size: 1.1rem;
+  }
+  
+  .board-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+} 

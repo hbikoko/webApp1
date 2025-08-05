@@ -48,7 +48,118 @@
     },
     "newsletter": {
       "title": "Grow Roots",
-      "description": "Subscribe to our newsletter to receive updates about our projects, events, and resources that celebrate and preserve African heritage."
+      "description": "Subscribe to our newsletter to receive updates about our projects, events, and resources that celebrate and preserve African heritage.",
+      "successTitle": "Thank You for Subscribing!",
+      "successMessage": "You're now part of our community. Watch your inbox for updates and news about African heritage and history.",
+      "invalidEmail": "Please enter a valid email address",
+      "invalidName": "Please enter your name",
+      "genericError": "Something went wrong. Please try again later.",
+      "nameLabel": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "submitting": "Subscribing...",
+      "submitButton": "Subscribe",
+      "privacyNote": "We respect your privacy. Your information will never be shared with third parties."
+    },
+    "footer": {
+      "contactUs": "Contact Us",
+      "contactDescription": "Get in touch with us to learn more about our programs and how you can get involved.",
+      "email": "Email",
+      "address": "Address",
+      "ourPrograms": "Our Programs"
+    },
+    "aboutUs": {
+      "title": "About Us",
+      "mission": "The African Heritage Education and Empowerment Community (AFRHEEC) is a nonprofit organization with a powerful mission: to serve as an Educational, Cultural, and Resource Center rooted in Afro-centric principles. AFRHEEC is committed to empowering Black diaspora, African, and African American communities—including immigrant and refugee families—through culturally grounded education, wellness practices, and access to essential resources.",
+      "history": "Since its inception, AFRHEEC has prioritized early literacy, culturally specific community events, and family-centered programming in Laine, Marion, Multnomah, and Washington counties in Oregon. Our focus is on healing-centered engagement, traditional foodways, mental health support, and parenting education tailored for families navigating new cultural terrain in the United States.",
+      "approach": "With an approach that is holistic and community-informed, AFRHEEC recognizes the unique challenges refugee and immigrant families face, especially in parenting across cultures, learning a new language, and adapting to a new environment and vastly different culture. We aim to fill gaps to support all black identifying families through programs that are accessible, nurturing, and culturally relevant.",
+      "boardLink": "Meet Our Board of Directors"
+    },
+    "board": {
+      "title": "Board of Directors",
+      "frieda": {
+        "name": "Frieda Bikele",
+        "title": "Chairwoman, AFRHEEC Board of Directors",
+        "bio1": "Frieda Bikele is a lifelong advocate for equity, inclusion, and social justice, bringing over 20 years of leadership experience across government agencies, international diplomacy, and nonprofit sectors in both Cameroon and the United States. She currently serves as a Service Equity Manager within a government agency, where she leads efforts to dismantle systemic inequities and build inclusive policies that serve diverse and historically marginalized communities.",
+        "bio2": "Fluent in French, Pidgin English, and several African native languages, Frieda's global perspective is matched by her deep community roots. She holds a Bachelor's degree in Sociology and Communication, as well as dual Master's degrees—one in Socio-Anthropology of Health and another in International Studies with a concentration in Public Health Policy. Her academic background, paired with her lived experience as a woman of African descent navigating multiple systems, fuels her powerful and personal approach to advocacy.",
+        "bio3": "As Chairwoman of AFRHEEC, Frieda leads with empathy and clarity of purpose. She is committed to advancing culturally grounded programs that support refugee, immigrant, and African heritage communities—particularly youth and families navigating educational and systemic barriers. Her passion for community connection shows in her outreach work, which includes linking underserved populations to critical resources and uplifting the voices of refugees and asylum seekers.",
+        "bio4": "Raised in Douala, Cameroon and inspired by her mother's resilience, Frieda's leadership is rooted in values of compassion, justice, and collective empowerment. She envisions a world where every child—regardless of their background—can thrive in systems that honor their identity and potential.",
+        "bio5": "In her free time, Frieda enjoys trail running, backpacking, and building deep connections within her community. She is especially energized by mentoring the next generation and encouraging young leaders to rise together in solidarity and service.",
+        "bio6": "For Frieda, leadership is not just about direction—it's about transformation. Her work continues to shape more equitable pathways for those who have been excluded for too long, always guided by a vision of a just and inclusive future."
+      },
+      "lia": {
+        "name": "Li'a Hammonds",
+        "title": "Vice Chairwoman, AFRHEEC Board of Directors",
+        "bio1": "Li'a Hammonds is a seasoned public relations and digital media executive whose work is rooted in advancing Justice, Equity, Diversity, and Inclusion (JEDI) across public and private sectors. A trusted voice in strategic communication and cultural leadership, Li'a is one of the few DEI practitioners worldwide certified to international DEI-ISO standards, positioning her at the forefront of global equity frameworks.",
+        "bio2": "With more than a decade of experience shaping narratives, protecting brand integrity, and building equity-centered campaigns, Li'a brings invaluable strategic insight to AFRHEEC's public presence. As Vice Chairwoman and lead communications strategist, she ensures that AFRHEEC's messaging honors its mission, resonates with its diverse communities, and uplifts the stories of those it serves through inclusive media practices.",
+        "bio3": "Li'a holds degrees in Communication Studies, a Master of Science in Business Analytics (MSBA), and a Master of Science in Strategic Communications. She is currently pursuing her doctorate, furthering her expertise in equity-driven leadership and organizational transformation. Throughout her dynamic career, she has led gubernatorial campaign messaging, developed crisis communication plans for public safety agencies, advised corporations on DEI strategies, and founded her own agency—Nimble Media Strategies—which supports mission-driven organizations in telling powerful, authentic stories.",
+        "bio4": "Currently serving as the Equity Communications Strategist for a government agency, Li'a also brings a deeply personal commitment to community. She is an advocate for culturally affirming education, racial healing, and the intentional inclusion of historically excluded voices—especially across digital and institutional platforms.",
+        "bio5": "Outside of her professional work, Li'a finds joy in raising her daughters, Xora and Xuri, and serving alongside other leaders to strengthen local community ties. Her work with AFRHEEC is not just professional—it is personal. As a mother, cultural strategist, and equity practitioner, she champions a future where every family has access to opportunity, literacy, and the dignity of being seen and heard."
+      },
+      "luc": {
+        "name": "Luc René Mbousya",
+        "title": "Board Treasurer",
+        "bio1": "Luc René Mbousya brings over 18 years of diverse experience in supply chain management, financial operations, and data analytics to his role as AFRHEEC's Accountant and Board Treasurer. With a career spanning multiple industries—including engine assembly, semiconductor R&D, and inventory management—Luc has developed a strong track record of optimizing business processes and improving operational efficiency.",
+        "bio2": "Luc is highly skilled in retail inventory systems, production scheduling, and cross-departmental collaboration. He is proficient in tools such as SAP, Cognos, TeamSupport B2B, Confluence CRM, and forecasting models, and is an expert-level user of Microsoft Excel. His analytical strengths are supported by working knowledge of statistical tools like Minitab, SAS, SPSS, and basic SQL, which he applies to ensure precise financial tracking and data-driven decision-making.",
+        "bio3": "At AFRHEEC, Luc plays a critical role in maintaining the organization's financial integrity and ensuring responsible stewardship of resources. His business acumen, technical expertise, and deep commitment to equitable community service make him a vital asset to AFRHEEC's mission of empowering African heritage families through education and culturally affirming programs."
+      }
+    },
+    "community": {
+      "title": "Community",
+      "education": {
+        "title": "Education",
+        "description": "Culturally responsive educational programs that support early literacy development and academic success for children and families.",
+        "link": "Learn More About Education Programs"
+      },
+      "cultural": {
+        "title": "Cultural",
+        "description": "Programs and events that celebrate and preserve African heritage, traditions, and cultural practices.",
+        "link": "Explore Cultural Programs"
+      },
+      "wellness": {
+        "title": "Wellness",
+        "description": "Mental health support, wellness practices, and holistic approaches to community health and healing.",
+        "link": "Discover Wellness Services"
+      },
+      "resources": {
+        "title": "Resources",
+        "description": "Access to essential resources, support services, and community connections for families and individuals.",
+        "link": "Access Resources"
+      },
+      "events": {
+        "title": "Community Events",
+        "description": "Join us for cultural celebrations, educational workshops, and community gatherings that strengthen our bonds and honor our shared heritage.",
+        "link": "View All Community Events"
+      }
+    },
+    "education": {
+      "title": "Education",
+      "grantText": "Grant provided by Meyer Memorial Trust",
+      "srpTitle": "AFRHEEC Summer Reading Program – Program Overview",
+      "srpDescription1": "AFRHEEC's",
+      "srpLink": "Summer Reading Program",
+      "srpDescription2": "is a culturally responsive, community-rooted initiative designed to support early literacy development for students in grades 1–3. Centered on the belief that every child deserves access to joyful, affirming, and effective learning, this program provides",
+      "highDosage": "high-dosage tutoring",
+      "srpDescription3": "rooted in the",
+      "scienceOfReading": "Science of Reading and Writing",
+      "srpDescription4": "with a strong focus on multilingual learners and children from historically underserved communities.",
+      "srpDescription5": "Through small group instruction (no more than four students per group), students receive",
+      "targetedSupport": "targeted literacy support",
+      "srpDescription6": "in decoding, fluency, vocabulary, and comprehension. Sessions are led by trained tutors who reflect the cultural and linguistic backgrounds of the students they serve. Learning is supported by engaging, culturally relevant materials and reinforced with storytelling, games, and family-focused literacy activities.",
+      "srpDescription7": "The program is designed to reduce summer learning loss and build foundational reading skills that prepare students for the upcoming school year—while also affirming students' identities, home languages, and community histories.",
+      "keyFeatures": "Key features include:",
+      "feature1": "Twice-weekly tutoring sessions for 10 weeks",
+      "feature2": "Individualized progress tracking and literacy assessments",
+      "feature3": "Culturally and linguistically responsive curriculum",
+      "feature4": "Family engagement events, workshops, and take-home materials",
+      "feature5": "Snacks, transportation assistance, and bilingual communication for families",
+      "locationInfo": "Held in trusted neighborhood spaces across the Willamette Valley—including Salem and Eugene—the program is",
+      "freeOfCharge": "free of charge",
+      "locationInfo2": "and open to families in our service area.",
+      "srp2024": "Summer Reading Program 2024",
+      "register2025": "Register for the 2025 Summer Reading Program",
+      "registerChild": "Register Your Child Today"
     }
   }
   

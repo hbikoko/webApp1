@@ -50,7 +50,7 @@ function Navbar() {
             </Link>
           </li>
         <li>
-            <Link to="/our-story" onClick={handleLinkClick}>
+            <Link to="/about-us" onClick={handleLinkClick}>
               {t('navbar.about', 'About Us')}
             </Link>
           </li>

@@ -19,6 +19,9 @@ import CurrentProjectsPage from './components/CurrentProjectsPage';
 import PolicyPositionsPage from './components/PolicyPositionsPage';
 import CountryPage from './components/CountryPage';
 import SupportPage from './components/SupportPage';
+import AboutUsPage from './components/AboutUsPage';
+import BoardOfDirectorsPage from './components/BoardOfDirectorsPage';
+import EducationPage from './components/EducationPage';
 
 import './App.css';
 import CommunityEvents from './components/CommunityEvents';
@@ -31,6 +34,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/programs" element={<ProgramsPage />} />
+        <Route path="/about-us" element={<AboutUsPage />} />
+        <Route path="/board-of-directors" element={<BoardOfDirectorsPage />} />
         <Route path="/our-story" element={<StoryPage />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/services" element={<ServicesPage />} />
@@ -38,6 +43,10 @@ function App() {
         {/* Card subpages */}
         <Route path="/services/heritage-and-history" element={<HeritageHistoryPage />} />
         <Route path="/services/community" element={<CommunityPage />} />
+        <Route path="/services/education" element={<EducationPage />} />
+        <Route path="/services/cultural" element={<ComingSoon />} />
+        <Route path="/services/wellness" element={<ComingSoon />} />
+        <Route path="/services/resources" element={<ComingSoon />} />
         <Route path="/services/current-projects" element={<CurrentProjectsPage />} />
         <Route path="/services/policy-and-positions" element={<PolicyPositionsPage />} />
 

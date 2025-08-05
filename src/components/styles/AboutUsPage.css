@@ -1,0 +1,88 @@
+.about-us-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 120px 20px 60px;
+  background: linear-gradient(120deg, #f0f8ff, #e6f7ff);
+  min-height: 100vh;
+}
+
+.about-us-title {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.about-us-content {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.about-us-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.about-us-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.about-us-links {
+  text-align: center;
+}
+
+.board-link {
+  display: inline-block;
+  background-color: #2E7D32;
+  color: white;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.board-link:hover {
+  background-color: #1B5E20;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.board-link:focus {
+  outline: 2px solid #ffdd00;
+  outline-offset: 2px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .about-us-container {
+    padding: 100px 15px 40px;
+  }
+  
+  .about-us-title {
+    font-size: 2rem;
+  }
+  
+  .about-us-content {
+    padding: 30px 20px;
+  }
+  
+  .about-us-paragraph {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .board-link {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+} 

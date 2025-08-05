@@ -66,5 +66,120 @@
     "paragraph6": "Explorer l'héritage africain n'est pas un exercice académique, mais une stratégie critique pour l'autonomisation collective. En comprenant les contextes historiques, les communautés noires peuvent élaborer des programmes éducatifs, créer des stratégies économiques, construire des réseaux de solidarité, défier le racisme systémique et favoriser la guérison psychologique.",
     "section6": "Conclusion: Un Voyage Continu",
     "paragraph7": "L'exploration de l'héritage africain ne consiste pas à s'attarder sur le passé, mais à construire un avenir plus juste et équitable — un processus continu de redécouverte, de guérison et de transformation. Chaque histoire retrouvée, chaque tradition rappelée, et chaque vérité historique reconnue est un acte de résistance et de restauration."
+  },
+  "newsletter": {
+    "title": "Cultiver des Racines",
+    "description": "Abonnez-vous à notre newsletter pour recevoir des mises à jour sur nos projets, événements et ressources qui célèbrent et préservent le patrimoine africain.",
+    "successTitle": "Merci de Vous Être Abonné !",
+    "successMessage": "Vous faites maintenant partie de notre communauté. Surveillez votre boîte de réception pour les mises à jour et les nouvelles sur le patrimoine et l'histoire africains.",
+    "invalidEmail": "Veuillez entrer une adresse e-mail valide",
+    "invalidName": "Veuillez entrer votre nom",
+    "genericError": "Quelque chose s'est mal passé. Veuillez réessayer plus tard.",
+    "nameLabel": "Nom Complet",
+    "namePlaceholder": "Entrez votre nom complet",
+    "emailLabel": "Adresse E-mail",
+    "emailPlaceholder": "Entrez votre adresse e-mail",
+    "submitting": "Inscription...",
+    "submitButton": "S'abonner",
+    "privacyNote": "Nous respectons votre vie privée. Vos informations ne seront jamais partagées avec des tiers."
+  },
+  "footer": {
+    "contactUs": "Contactez-Nous",
+    "contactDescription": "Contactez-nous pour en savoir plus sur nos programmes et comment vous pouvez vous impliquer.",
+    "email": "E-mail",
+    "address": "Adresse",
+    "ourPrograms": "Nos Programmes"
+  },
+  "aboutUs": {
+    "title": "À Propos de Nous",
+    "mission": "La Communauté d'Éducation et d'Empowerment du Patrimoine Africain (AFRHEEC) est une organisation à but non lucratif avec une mission puissante : servir de Centre Éducatif, Culturel et de Ressources enraciné dans les principes afrocentriques. AFRHEEC s'engage à donner du pouvoir aux communautés de la diaspora noire, africaines et afro-américaines—y compris les familles d'immigrants et de réfugiés—par l'éducation culturellement ancrée, les pratiques de bien-être, et l'accès aux ressources essentielles.",
+    "history": "Depuis sa création, AFRHEEC a priorisé l'alphabétisation précoce, les événements communautaires culturellement spécifiques, et la programmation centrée sur la famille dans les comtés de Laine, Marion, Multnomah, et Washington en Oregon. Notre focus est sur l'engagement centré sur la guérison, les traditions culinaires, le soutien à la santé mentale, et l'éducation parentale adaptée aux familles naviguant dans un nouveau terrain culturel aux États-Unis.",
+    "approach": "Avec une approche holistique et informée par la communauté, AFRHEEC reconnaît les défis uniques auxquels font face les familles de réfugiés et d'immigrants, surtout dans l'éducation parentale à travers les cultures, l'apprentissage d'une nouvelle langue, et l'adaptation à un nouvel environnement et une culture très différente. Nous visons à combler les lacunes pour soutenir toutes les familles s'identifiant comme noires à travers des programmes accessibles, nourrissants, et culturellement pertinents.",
+    "boardLink": "Rencontrez Notre Conseil d'Administration"
+  },
+  "board": {
+    "title": "Conseil d'Administration",
+    "frieda": {
+      "name": "Frieda Bikele",
+      "title": "Présidente, Conseil d'Administration AFRHEEC",
+      "bio1": "Frieda Bikele est une défenseure de toute une vie pour l'équité, l'inclusion, et la justice sociale, apportant plus de 20 ans d'expérience de leadership à travers les agences gouvernementales, la diplomatie internationale, et les secteurs à but non lucratif au Cameroun et aux États-Unis. Elle sert actuellement comme Gestionnaire de l'Équité des Services au sein d'une agence gouvernementale, où elle dirige les efforts pour démanteler les iniquités systémiques et construire des politiques inclusives qui servent les communautés diverses et historiquement marginalisées.",
+      "bio2": "Courante en français, anglais pidgin, et plusieurs langues africaines natives, la perspective globale de Frieda est assortie de ses racines communautaires profondes. Elle détient un diplôme de licence en Sociologie et Communication, ainsi que des diplômes de maîtrise doubles—un en Socio-Anthropologie de la Santé et un autre en Études Internationales avec une concentration en Politique de Santé Publique. Son parcours académique, jumelé à son expérience vécue en tant que femme d'ascendance africaine naviguant dans plusieurs systèmes, alimente son approche puissante et personnelle de l'advocacy.",
+      "bio3": "En tant que Présidente d'AFRHEEC, Frieda dirige avec empathie et clarté de but. Elle s'engage à faire avancer des programmes culturellement ancrés qui soutiennent les communautés de réfugiés, d'immigrants, et du patrimoine africain—particulièrement les jeunes et les familles naviguant dans les barrières éducatives et systémiques. Sa passion pour la connexion communautaire se montre dans son travail de sensibilisation, qui inclut lier les populations mal desservies aux ressources critiques et élever les voix des réfugiés et demandeurs d'asile.",
+      "bio4": "Élevée à Douala, Cameroun et inspirée par la résilience de sa mère, le leadership de Frieda est enraciné dans les valeurs de compassion, justice, et empowerment collectif. Elle envisage un monde où chaque enfant—peu importe son origine—peut prospérer dans des systèmes qui honorent son identité et son potentiel.",
+      "bio5": "Dans son temps libre, Frieda aime la course en sentier, le randonnée, et construire des connexions profondes dans sa communauté. Elle est particulièrement énergisée par le mentorat de la prochaine génération et encourager les jeunes leaders à s'élever ensemble dans la solidarité et le service.",
+      "bio6": "Pour Frieda, le leadership n'est pas seulement une question de direction—c'est une question de transformation. Son travail continue de façonner des voies plus équitables pour ceux qui ont été exclus trop longtemps, toujours guidé par une vision d'un avenir juste et inclusif."
+    },
+    "lia": {
+      "name": "Li'a Hammonds",
+      "title": "Vice-Présidente, Conseil d'Administration AFRHEEC",
+      "bio1": "Li'a Hammonds est une dirigeante chevronnée en relations publiques et médias numériques dont le travail est enraciné dans l'avancement de la Justice, l'Équité, la Diversité, et l'Inclusion (JEDI) à travers les secteurs public et privé. Une voix de confiance en communication stratégique et leadership culturel, Li'a est l'une des rares praticiennes DEI au monde certifiées aux normes internationales DEI-ISO, la positionnant à l'avant-garde des cadres d'équité mondiale.",
+      "bio2": "Avec plus d'une décennie d'expérience façonnant les récits, protégeant l'intégrité de la marque, et construisant des campagnes centrées sur l'équité, Li'a apporte un aperçu stratégique inestimable à la présence publique d'AFRHEEC. En tant que Vice-Présidente et stratège en communications principale, elle s'assure que la messagerie d'AFRHEEC honore sa mission, résonne avec ses communautés diverses, et élève les histoires de ceux qu'elle sert à travers des pratiques médiatiques inclusives.",
+      "bio3": "Li'a détient des diplômes en Études de Communication, une Maîtrise en Sciences en Analyse Commerciale (MSBA), et une Maîtrise en Sciences en Communications Stratégiques. Elle poursuit actuellement son doctorat, approfondissant son expertise en leadership axé sur l'équité et transformation organisationnelle. Tout au long de sa carrière dynamique, elle a dirigé la messagerie de campagnes gubernatoriales, développé des plans de communication de crise pour les agences de sécurité publique, conseillé des corporations sur les stratégies DEI, et fondé sa propre agence—Nimble Media Strategies—qui soutient les organisations axées sur la mission en racontant des histoires puissantes et authentiques.",
+      "bio4": "Servant actuellement comme Stratège en Communications d'Équité pour une agence gouvernementale, Li'a apporte aussi un engagement communautaire profondément personnel. Elle est une défenseure de l'éducation culturellement affirmante, de la guérison raciale, et de l'inclusion intentionnelle des voix historiquement exclues—surtout à travers les plateformes numériques et institutionnelles.",
+      "bio5": "En dehors de son travail professionnel, Li'a trouve de la joie à élever ses filles, Xora et Xuri, et servir aux côtés d'autres leaders pour renforcer les liens communautaires locaux. Son travail avec AFRHEEC n'est pas seulement professionnel—il est personnel. En tant que mère, stratège culturelle, et praticienne de l'équité, elle défend un avenir où chaque famille a accès à l'opportunité, l'alphabétisation, et la dignité d'être vue et entendue."
+    },
+    "luc": {
+      "name": "Luc René Mbousya",
+      "title": "Trésorier du Conseil",
+      "bio1": "Luc René Mbousya apporte plus de 18 ans d'expérience diverse en gestion de la chaîne d'approvisionnement, opérations financières, et analyse de données à son rôle de Comptable et Trésorier du Conseil d'AFRHEEC. Avec une carrière couvrant plusieurs industries—y compris l'assemblage de moteurs, R&D de semi-conducteurs, et gestion d'inventaire—Luc a développé un solide bilan d'optimisation des processus commerciaux et d'amélioration de l'efficacité opérationnelle.",
+      "bio2": "Luc est hautement qualifié dans les systèmes d'inventaire de détail, la planification de production, et la collaboration inter-départementale. Il est compétent dans des outils tels que SAP, Cognos, TeamSupport B2B, Confluence CRM, et modèles de prévision, et est un utilisateur expert de Microsoft Excel. Ses forces analytiques sont soutenues par une connaissance pratique d'outils statistiques comme Minitab, SAS, SPSS, et SQL de base, qu'il applique pour assurer un suivi financier précis et une prise de décision basée sur les données.",
+      "bio3": "Chez AFRHEEC, Luc joue un rôle critique en maintenant l'intégrité financière de l'organisation et en assurant une intendance responsable des ressources. Son acuité commerciale, expertise technique, et engagement profond envers le service communautaire équitable en font un atout vital à la mission d'AFRHEEC d'habiliter les familles du patrimoine africain par l'éducation et des programmes culturellement affirmants."
+    },
+    "community": {
+      "title": "Communauté",
+      "education": {
+        "title": "Éducation",
+        "description": "Programmes éducatifs culturellement réactifs qui soutiennent le développement de la littératie précoce et la réussite scolaire des enfants et des familles.",
+        "link": "En Savoir Plus Sur Les Programmes Éducatifs"
+      },
+      "cultural": {
+        "title": "Culturel",
+        "description": "Programmes et événements qui célèbrent et préservent l'héritage africain, les traditions et les pratiques culturelles.",
+        "link": "Explorer Les Programmes Culturels"
+      },
+      "wellness": {
+        "title": "Bien-être",
+        "description": "Soutien à la santé mentale, pratiques de bien-être et approches holistiques de la santé et de la guérison communautaires.",
+        "link": "Découvrir Les Services De Bien-être"
+      },
+      "resources": {
+        "title": "Ressources",
+        "description": "Accès aux ressources essentielles, services de soutien et connexions communautaires pour les familles et les individus.",
+        "link": "Accéder Aux Ressources"
+      },
+      "events": {
+        "title": "Événements Communautaires",
+        "description": "Rejoignez-nous pour des célébrations culturelles, des ateliers éducatifs et des rassemblements communautaires qui renforcent nos liens et honorent notre héritage partagé.",
+        "link": "Voir Tous Les Événements Communautaires"
+      }
+    },
+    "education": {
+      "title": "Éducation",
+      "grantText": "Subvention fournie par Meyer Memorial Trust",
+      "srpTitle": "Programme de Lecture d'Été AFRHEEC – Aperçu du Programme",
+      "srpDescription1": "Le",
+      "srpLink": "Programme de Lecture d'Été",
+      "srpDescription2": "d'AFRHEEC est une initiative culturellement réactive et enracinée dans la communauté conçue pour soutenir le développement de la littératie précoce pour les élèves de la 1ère à la 3ème année. Centré sur la croyance que chaque enfant mérite l'accès à un apprentissage joyeux, affirmatif et efficace, ce programme fournit",
+      "highDosage": "du tutorat à haute dose",
+      "srpDescription3": "enraciné dans la",
+      "scienceOfReading": "Science de la Lecture et de l'Écriture",
+      "srpDescription4": "avec un fort accent sur les apprenants multilingues et les enfants des communautés historiquement mal desservies.",
+      "srpDescription5": "Par l'instruction en petits groupes (pas plus de quatre élèves par groupe), les élèves reçoivent",
+      "targetedSupport": "un soutien ciblé à la littératie",
+      "srpDescription6": "en décodage, fluidité, vocabulaire et compréhension. Les sessions sont dirigées par des tuteurs formés qui reflètent les antécédents culturels et linguistiques des élèves qu'ils servent. L'apprentissage est soutenu par des matériaux engageants et culturellement pertinents et renforcé par la narration, les jeux et les activités de littératie centrées sur la famille.",
+      "srpDescription7": "Le programme est conçu pour réduire la perte d'apprentissage estival et construire des compétences de lecture fondamentales qui préparent les élèves pour l'année scolaire à venir—tout en affirmant également les identités, langues maternelles et histoires communautaires des élèves.",
+      "keyFeatures": "Les caractéristiques principales incluent :",
+      "feature1": "Sessions de tutorat bi-hebdomadaires pendant 10 semaines",
+      "feature2": "Suivi des progrès individualisé et évaluations de littératie",
+      "feature3": "Curriculum culturellement et linguistiquement réactif",
+      "feature4": "Événements d'engagement familial, ateliers et matériaux à emporter",
+      "feature5": "Collations, assistance au transport et communication bilingue pour les familles",
+      "locationInfo": "Tenus dans des espaces de quartier de confiance à travers la vallée de Willamette—y compris Salem et Eugene—le programme est",
+      "freeOfCharge": "gratuit",
+      "locationInfo2": "et ouvert aux familles de notre zone de service.",
+      "srp2024": "Programme de Lecture d'Été 2024",
+      "register2025": "S'inscrire au Programme de Lecture d'Été 2025",
+      "registerChild": "Inscrire Votre Enfant Aujourd'hui"
+    }
   }
 }

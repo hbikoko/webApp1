@@ -20,7 +20,7 @@
 .services-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 60px 80px; /* Increased from 20px - first value is row gap, second is column gap */
+  gap: 60px 40px; /* Reduced column gap from 80px to 40px */
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -36,7 +36,7 @@
 }
 
 .service-block img {
-  width: 90px;
+  width: 110px;
   height: auto;
   display: block;
   margin: 0 auto 10px;

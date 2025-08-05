@@ -66,6 +66,121 @@
     "paragraph6": "Ukucwaninga ifa lase-Afrika akuyona nje into yokufunda, kodwa kuyisu elibalulekile lokunika amandla umphakathi. Ngokwazi izizinda zomlando, abantu abamnyama bangakha izinhlelo zemfundo, benze amasu ezomnotho, bakhe amanethiwekhi okuhlangana, baphonsela inselelo izinhlelo zobandlululo, futhi bakhuthaze ukululama kwengqondo.",
     "section6": "Isiphetho: Uhambo Olungapheli",
     "paragraph7": "Ukucwaninga ifa lase-Afrika akugxili ekubukeni kwedlule kuphela kodwa ekwakheni ikusasa elilingene nelinobulungisa—inqubo eqhubekayo yokuthola kabusha, ukululama, nokuguquka. Wonke umlando otholakele, lonke isiko elikhunjulwayo, kanye neqiniso elivunywa ngabantu liyisenzo sokumelana nokubuyiselwa."
+  },
+  "newsletter": {
+    "title": "Khulisa Izimpande",
+    "description": "Bhalisa kulezi zindaba zethu ukuze uthole izibuyekezo mayelana namaphrojekthi ethu, imicimbi, nezinsiza ezihlonipha futhi zigcina ifa lase-Afrika.",
+    "successTitle": "Siyabonga Ngokubhalisa!",
+    "successMessage": "Manje uyingxenye yomphakathi wethu. Bheka ibhokisi lakho leposi ukuze uthole izibuyekezo nezindaba mayelana nefa lase-Afrika nomlando.",
+    "invalidEmail": "Sicela ufake ikheli le-imeyili elivumelekile",
+    "invalidName": "Sicela ufake igama lakho",
+    "genericError": "Kukhona okuhambile. Sicela uzame futhi kamuva.",
+    "nameLabel": "Igama Elicacile",
+    "namePlaceholder": "Faka igama lakho elicacile",
+    "emailLabel": "Ikheli Le-imeyili",
+    "emailPlaceholder": "Faka ikheli lakho le-imeyili",
+    "submitting": "Iyabhalisa...",
+    "submitButton": "Bhalisa",
+    "privacyNote": "Sihlonipha ubumfihlo bakho. Ulwazi lwakho ngeke lwabiwe nabanye abantu."
+  },
+  "footer": {
+    "contactUs": "Xhumana Nathi",
+    "contactDescription": "Xhumana nathi ukuze ufunde kabanzi mayelana nezinhlelo zethu nendlela ongazibandakanya ngayo.",
+    "email": "I-imeyili",
+    "address": "Ikheli",
+    "ourPrograms": "Izinhlelo Zethu"
+  },
+  "aboutUs": {
+    "title": "Mayelana Nathi",
+    "mission": "Umphakathi Wokufundisa Nokunika Amandla Ifa Lase-Afrika (AFRHEEC) yinhlangano engenzi nzuzo enenjongo enamandla: ukusebenza njengeSikhungo Sokufundisa, Amasiko, Nezinsiza ezixhumene nemigomo ye-Afrocentric. I-AFRHEEC izibophezele ekunikezeni amandla imiphakathi yabantu abamnyama base-diaspora, abantu base-Afrika, nabantu abamnyama baseMelika—kubandakanya imindeni yabokufika nababaleki—ngokufundisa okuxhumene namasiko, imikhuba yokunempilo, nokufinyelela ezinsizeni ezibalulekile.",
+    "history": "Kusukela ekusungulweni kwayo, i-AFRHEEC ibeke ukuqala ekufundeni kwangaphambi kwesikhathi, imicimbi yomphakathi ehambisana namasiko, kanye nezinhlelo ezigxile emindenini ezifundazweni zaseLaine, Marion, Multnomah, naseWashington e-Oregon. Inhloso yethu ukugxila ekubandakanyekeni okugxile ekulaphekeni, izindlela zokudla zendabuko, ukwesekwa kwezempilo yengqondo, kanye nemfundo yokukhulelwa eyenzelwe imindeni ezihamba ezindaweni ezintsha zamasiko e-United States.",
+    "approach": "Ngenqubo ephelele futhi eyaziwa umphakathi, i-AFRHEEC iyabona izinselelo eziyingqayizivele ezibhekene nemindeni yababaleki nabokufika, ikakhulukazi ekukhulelweni kuzo zonke izizwe, ukufunda ulimi olusha, nokujwayela indawo entsha kanye nesiko elihluke kakhulu. Sihlose ukugcwalisa izikhala zokusekela yonke imindeni ezizibiza ngokuthi abamnyama ngamahlelo atholakalayo, anakekela, futhi ahambisana namasiko.",
+    "boardLink": "Hlangana NeBodi Yethu Yabaholi"
+  },
+  "board": {
+    "title": "Bodi Yabaholi",
+    "frieda": {
+      "name": "Frieda Bikele",
+      "title": "USihlalo, IBodi Yabaholi Be-AFRHEEC",
+      "bio1": "UFrieda Bikele ungumvikeli wezimpilo zonke zokulingana, ukubandakanywa, kanye nobulungiswa bezenhlalo, eza nolwazi lweminyaka engaphezu kwama-20 lobuholi kuzo zonke izinhlaka zikahulumeni, ubudlelwano bezwe lonke, kanye nemikhakha yezinhlangano ezingenzi nzuzo eCameroon nase-United States. Njengamanje usebenza njengoMphathi Wokulingana Kwezinsizakalo ngaphakathi kwenhlaka kahulumeni, lapho ahola imizamo yokudiliza ukungalingani kohlelo nokwakha izinqubomgomo zokubandakanya ezisebenza imiphakathi ehlukahlukene kanye neyayihlukunyetshwe ngokomlando.",
+      "bio2": "Ekhuluma kahle isiFulentshi, isiNgisi sePidgin, kanye nezilimi eziningana zendabuko zase-Afrika, umbono wakhe womhlaba wonke uhambisana nemizizi yakhe ejulile yomphakathi. Uneziqu zeBachelor's kuSociology kanye neCommunication, kanye neziqu zeMaster's ezimbili—elinye kuSocio-Anthropology Yezempilo kanye nelinye kuInternational Studies enokugxila kuPublic Health Policy. Isizinda sakhe sezemfundo, kanye nolwazi lwakhe lokuhlala njengowesifazane wendabuko yase-Afrika ohamba ezinhlelweni eziningi, kushukumisa indlela yakhe enamandla neyomuntu siqu yokuvikela.",
+      "bio3": "NjengoSihlalo we-AFRHEEC, uFrieda uhola ngomzwelo nokucacileka kwenjongo. Uzibophezele ekuqhubekisela phambili izinhlelo ezixhumene namasiko ezisekela imiphakathi yababaleki, abokufika, kanye nefa lase-Afrika—ikakhulukazi intsha kanye nemindeni ezihamba emithiyweni yemfundo neyohlelo. Intshisekelo yakhe yokuxhumana komphakathi kubonakala emsebenzini wakhe wokufinyelela, okubandakanya ukuxhumanisa abantu abangafinyelelwa kahle nezinsiza ezibalulekile nokuphakamisa amazwi ababaleki nabaceli ukusabela.",
+      "bio4": "Ekhulele eDouala, Cameroon futhi ekhuthazwa ukuzimisela kukanina, ubuholi bukaFrieda bususelwa kuzindinganiso zomzwelo, ubulungiswa, nokunikezwa kwamandla okwenziwa ndawonye. Ubona umhlaba lapho wonke umntwana—kungakhathaliseki isizinda sakhe—angaphumelela ezinhlelweni ezihlonipha ubunikazi bakhe namandla akhe.",
+      "bio5": "Ngesikhathi sakhe samahhala, uFrieda ujabulela ukugijima emzileni, ukuhamba ngekhwama, nokwakha ukuxhumana okujulile ngaphakathi komphakathi wakhe. Ushukumiswa ikakhulukazi ngokufundisa isizukulwane esizayo nokukhuthaza abaholi abancane ukuba baphakame ndawonye ngobumbano nokukhonza.",
+      "bio6": "KuFrieda, ubuholi akukhona nje ngokuhola—kungokuguqula. Umsebenzi wakhe uyaqhubeka nokwenza izindlela zokulingana kakhudlwana kulabo ababekade behlukunyetshwa isikhathi eside, beholelwa njalo ngombono wokuzayo okulungile nokubandakanya."
+    },
+    "lia": {
+      "name": "Li'a Hammonds",
+      "title": "ISekela Sihlalo, IBodi Yabaholi Be-AFRHEEC",
+      "bio1": "ULi'a Hammonds ungumphathi onolwazi lwezokuxhumana komphakathi kanye nemidiya yedijithali umsebenzi wakhe ususelwa ekuqhubekiseleni phambili uBulungiswa, Ukulingana, Umehluko, Nokubandakanywa (JEDI) kuzo zonke imikhakha yomphakathi neyabangasese. Izwi elithembekile ekuxhumaneni okuhlelekile kanye nobuholi bamasiko, uLi'a ungomunye wabasebenzi abambalwa beDEI emhlabeni wonke abagunyazwe kumazinga omhlaba wonke eDEI-ISO, okumfaka ngaphambili kwezinhlaka zokulingana komhlaba wonke.",
+      "bio2": "Ngolwazi lweminyaka engaphezu kweshumi lokwenza izindaba, ukuvikela ubuqotho bephawu, nokwakha imikhankaso egxile ekulinganeni, uLi'a uletha ukuqonda okuhlelekile okungenakubalwa ekubekhona komphakathi kwe-AFRHEEC. NjengoSekela Sihlalo kanye nomqondisi omkhulu wezokuxhumana, uqinisekisa ukuthi umyalezo we-AFRHEEC uhlonipha injongo yawo, uhambisana nemiphakathi yawo ehlukahlukene, futhi uphakamisa izindaba zalabo abawakhonza ngemikhuba yemidiya yokubandakanya.",
+      "bio3": "ULi'a uneziqu zeCommunication Studies, iMaster of Science kuBusiness Analytics (MSBA), kanye neMaster of Science kuStrategic Communications. Njengamanje ufuna udokotela wakhe, ekuqhubekisela phambili ubuchwepheshe bakhe ekuholeni okuholelwa ukulingana nokuguqulwa kwenhlangano. Kulo lonke umsebenzi wakhe onamandla, uhole umyalezo wemikhankaso yababusi, wakha amapulani okuxhumana ngezinkinga ezizinhlangano zokuphepha komphakathi, weluleka amakampani ngezinqubomgomo zeDEI, futhi wasungula inhlangano yakhe—Nimble Media Strategies—esekela izinhlangano eziholelwa yinjongo ekuxoxa izindaba ezinamandla neziqinisile.",
+      "bio4": "Njengamanje esebenza njengoMqondisi Wezokuxhumana Zokulingana wenhlangano kahulumeni, uLi'a futhi uletha ukuzibophezela okujulile komphakathi. Ungumvikeli wemfundo ehlonipha amasiko, ukulapheka kwobuhlanga, nokubandakanywa ngamabomu kwamazwi ahlukunyetshwe ngokomlando—ikakhulukazi kumapulatifomu edijithali neyizinhlangano.",
+      "bio5": "Ngaphandle komsebenzi wakhe wezobuchwepheshe, uLi'a uthola injabulo ekukhuliseni amadodakazi akhe, uXora noXuri, nokukhonza kanye nabanye abaholi ukuqinisa izibopho zomphakathi wasendaweni. Umsebenzi wakhe ne-AFRHEEC akuwona nje wezobuchwepheshe—uwomuntu siqu. Njengomama, umqondisi wamasiko, nomsebenzi wokulingana, uvikela ikusasa lapho wonke umndeni enokufinyelela amathuba, ukufunda, kanye nesithunzi sokubonwa nokuzwakala."
+    },
+    "luc": {
+      "name": "Luc René Mbousya",
+      "title": "UMgcini Wemali WeBodi",
+      "bio1": "ULuc René Mbousya uletha ulwazi lweminyaka engaphezu kwama-18 lwezokulawula umnyororo wokuhambisa, imisebenzi yezimali, kanye nokuhlaziya idatha kumsebenzi wakhe wokuba nguMabhuku kanye noMgcini Wemali WeBodi ye-AFRHEEC. Ngomsebenzi obandakanya imikhakha eminingi—kubandakanya ukuhlanganiswa kwezinjini, R&D ye-semiconductor, nokulawula amanani—uLuc uye wakha irekhodi eliqinile lokuthuthukisa izinqubo zezebhizinisi nokuthuthukisa ukusebenza kahle kwemisebenzi.",
+      "bio2": "ULuc unamakhono aphezulu ezinhlelweni zokulawula amanani ezitolo, ukuhlela ukukhiqiza, nokubambisana kwamadivishini ahlukene. Unamakhono ezinsiza ezifana neSAP, Cognos, TeamSupport B2B, Confluence CRM, kanye nemodeli zokubikezela, futhi ungumsebenzisi wezinga lobuchwepheshe lweMicrosoft Excel. Amandla akhe okuhlaziya asekelwa ulwazi lokusebenza lwezinsiza zokubala ezifana neMinitab, SAS, SPSS, kanye neSQL eyisisekelo, ayisebenzisa ukuqinisekisa ukulandelela okuqondile kwezezimali nokwenza izinqumo okuholelwa idatha.",
+      "bio3": "Ku-AFRHEEC, uLuc udlala indima ebalulekile ekugcineni ubuqotho bezezimali benhlangano nokuqinisekisa ukulawulwa okunomthwalo wezinsiza. Ukuhlakanipha kwakhe kwezebhizinisi, ubuchwepheshe bezobuchwepheshe, nokuzibophezela okujulile ekukhonzeni umphakathi ngokulingana kumenza ibe yimpahla ebalulekile kumsebenzi we-AFRHEEC wokunikeza amandla imindeni yefa lase-Afrika ngokufundisa kanye nezinhlelo ezihlonipha amasiko."
+    },
+    "community": {
+      "title": "Umphakathi",
+      "education": {
+        "title": "Imfundo",
+        "description": "Izinhlelo zemfundo ezibuyekela ngokwesiko ezisekela ukuthuthukiswa kokufunda kwangaphambi kwesikhathi nempumelelo yezemfundo yezingane nemindeni.",
+        "link": "Funda Okuningi Mayelana Nezinhlelo Zemfundo"
+      },
+      "cultural": {
+        "title": "Amasiko",
+        "description": "Izinhlelo nemicimbi egubha futhi igcine ifa lase-Afrika, amasiko, kanye nemikhuba yamasiko.",
+        "link": "Hlola Izinhlelo Zamasiko"
+      },
+      "wellness": {
+        "title": "Impilo",
+        "description": "Ukusekwa kwezempilo yengqondo, imikhuba yempilo, kanye nezindlela eziphelele zezempilo yomphakathi nokululama.",
+        "link": "Thola Izinsizakalo Zempilo"
+      },
+      "resources": {
+        "title": "Izinsiza",
+        "description": "Ukufinyelela ezinsizeni ezibalulekile, izinsizakalo zokweseka, nokuxhumana komphakathi kwemindeni nabantu ngabanye.",
+        "link": "Finyelela Izinsiza"
+      },
+      "events": {
+        "title": "Imicimbi Yomphakathi",
+        "description": "Hlanganyela nathi kumikhosi yamasiko, amaworkshop emfundo, kanye nemibuthano yomphakathi eqinisa izibopho zethu futhi ihloniphe ifa lethu elihlanganyelwe.",
+        "link": "Bheka Yonke Imicimbi Yomphakathi"
+      }
+    },
+    "education": {
+      "title": "Imfundo",
+      "grantText": "Isipho esinikezwe nguMeyer Memorial Trust",
+      "srpTitle": "Ihlelo Lokufunda Lasehlobo le-AFRHEEC – Ukuqonda Kwesigaba",
+      "srpDescription1": "Ihlelo le-AFRHEEC lokufunda",
+      "srpLink": "Lasehlobo",
+      "srpDescription2": "liyisinyathelo esibuyekela ngokwesiko, esixhumene nomphakathi esiklanyelwe ukusekela ukuthuthukiswa kokufunda kwangaphambi kwesikhathi kwabafundi bebanga 1-3. Eligxile ekukholweni ukuthi wonke umntwana ufanele ukufinyelela ekufundeni okujabulisayo, okuthobekayo, nokusebenzayo, lolu hlelo lunikeza",
+      "highDosage": "ukufundisa okuphezulu",
+      "srpDescription3": "elixhumene ne",
+      "scienceOfReading": "Isayensi Yokufunda Nokubhala",
+      "srpDescription4": "ngokugxila kakhulu kubafundi abakhuluma izilimi eziningi nezingane ezivela emiphakathini eyayifikiwa kabi ngokomlando.",
+      "srpDescription5": "Ngokufundisa amaqembu amancane (akukho abafundi abangaphezu kwabane eqenjini), abafundi bathola",
+      "targetedSupport": "ukwesekwa kokufunda okuhloselwe",
+      "srpDescription6": "ekusikeni, ukushesha, amagama, nokuqonda. Amaseshini aholwa abafundisi abaqeqeshwe ababonisa izizinda zamasiko nezilimi zabafundi ababakhonza. Ukufunda kusekelwa izinto ezivusa umdlandla, ezixhumene namasiko futhi kuqiniswa ngokuxoxa izindaba, imidlalo, nemisebenzi yokufunda egxile emindenini.",
+      "srpDescription7": "Ihlelo liklanyelwe ukunciphisa ukulahlekelwa kokufunda kwasihlobo nokwakha amakhono okufunda ayisisekelo okulungiselela abafundi unyaka wesikole ozayo—kanti futhi liqinisa ubunikazi babafundi, izilimi zasekhaya, nemlando womphakathi.",
+      "keyFeatures": "Izici ezibalulekile zibandakanya:",
+      "feature1": "Amaseshini okufundisa kabili ngeviki kwezinsuku eziyi-10",
+      "feature2": "Ukulandelela inqubekelaphambili yomuntu siqu kanye nokuhlola kokufunda",
+      "feature3": "Ikharikhulamu ebuyekela ngokwesiko nolimi",
+      "feature4": "Imicimbi yokubandakanya imindeni, amaworkshop, nezinto zokuthatha ekhaya",
+      "feature5": "Ukudla okuncane, usizo lokuhamba, nokuxhumana ngezilimi ezimbili kwemindeni",
+      "locationInfo": "Kwenziwa ezindaweni zokwethemba zasekitongoji kulo lonke iWillamette Valley—kubandakanya iSalem neEugene—ihlelo",
+      "freeOfCharge": "lizikhulula",
+      "locationInfo2": "futhi livulekele imindeni endaweni yethu yensizakalo.",
+      "srp2024": "Ihlelo Lokufunda Lasehlobo 2024",
+      "register2025": "Bhalisa kwiHlelo Lokufunda Lasehlobo 2025",
+      "registerChild": "Bhalisa Ingane Yakho Namhlanje"
+    }
   }
 }
 

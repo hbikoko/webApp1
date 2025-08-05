@@ -52,6 +52,23 @@
   text-decoration: underline;
 }
 
+.footer-links {
+  margin-top: 25px;
+}
+
+.footer-links a {
+  color: #f4d03f;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .site-footer {
     padding: 50px 15px 35px;
