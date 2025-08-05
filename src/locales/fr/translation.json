@@ -181,5 +181,43 @@
       "register2025": "S'inscrire au Programme de Lecture d'Été 2025",
       "registerChild": "Inscrire Votre Enfant Aujourd'hui"
     }
+  },
+  "support": {
+    "title": "Soutien",
+    "intro": "Votre soutien nous aide à poursuivre notre mission d'autonomiser les communautés du patrimoine africain par l'éducation, les programmes culturels et les ressources essentielles.",
+    "grantsAwarded": {
+      "title": "Subventions Accordées",
+      "description": "Nous sommes reconnaissants pour le généreux soutien de nos partenaires de subvention qui aident à rendre nos programmes possibles.",
+      "meyerTrust": {
+        "name": "Meyer Memorial Trust",
+        "description": "Soutien de subvention pour notre Programme de Lecture d'Été, permettant le développement de la littératie culturellement réactive pour les enfants de la 1ère à la 3ème année."
+      }
+    },
+    "communityPartners": {
+      "title": "Partenaires Communautaires",
+      "description": "Nous collaborons avec des organisations communautaires, des écoles et des partenaires locaux pour fournir efficacement nos programmes et services.",
+      "schools": {
+        "name": "Écoles Locales",
+        "description": "Partenariats avec des écoles de la vallée de Willamette pour soutenir la réussite des étudiants et l'engagement familial."
+      },
+      "community": {
+        "name": "Organisations Communautaires",
+        "description": "Collaborations avec des organisations locales pour fournir des services de soutien complets et une programmation culturelle."
+      },
+      "families": {
+        "name": "Réseaux Familiaux",
+        "description": "Connexions solides avec les réseaux familiaux pour s'assurer que nos programmes répondent aux vrais besoins de notre communauté."
+      },
+      "volunteers": {
+        "name": "Réseau de Bénévoles",
+        "description": "Bénévoles dévoués qui contribuent leur temps et expertise pour soutenir notre mission et nos programmes."
+      }
+    },
+    "cta": {
+      "title": "Rejoignez-nous pour Faire une Différence",
+      "description": "Il y a plusieurs façons de soutenir notre mission. Que ce soit par le bénévolat, les partenariats ou les dons, votre implication aide à renforcer notre communauté.",
+      "contactButton": "Contactez-nous",
+      "donateButton": "Faire un Don"
+    }
   }
 }

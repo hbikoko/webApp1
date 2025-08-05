@@ -181,6 +181,44 @@
       "register2025": "Bhalisa kwiHlelo Lokufunda Lasehlobo 2025",
       "registerChild": "Bhalisa Ingane Yakho Namhlanje"
     }
+  },
+  "support": {
+    "title": "Ukusekela",
+    "intro": "Ukusekela kwakho kusisiza ukuqhubeka nomsebenzi wethu wokunikeza amandla imiphakathi yefa lase-Afrika ngokufundisa, izinhlelo zamasiko kanye nezinsiza ezibalulekile.",
+    "grantsAwarded": {
+      "title": "Izibonelelo Ezinikezwe",
+      "description": "Sibonga ukusekela okukhulu kwabalingani bethu bezibonelelo abasiza ukwenza izinhlelo zethu zenzeke.",
+      "meyerTrust": {
+        "name": "Meyer Memorial Trust",
+        "description": "Ukusekela kwezibonelelo kwiHlelo Lethu Lokufunda Lasehlobo, okunikeza amandla ukuthuthukiswa kokufunda okubuyekela ngokwesiko kwizingane zebanga 1-3."
+      }
+    },
+    "communityPartners": {
+      "title": "Abalingani Bomphakathi",
+      "description": "Sisebenzisana nemiphakathi, izikole, kanye nabalingani bendawo ukuletha izinhlelo kanye nezinsizakalo zethu ngempumelelo.",
+      "schools": {
+        "name": "Izikole Zendawo",
+        "description": "Ubudlelwano nezikole kulo lonke iWillamette Valley ukusekela impumelelo yabafundi nokubandakanyeka kwemindeni."
+      },
+      "community": {
+        "name": "Imiphakathi",
+        "description": "Ubudlelwano nemiphakathi yendawo ukunikeza izinsizakalo eziphelele zokweseka kanye nezinhlelo zamasiko."
+      },
+      "families": {
+        "name": "Amanethiwekhi Emindeni",
+        "description": "Ukuxhumana okuqinile namanethiwekhi emindeni ukuqinisekisa ukuthi izinhlelo zethu zihlangabezana nezidingo zangempela zomphakathi wethu."
+      },
+      "volunteers": {
+        "name": "Inethiwekhi Yabavolontiya",
+        "description": "Abavolontiya abazinikele abanikeza isikhathi sabo nobuchwepheshe ukusekela umsebenzi wethu kanye nezinhlelo."
+      }
+    },
+    "cta": {
+      "title": "Hlanganyela Nathi Ekwenzeni Umehluko",
+      "description": "Kunezindlela eziningi zokusekela umsebenzi wethu. Kungaba ngokuzinikela, ubudlelwano, noma iminikelo, ukubandakanyeka kwakho kusiza ukuqinisa umphakathi wethu.",
+      "contactButton": "Xhumana Nathi",
+      "donateButton": "Nika Imikhiqizo"
+    }
   }
 }
 

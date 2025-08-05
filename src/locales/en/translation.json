@@ -159,7 +159,45 @@
       "locationInfo2": "and open to families in our service area.",
       "srp2024": "Summer Reading Program 2024",
       "register2025": "Register for the 2025 Summer Reading Program",
-      "registerChild": "Register Your Child Today"
+          "registerChild": "Register Your Child Today"
+  },
+  "support": {
+    "title": "Support",
+    "intro": "Your support helps us continue our mission of empowering African heritage communities through education, cultural programs, and essential resources.",
+    "grantsAwarded": {
+      "title": "Grants Awarded",
+      "description": "We are grateful for the generous support of our grant partners who help make our programs possible.",
+      "meyerTrust": {
+        "name": "Meyer Memorial Trust",
+        "description": "Grant support for our Summer Reading Program, enabling culturally responsive literacy development for children in grades 1-3."
+      }
+    },
+    "communityPartners": {
+      "title": "Community Partners",
+      "description": "We collaborate with community organizations, schools, and local partners to deliver our programs and services effectively.",
+      "schools": {
+        "name": "Local Schools",
+        "description": "Partnerships with schools across the Willamette Valley to support student success and family engagement."
+      },
+      "community": {
+        "name": "Community Organizations",
+        "description": "Collaborations with local organizations to provide comprehensive support services and cultural programming."
+      },
+      "families": {
+        "name": "Family Networks",
+        "description": "Strong connections with family networks to ensure our programs meet the real needs of our community."
+      },
+      "volunteers": {
+        "name": "Volunteer Network",
+        "description": "Dedicated volunteers who contribute their time and expertise to support our mission and programs."
+      }
+    },
+    "cta": {
+      "title": "Join Us in Making a Difference",
+      "description": "There are many ways to support our mission. Whether through volunteering, partnerships, or donations, your involvement helps strengthen our community.",
+      "contactButton": "Contact Us",
+      "donateButton": "Donate"
     }
   }
+}
   

@@ -181,6 +181,44 @@
       "register2025": "Jiandikishe kwa Programu ya Usomaji wa Majira ya Joto 2025",
       "registerChild": "Jiandikishe Mtoto Wako Leo"
     }
+  },
+  "support": {
+    "title": "Msaada",
+    "intro": "Msaada wako unatusaidia kuendelea na dhamira yetu ya kuwezesha jamii za urithi wa Kiafrika kupitia elimu, programu za kitamaduni na rasilimali muhimu.",
+    "grantsAwarded": {
+      "title": "Mikopo Iliyotolewa",
+      "description": "Tunashukuru kwa msaada wa kujali wa washirika wetu wa mikopo ambao husaidia kuwezesha programu zetu.",
+      "meyerTrust": {
+        "name": "Meyer Memorial Trust",
+        "description": "Msaada wa mkopo kwa Programu Yetu ya Kusoma ya Majira ya Joto, kuwezesha ukuzaji wa uwezo wa kusoma unaojibu kitamaduni kwa watoto wa daraja la 1-3."
+      }
+    },
+    "communityPartners": {
+      "title": "Washirika wa Jamii",
+      "description": "Tunashirikiana na mashirika ya jamii, shule, na washirika wa ndani kutoa programu na huduma zetu kwa ufanisi.",
+      "schools": {
+        "name": "Shule za Ndani",
+        "description": "Ushirikiano na shule katika Bonde la Willamette kusaidia mafanikio ya wanafunzi na ushiriki wa familia."
+      },
+      "community": {
+        "name": "Mashirika ya Jamii",
+        "description": "Ushirikiano na mashirika ya ndani kutoa huduma kamili za msaada na programu za kitamaduni."
+      },
+      "families": {
+        "name": "Mitandao ya Familia",
+        "description": "Uhusiano imara na mitandao ya familia kuhakikisha programu zetu zinakidhi mahitaji halisi ya jamii yetu."
+      },
+      "volunteers": {
+        "name": "Mtandao wa Wachangiaji",
+        "description": "Wachangiaji waliojitolea ambao huchangia muda na utaalam wao kusaidia dhamira na programu zetu."
+      }
+    },
+    "cta": {
+      "title": "Jiunge Nasi Kufanya Tofauti",
+      "description": "Kuna njia nyingi za kusaidia dhamira yetu. Iwe kupitia kujitolea, ushirikiano, au michango, ushiriki wako husaidia kuimarisha jamii yetu.",
+      "contactButton": "Wasiliana Nasi",
+      "donateButton": "Toa Michango"
+    }
   }
 }
 
