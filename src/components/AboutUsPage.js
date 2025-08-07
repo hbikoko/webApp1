@@ -1,10 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import './styles/AboutUsPage.css';
 
 function AboutUsPage() {
   const { t } = useTranslation();
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    // Force immediate scroll to top with instant behavior
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    });
+    
+    // Also scroll after a short delay to ensure it takes effect
+    const timer = setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant'
+      });
+    }, 50);
+    
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="about-us-container">

@@ -35,30 +35,31 @@ function WWD() {
   const { t } = useTranslation();
 
   return (
-    <div className="wwd-container">
-      <h2 className="wwd-header">
+    <section className="wwd-container" aria-labelledby="what-we-do-title">
+      <h2 id="what-we-do-title" className="wwd-header">
         {t('wwd.header', 'What We Do')}
       </h2>
 
-      <div className="services-container">
-        {servicesData.map((service) => (
-          <Link
-            to={service.path}
-            key={service.title}
-            style={{ textDecoration: 'none', color: 'inherit' }}
-          >
-            <ServiceBlock
-              icon={service.icon}
-              title={t(
-                `wwd.${service.title.replace(/\s+/g, '').toLowerCase()}`,
-                service.title
-              )}
-            />
-          </Link>
+      <div className="services-container" role="list" aria-label="Our services">
+        {servicesData.map((service, index) => (
+          <div key={service.title} role="listitem">
+            <Link
+              to={service.path}
+              style={{ textDecoration: 'none', color: 'inherit' }}
+              aria-label={`Learn more about ${service.title}`}
+            >
+              <ServiceBlock
+                icon={service.icon}
+                title={t(
+                  `wwd.${service.title.replace(/\s+/g, '').toLowerCase()}`,
+                  service.title
+                )}
+              />
+            </Link>
+          </div>
         ))}
       </div>
 
-      {/* → Use Link directly as the “button” element */}
       <Link
         to="/services"
         className="wwd-read-more"
@@ -66,7 +67,7 @@ function WWD() {
       >
         {t('wwd.readMore', 'Read More About What We Do')}
       </Link>
-    </div>
+    </section>
   );
 }
 

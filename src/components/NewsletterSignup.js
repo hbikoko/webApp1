@@ -57,46 +57,58 @@ const NewsletterSignup = () => {
   };
 
   return (
-    <section className="newsletter-section">
+    <section className="newsletter-section" aria-labelledby="newsletter-title">
       <div className="newsletter-container">
-        <h2>{t('newsletter.title', 'Grow Roots')}</h2>
+        <h2 id="newsletter-title">{t('newsletter.title', 'Grow Roots')}</h2>
         <p>{t('newsletter.description', 'Subscribe to our newsletter to receive updates about our projects, events, and resources that celebrate and preserve African heritage.')}</p>
 
         {status === 'success' ? (
-          <div className="success-message">
+          <div className="success-message" role="alert" aria-live="polite">
             <h3>{t('newsletter.successTitle', 'Thank You for Subscribing!')}</h3>
             <p>{t('newsletter.successMessage', 'You\'re now part of our community. Watch your inbox for updates and news about African heritage and history.')}</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="newsletter-form">
+          <form onSubmit={handleSubmit} className="newsletter-form" noValidate>
             <div className="form-row">
               <div className="form-group">
-                <label htmlFor="name">{t('newsletter.nameLabel', 'Full Name')}</label>
+                <label htmlFor="name" id="name-label">
+                  {t('newsletter.nameLabel', 'Full Name')} <span aria-label="required">*</span>
+                </label>
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder={t('newsletter.namePlaceholder', 'Enter your full name')}
                   disabled={status === 'loading'}
+                  aria-labelledby="name-label"
+                  aria-required="true"
+                  aria-invalid={status === 'error' && !name}
                 />
               </div>
               
               <div className="form-group">
-                <label htmlFor="email">{t('newsletter.emailLabel', 'Email Address')}</label>
+                <label htmlFor="email" id="email-label">
+                  {t('newsletter.emailLabel', 'Email Address')} <span aria-label="required">*</span>
+                </label>
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder={t('newsletter.emailPlaceholder', 'Enter your email address')}
                   disabled={status === 'loading'}
+                  aria-labelledby="email-label"
+                  aria-required="true"
+                  aria-invalid={status === 'error' && (!email || !validateEmail(email))}
                 />
               </div>
             </div>
 
             {status === 'error' && (
-              <div className="error-message">
+              <div className="error-message" role="alert" aria-live="assertive">
                 <p>{errorMessage}</p>
               </div>
             )}
@@ -105,11 +117,17 @@ const NewsletterSignup = () => {
               type="submit" 
               className="subscribe-button"
               disabled={status === 'loading'}
+              aria-describedby={status === 'loading' ? 'loading-text' : undefined}
             >
               {status === 'loading' 
                 ? t('newsletter.submitting', 'Subscribing...') 
                 : t('newsletter.submitButton', 'Subscribe')}
             </button>
+            {status === 'loading' && (
+              <span id="loading-text" className="sr-only">
+                {t('newsletter.loading', 'Please wait while we process your subscription')}
+              </span>
+            )}
           </form>
         )}
         

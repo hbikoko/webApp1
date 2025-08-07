@@ -63,20 +63,6 @@ function SupportPage() {
           </div>
         </div>
       </div>
-
-      {/* Call to Action Section */}
-      <div className="support-cta">
-        <h2>{t('support.cta.title', 'Join Us in Making a Difference')}</h2>
-        <p>{t('support.cta.description', 'There are many ways to support our mission. Whether through volunteering, partnerships, or donations, your involvement helps strengthen our community.')}</p>
-        <div className="cta-buttons">
-          <a href="/contact" className="cta-button primary">
-            {t('support.cta.contactButton', 'Contact Us')}
-          </a>
-          <a href="/donate" className="cta-button secondary">
-            {t('support.cta.donateButton', 'Donate')}
-          </a>
-        </div>
-      </div>
     </div>
   );
 }

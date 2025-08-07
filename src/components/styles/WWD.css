@@ -16,11 +16,14 @@
   margin-bottom: 40px;
 }
 
-/* 3. Grid container for 4 columns */
-.services-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 60px 40px; /* Reduced column gap from 80px to 40px */
+/* 3. Flexbox container for 4 columns in a single row */
+.wwd-container .services-container {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 40px !important;
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -97,15 +100,44 @@ button:focus {
 }
 
 /* 7. Responsive: fewer columns */
+@media (max-width: 1024px) {
+  .wwd-container .services-container {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 30px !important;
+  }
+}
+
 @media (max-width: 768px) {
-  .services-container {
-    grid-template-columns: repeat(2, 1fr);
+  .wwd-container .services-container {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 30px !important;
+  }
+  
+  .wwd-container .service-block {
+    flex: 0 0 calc(50% - 15px) !important;
   }
 }
 
 @media (max-width: 480px) {
-  .services-container {
-    grid-template-columns: 1fr;
+  .wwd-container .services-container {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 30px !important;
+  }
+  
+  .wwd-container .service-block {
+    flex: 0 0 auto !important;
   }
 }
 

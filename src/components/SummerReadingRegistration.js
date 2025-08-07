@@ -15,6 +15,7 @@ function SummerReadingRegistration() {
     additionalInfo: ''
   });
   
+  const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -24,14 +25,66 @@ function SummerReadingRegistration() {
       ...prev,
       [name]: value
     }));
+    
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    
+    if (!formData.parentName.trim()) {
+      newErrors.parentName = 'Parent/Guardian name is required';
+    }
+    
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+    
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Phone number is required';
+    }
+    
+    if (!formData.childName.trim()) {
+      newErrors.childName = 'Child\'s name is required';
+    }
+    
+    if (!formData.childAge.trim()) {
+      newErrors.childAge = 'Child\'s age is required';
+    } else if (parseInt(formData.childAge) < 5 || parseInt(formData.childAge) > 12) {
+      newErrors.childAge = 'Child must be between 5 and 12 years old';
+    }
+    
+    if (!formData.childGrade.trim()) {
+      newErrors.childGrade = 'Current grade is required';
+    }
+    
+    if (!formData.address.trim()) {
+      newErrors.address = 'Home address is required';
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+    
     setIsLoading(true);
 
     try {
-      // Submit to Google For
+      // Submit to Google Form
       const formUrl = 'https://docs.google.com/forms/u/0/d/1S03jFoK58l2iiJLGp1PuBtgqO22cGzA7XTA3afjOwjY/formResponse';
       
       const formDataToSubmit = new FormData();
@@ -65,6 +118,7 @@ function SummerReadingRegistration() {
         preferredLanguage: '',
         additionalInfo: ''
       });
+      setErrors({});
     } catch (error) {
       console.error('Error submitting form:', error);
     } finally {
@@ -109,19 +163,19 @@ function SummerReadingRegistration() {
         <ul className="benefits-list">
           <li>
             <span className="icon">📚</span>
-            <strong>Boost reading skills</strong> with small-group tutoring led by trained, caring educators
+            Boost reading skills with small-group tutoring led by trained, caring educators
           </li>
           <li>
             <span className="icon">🌍</span>
-            <strong>Celebrate culture and identity</strong> through diverse books, African storytelling, and bilingual learning
+            Celebrate culture and identity through diverse books, African storytelling, and bilingual learning
           </li>
           <li>
             <span className="icon">🤝</span>
-            <strong>Build community</strong> with other families in a safe, welcoming space
+            Build community with other families in a safe, welcoming space
           </li>
           <li>
             <span className="icon">🍎</span>
-            <strong>Snacks and support</strong> included to make participation easy for your family
+            Snacks and support included to make participation easy for your family
           </li>
         </ul>
 
@@ -130,11 +184,13 @@ function SummerReadingRegistration() {
         </p>
       </div>
 
-      <form className="registration-form" onSubmit={handleSubmit}>
+      <form className="registration-form" onSubmit={handleSubmit} noValidate>
         <h2>Registration Form</h2>
         
         <div className="form-group">
-          <label htmlFor="parentName">Parent/Guardian Name *</label>
+          <label htmlFor="parentName">
+            Parent/Guardian Name <span aria-label="required">*</span>
+          </label>
           <input
             type="text"
             id="parentName"
@@ -142,11 +198,21 @@ function SummerReadingRegistration() {
             value={formData.parentName}
             onChange={handleInputChange}
             required
+            aria-required="true"
+            aria-describedby={errors.parentName ? "parentName-error" : undefined}
+            aria-invalid={!!errors.parentName}
           />
+          {errors.parentName && (
+            <div id="parentName-error" className="error-message" role="alert">
+              {errors.parentName}
+            </div>
+          )}
         </div>
 
         <div className="form-group">
-          <label htmlFor="email">Email Address *</label>
+          <label htmlFor="email">
+            Email Address <span aria-label="required">*</span>
+          </label>
           <input
             type="email"
             id="email"
@@ -154,11 +220,21 @@ function SummerReadingRegistration() {
             value={formData.email}
             onChange={handleInputChange}
             required
+            aria-required="true"
+            aria-describedby={errors.email ? "email-error" : undefined}
+            aria-invalid={!!errors.email}
           />
+          {errors.email && (
+            <div id="email-error" className="error-message" role="alert">
+              {errors.email}
+            </div>
+          )}
         </div>
 
         <div className="form-group">
-          <label htmlFor="phone">Phone Number *</label>
+          <label htmlFor="phone">
+            Phone Number <span aria-label="required">*</span>
+          </label>
           <input
             type="tel"
             id="phone"
@@ -166,11 +242,21 @@ function SummerReadingRegistration() {
             value={formData.phone}
             onChange={handleInputChange}
             required
+            aria-required="true"
+            aria-describedby={errors.phone ? "phone-error" : undefined}
+            aria-invalid={!!errors.phone}
           />
+          {errors.phone && (
+            <div id="phone-error" className="error-message" role="alert">
+              {errors.phone}
+            </div>
+          )}
         </div>
 
         <div className="form-group">
-          <label htmlFor="childName">Child's Full Name *</label>
+          <label htmlFor="childName">
+            Child's Full Name <span aria-label="required">*</span>
+          </label>
           <input
             type="text"
             id="childName"
@@ -178,12 +264,22 @@ function SummerReadingRegistration() {
             value={formData.childName}
             onChange={handleInputChange}
             required
+            aria-required="true"
+            aria-describedby={errors.childName ? "childName-error" : undefined}
+            aria-invalid={!!errors.childName}
           />
+          {errors.childName && (
+            <div id="childName-error" className="error-message" role="alert">
+              {errors.childName}
+            </div>
+          )}
         </div>
 
         <div className="form-row">
           <div className="form-group">
-            <label htmlFor="childAge">Child's Age *</label>
+            <label htmlFor="childAge">
+              Child's Age <span aria-label="required">*</span>
+            </label>
             <input
               type="number"
               id="childAge"
@@ -193,23 +289,44 @@ function SummerReadingRegistration() {
               value={formData.childAge}
               onChange={handleInputChange}
               required
+              aria-required="true"
+              aria-describedby={errors.childAge ? "childAge-error" : undefined}
+              aria-invalid={!!errors.childAge}
             />
+            {errors.childAge && (
+              <div id="childAge-error" className="error-message" role="alert">
+                {errors.childAge}
+              </div>
+            )}
           </div>
 
           <div className="form-group">
-            <label htmlFor="childGrade">Current Grade *</label>
+            <label htmlFor="childGrade">
+              Current Grade <span aria-label="required">*</span>
+            </label>
             <input
-            type="text"
-            id="childGrade"
-            name="childGrade"
-            value={formData.childGrade}
-            onChange={handleInputChange}
-          />
+              type="text"
+              id="childGrade"
+              name="childGrade"
+              value={formData.childGrade}
+              onChange={handleInputChange}
+              required
+              aria-required="true"
+              aria-describedby={errors.childGrade ? "childGrade-error" : undefined}
+              aria-invalid={!!errors.childGrade}
+            />
+            {errors.childGrade && (
+              <div id="childGrade-error" className="error-message" role="alert">
+                {errors.childGrade}
+              </div>
+            )}
           </div>
         </div>
 
         <div className="form-group">
-          <label htmlFor="address">Home Address *</label>
+          <label htmlFor="address">
+            Home Address <span aria-label="required">*</span>
+          </label>
           <textarea
             id="address"
             name="address"
@@ -217,7 +334,15 @@ function SummerReadingRegistration() {
             value={formData.address}
             onChange={handleInputChange}
             required
+            aria-required="true"
+            aria-describedby={errors.address ? "address-error" : undefined}
+            aria-invalid={!!errors.address}
           />
+          {errors.address && (
+            <div id="address-error" className="error-message" role="alert">
+              {errors.address}
+            </div>
+          )}
         </div>
 
         <div className="form-group">

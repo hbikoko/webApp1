@@ -2,11 +2,11 @@ import React from 'react';
 
 function ServiceBlock({ icon, title, description }) {
   return (
-    <div className="service-block">
-      <img src={icon} alt={`${title} icon`} />
+    <article className="service-block">
+      <img src={icon} alt={`${title} icon`} aria-hidden="true" />
       <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
+      {description && <p>{description}</p>}
+    </article>
   );
 }
 

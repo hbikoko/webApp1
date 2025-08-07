@@ -22,6 +22,9 @@ function HomePage() {
     autoplay: true,
     autoplaySpeed: 5000,
     arrows: true,
+    accessibility: true,
+    adaptiveHeight: true,
+    pauseOnHover: true,
   };
 
   return (
@@ -34,21 +37,30 @@ function HomePage() {
         />
       </Helmet>
 
-      <div className="slider-container">
+      <section className="slider-container" aria-label="Featured images">
         <Slider {...sliderSettings} className="homepage-slider">
           <div>
-            <img src={testSliderPic1} alt={t('homepage.sliderAlt1', 'A joyful community celebrating under the open sky')} />
+            <img 
+              src={testSliderPic1} 
+              alt={t('homepage.sliderAlt1', 'A joyful community celebrating under the open sky')} 
+            />
           </div>
           <div>
-            <img src={testSliderPic2} alt={t('homepage.sliderAlt2', 'AFRHEEC project event showcasing happy participants')} />
+            <img 
+              src={testSliderPic2} 
+              alt={t('homepage.sliderAlt2', 'AFRHEEC project event showcasing happy participants')} 
+            />
           </div>
         </Slider>
-      </div>
+      </section>
 
-      <WWD />
+      <section aria-labelledby="what-we-do-title">
+        <WWD />
+      </section>
       
-      {/* Newsletter Signup Form */}
-      <NewsletterSignup />
+      <section aria-labelledby="newsletter-title">
+        <NewsletterSignup />
+      </section>
     </div>
   );
 }

@@ -18,7 +18,15 @@ function CommunityEvents() {
 
   // Scroll to top when component mounts
   useEffect(() => {
+    // Immediate scroll to top
     window.scrollTo(0, 0);
+    
+    // Also scroll after a short delay to handle any dynamic content loading
+    const timer = setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   const handleImageClick = (imageSrc, imageAlt) => {
@@ -181,20 +189,6 @@ function CommunityEvents() {
           <div className="contact-info">
             <p><strong>RSVP & Information:</strong> (971) 239-4693</p>
           </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="cta-section">
-        <h2>Want to Get Involved?</h2>
-        <p>
-          Our community events are made possible through partnerships, volunteers, and the 
-          participation of families like yours. Contact us to learn about volunteering 
-          opportunities or hosting future events.
-        </p>
-        <div className="cta-buttons">
-          <a href="/contact" className="cta-button primary">Contact Us</a>
-          <a href="/community" className="cta-button secondary">Back to Community</a>
         </div>
       </section>
 

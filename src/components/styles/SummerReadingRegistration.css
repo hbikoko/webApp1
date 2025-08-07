@@ -57,9 +57,11 @@
   
   .benefits-list .icon {
     font-size: 1.2rem;
-    margin-right: 12px;
+    margin-right: 15px;
     margin-top: 2px;
     flex-shrink: 0;
+    width: 20px;
+    text-align: center;
   }
   
   .urgency-text {

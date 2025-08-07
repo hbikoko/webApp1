@@ -18,9 +18,8 @@
   text-align: center;
   margin-bottom: 50px;
   padding: 30px;
-  background: linear-gradient(135deg, #f8f9fa, #e8f5e8);
+  background: #f8f9fa;
   border-radius: 10px;
-  border-left: 4px solid #6a994e;
 }
 
 .support-intro p {
@@ -46,9 +45,8 @@
 
 .section-title {
   font-size: 1.8rem;
-  color: #6a994e;
+  color: #333;
   margin-bottom: 20px;
-  border-bottom: 2px solid #6a994e;
   padding-bottom: 10px;
 }
 
@@ -70,11 +68,10 @@
   background: #f8f9fa;
   padding: 20px;
   border-radius: 8px;
-  border-left: 3px solid #6a994e;
 }
 
 .partner-item h3 {
-  color: #2c5530;
+  color: #333;
   margin-bottom: 10px;
   font-size: 1.2rem;
 }
@@ -97,7 +94,6 @@
   background: #f8f9fa;
   padding: 25px;
   border-radius: 10px;
-  border-left: 4px solid #6a994e;
   margin-bottom: 20px;
 }
 
@@ -109,7 +105,7 @@
 }
 
 .grant-info h3 {
-  color: #2c5530;
+  color: #333;
   margin-bottom: 10px;
   font-size: 1.4rem;
 }
@@ -119,71 +115,6 @@
   font-size: 1rem;
   margin: 0;
   line-height: 1.5;
-}
-
-/* Call to Action Section */
-.support-cta {
-  background: linear-gradient(135deg, #6a994e, #5a8742);
-  color: white;
-  padding: 40px;
-  border-radius: 15px;
-  text-align: center;
-  margin-top: 40px;
-}
-
-.support-cta h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: white;
-}
-
-.support-cta p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-  opacity: 0.9;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cta-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.cta-button {
-  padding: 15px 30px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  min-width: 150px;
-  text-align: center;
-}
-
-.cta-button.primary {
-  background-color: #d4a574;
-  color: white;
-}
-
-.cta-button.primary:hover {
-  background-color: #c49660;
-  transform: translateY(-2px);
-}
-
-.cta-button.secondary {
-  background-color: transparent;
-  color: white;
-  border: 2px solid white;
-}
-
-.cta-button.secondary:hover {
-  background-color: white;
-  color: #2c5530;
-  transform: translateY(-2px);
 }
 
 /* Mobile Responsiveness */
@@ -213,24 +144,6 @@
   
   .grant-logo {
     width: 100px;
-  }
-  
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .cta-button {
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  .support-cta {
-    padding: 30px 20px;
-  }
-  
-  .support-cta h2 {
-    font-size: 1.6rem;
   }
 }
 

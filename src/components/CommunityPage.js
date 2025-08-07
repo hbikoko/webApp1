@@ -1,14 +1,58 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import './styles/CommunityPage.css';
 
 function CommunityPage() {
-  const { t } = useTranslation();
+  const { t, i18n, ready } = useTranslation();
+  const [currentLang, setCurrentLang] = useState(i18n.language);
+
+  // Debug: Log current language and translations
+  useEffect(() => {
+    console.log('=== COMMUNITY PAGE DEBUG ===');
+    console.log('Current language:', i18n.language);
+    console.log('Translation ready:', ready);
+    console.log('Community title translation:', t('community.title'));
+    console.log('Education title translation:', t('community.education.title'));
+    console.log('Cultural title translation:', t('community.cultural.title'));
+    console.log('Available languages:', i18n.languages);
+    console.log('All community translations:', {
+      title: t('community.title'),
+      education: t('community.education.title'),
+      cultural: t('community.cultural.title'),
+      wellness: t('community.wellness.title'),
+      resources: t('community.resources.title'),
+      events: t('community.events.title')
+    });
+    console.log('=== END DEBUG ===');
+    
+    // Update current language state to force re-render
+    setCurrentLang(i18n.language);
+  }, [i18n.language, t, ready]);
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    // Immediate scroll to top
+    window.scrollTo(0, 0);
+    
+    // Also scroll after a short delay to handle any dynamic content loading
+    const timer = setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Don't render until translations are ready
+  if (!ready) {
+    return <div>Loading...</div>;
+  }
 
   return (
-    <div className="community-container">
-      <h1 className="community-title">{t('community.title', 'Community')}</h1>
+    <div className="community-container" key={currentLang}>
+      <h1 className="community-title">
+        {t('community.title', 'Community')} - Current Language: {currentLang}
+      </h1>
       
       <div className="services-grid">
         {/* Education Section */}

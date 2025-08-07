@@ -70,9 +70,9 @@ function EducationPage() {
           </ul>
           
           <p className="program-description location-info">
-            {t('education.locationInfo', 'Held in trusted neighborhood spaces across the Willamette Valley—including Salem and Eugene—the program is')} 
+            {t('education.locationInfo', 'Held in trusted neighborhood spaces across the Willamette Valley—including Salem and Eugene—the program is ')} 
             <strong>{t('education.freeOfCharge', 'free of charge')}</strong> 
-            {t('education.locationInfo2', 'and open to families in our service area.')}
+            {t('education.locationInfo2', ' and open to families in our service area.')}
           </p>
           
           {/* Summer Reading Program 2024 Album */}
@@ -98,6 +98,9 @@ function EducationPage() {
               >
                 {t('education.register2025', 'Register for the 2025 Summer Reading Program')}
               </a>
+              <Link to="/summer-reading-program-registration-2025" className="register-button">
+                {t('education.registerChild', 'Register Your Child Today')}
+              </Link>
             </div>
           </div>
           
@@ -115,12 +118,6 @@ function EducationPage() {
               </div>
             </div>
           )}
-          
-          <div className="cta-section">
-            <Link to="/summer-reading-program-registration-2025" className="register-button">
-              {t('education.registerChild', 'Register Your Child Today')}
-            </Link>
-          </div>
         </div>
       </div>
     </div>

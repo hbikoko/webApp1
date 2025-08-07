@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './i18n'; // initialize i18next
 import Navbar from './components/Navbar';
@@ -28,6 +28,13 @@ import CommunityEvents from './components/CommunityEvents';
 import Footer from './components/Footer';
 
 function App() {
+  // Disable scroll restoration to prevent browser from remembering scroll position
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+  }, []);
+
   return (
     <Router>
       <Navbar />

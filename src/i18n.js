@@ -22,10 +22,15 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
+    lng: 'en', // Set default language
     fallbackLng: 'en',
-    debug: false,
+    debug: true, // Enable debug mode
     interpolation: {
       escapeValue: false
+    },
+    detection: {
+      order: ['localStorage', 'navigator'],
+      caches: ['localStorage']
     }
   });
 
