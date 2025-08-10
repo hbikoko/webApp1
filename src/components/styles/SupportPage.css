@@ -117,6 +117,18 @@
   line-height: 1.5;
 }
 
+/* Volunteer Form Section */
+.volunteer-section {
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.volunteer-form-container {
+  margin: 0;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .support-container {
@@ -144,6 +156,15 @@
   
   .grant-logo {
     width: 100px;
+  }
+
+  /* Volunteer Form Mobile Adjustments */
+  .volunteer-section {
+    padding: 0 !important;
+  }
+  
+  .volunteer-form-container {
+    margin: 0;
   }
 }
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import midPassage1 from '../assets/midPassage1.gif';
 import './styles/AboutUsPage.css';
 
 function AboutUsPage() {
@@ -35,6 +36,18 @@ function AboutUsPage() {
         <p className="about-us-paragraph">
           {t('aboutUs.mission', 'The African Heritage Education and Empowerment Community (AFRHEEC) is a nonprofit organization with a powerful mission: to serve as an Educational, Cultural, and Resource Center rooted in Afro-centric principles. AFRHEEC is committed to empowering Black diaspora, African, and African American communities—including immigrant and refugee families—through culturally grounded education, wellness practices, and access to essential resources.')}
         </p>
+
+        {/* Transatlantic Trade Map */}
+        <div className="trade-map-container">
+          <img 
+            src={midPassage1} 
+            alt="Historical map showing transatlantic triangular trade routes during the slave trade era"
+            className="trade-map"
+          />
+          <p className="map-caption">
+            {t('aboutUs.mapCaption', 'Historical map illustrating the transatlantic triangular trade routes during the era of the slave trade, showing the forced movement of millions of Africans across the Atlantic Ocean that created the African diaspora.')}
+          </p>
+        </div>
 
         <p className="about-us-paragraph">
           {t('aboutUs.history', 'Since its inception, AFRHEEC has prioritized early literacy, culturally specific community events, and family-centered programming in Laine, Marion, Multnomah, and Washington counties in Oregon. Our focus is on healing-centered engagement, traditional foodways, mental health support, and parenting education tailored for families navigating new cultural terrain in the United States.')}

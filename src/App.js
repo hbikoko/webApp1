@@ -14,7 +14,6 @@ import SummerReadingRegistration from './components/SummerReadingRegistration';
 
 // Import new pages
 import HeritageHistoryPage from './components/HeritageHistoryPage';
-import CommunityPage from './components/CommunityPage';
 import CurrentProjectsPage from './components/CurrentProjectsPage';
 import PolicyPositionsPage from './components/PolicyPositionsPage';
 import CountryPage from './components/CountryPage';
@@ -49,7 +48,6 @@ function App() {
 
         {/* Card subpages */}
         <Route path="/services/heritage-and-history" element={<HeritageHistoryPage />} />
-        <Route path="/services/community" element={<CommunityPage />} />
         <Route path="/services/education" element={<EducationPage />} />
         <Route path="/services/cultural" element={<ComingSoon />} />
         <Route path="/services/wellness" element={<ComingSoon />} />

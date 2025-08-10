@@ -15,6 +15,7 @@ import mDay9 from '../assets/mDay9.jpg';
 
 function CommunityEvents() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedAlbum, setSelectedAlbum] = useState(null);
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -36,6 +37,90 @@ function CommunityEvents() {
   const closeModal = () => {
     setSelectedImage(null);
   };
+
+  const closeAlbum = () => {
+    setSelectedAlbum(null);
+  };
+
+  // Album data
+  const albums = {
+    flyers: {
+      title: "Event Flyers",
+      description: "Multilingual event announcements and promotional materials",
+      coverImage: mdEnglish,
+      photos: [
+        { src: mdEnglish, alt: "Motherland Mother's Day - English Flyer" },
+        { src: mdFrench, alt: "Motherland Mother's Day - French Flyer" },
+        { src: mdSwahili, alt: "Motherland Mother's Day - Swahili Flyer" }
+      ]
+    },
+    eventPhotos: {
+      title: "Event Photos",
+      description: "Photos from the Motherland Mother's Day celebration",
+      coverImage: mDay1,
+      photos: [
+        { src: mDay1, alt: "Motherland Mother's Day - Album Photo 1" },
+        { src: mDay2, alt: "Motherland Mother's Day - Album Photo 2" },
+        { src: mDay3, alt: "Motherland Mother's Day - Album Photo 3" },
+        { src: mDay4, alt: "Motherland Mother's Day - Album Photo 4" },
+        { src: mDay5, alt: "Motherland Mother's Day - Album Photo 5" },
+        { src: mDay6, alt: "Motherland Mother's Day - Album Photo 6" },
+        { src: mDay7, alt: "Motherland Mother's Day - Album Photo 7" },
+        { src: mDay8, alt: "Motherland Mother's Day - Album Photo 8" },
+        { src: mDay9, alt: "Motherland Mother's Day - Album Photo 9" }
+      ]
+    }
+  };
+
+  const renderAlbumCover = (albumKey, album) => (
+    <div 
+      key={albumKey}
+      className="album-cover"
+      onClick={() => setSelectedAlbum(albumKey)}
+    >
+      <div className="album-preview">
+        <img 
+          src={album.coverImage} 
+          alt={album.title}
+          className="album-cover-image"
+        />
+        <div className="album-overlay">
+          <div className="album-info">
+            <h3>{album.title}</h3>
+            <p>{album.description}</p>
+            <span className="photo-count">{album.photos.length} photos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderAlbumView = (albumKey, album) => (
+    <div className="album-view">
+      <div className="album-header">
+        <button className="back-button" onClick={closeAlbum}>
+          ← Back to Albums
+        </button>
+        <h2>{album.title}</h2>
+        <p>{album.description}</p>
+      </div>
+      <div className="album-grid">
+        {album.photos.map((photo, index) => (
+          <div 
+            key={index}
+            className="album-photo"
+            onClick={() => handleImageClick(photo.src, photo.alt)}
+          >
+            <img 
+              src={photo.src} 
+              alt={photo.alt}
+              className="album-photo-image"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
     <div className="community-events-container">
@@ -60,80 +145,18 @@ function CommunityEvents() {
           </div>
           
           <div className="event-content">
-            <div className="event-images">
-              <img 
-                src={mdEnglish} 
-                alt="Motherland Mother's Day - Traditional African celebration" 
-                className="event-image clickable-image" 
-                onClick={() => handleImageClick(mdEnglish, 'Motherland Mother\'s Day - Traditional African celebration')}
-              />
-              <img 
-                src={mdFrench} 
-                alt="Motherland Mother's Day - French celebration" 
-                className="event-image clickable-image" 
-                onClick={() => handleImageClick(mdFrench, 'Motherland Mother\'s Day - French celebration')}
-              />
-              <img 
-                src={mdSwahili} 
-                alt="Motherland Mother's Day - Elegant floral celebration" 
-                className="event-image clickable-image" 
-                onClick={() => handleImageClick(mdSwahili, 'Motherland Mother\'s Day - Elegant floral celebration')}
-              />
-              <img 
-                src={mDay1} 
-                alt="Motherland Mother's Day - Album Photo 1" 
-                className="event-image clickable-image" 
-                onClick={() => handleImageClick(mDay1, 'Motherland Mother\'s Day - Album Photo 1')}
-              />
-              <img 
-                src={mDay2} 
-                alt="Motherland Mother's Day - Album Photo 2" 
-                className="event-image clickable-image" 
-                onClick={() => handleImageClick(mDay2, 'Motherland Mother\'s Day - Album Photo 2')}
-              />
-              <img 
-                src={mDay3} 
-                alt="Motherland Mother's Day - Album Photo 3" 
-                className="event-image clickable-image" 
-                onClick={() => handleImageClick(mDay3, 'Motherland Mother\'s Day - Album Photo 3')}
-              />
-              <img 
-                src={mDay4} 
-                alt="Motherland Mother's Day - Album Photo 4" 
-                className="event-image clickable-image" 
-                onClick={() => handleImageClick(mDay4, 'Motherland Mother\'s Day - Album Photo 4')}
-              />
-              <img 
-                src={mDay5} 
-                alt="Motherland Mother's Day - Album Photo 5" 
-                className="event-image clickable-image" 
-                onClick={() => handleImageClick(mDay5, 'Motherland Mother\'s Day - Album Photo 5')}
-              />
-              <img 
-                src={mDay6} 
-                alt="Motherland Mother's Day - Album Photo 6" 
-                className="event-image clickable-image" 
-                onClick={() => handleImageClick(mDay6, 'Motherland Mother\'s Day - Album Photo 6')}
-              />
-              <img 
-                src={mDay7} 
-                alt="Motherland Mother's Day - Album Photo 7" 
-                className="event-image clickable-image" 
-                onClick={() => handleImageClick(mDay7, 'Motherland Mother\'s Day - Album Photo 7')}
-              />
-              <img 
-                src={mDay8} 
-                alt="Motherland Mother's Day - Album Photo 8" 
-                className="event-image clickable-image" 
-                onClick={() => handleImageClick(mDay8, 'Motherland Mother\'s Day - Album Photo 8')}
-              />
-              <img 
-                src={mDay9} 
-                alt="Motherland Mother's Day - Album Photo 9" 
-                className="event-image clickable-image" 
-                onClick={() => handleImageClick(mDay9, 'Motherland Mother\'s Day - Album Photo 9')}
-              />
-            </div>
+            {/* Photo Albums Section */}
+            {!selectedAlbum ? (
+              <div className="photo-albums">
+                <h3 className="albums-title">Photo Albums</h3>
+                <div className="albums-grid">
+                  {renderAlbumCover('flyers', albums.flyers)}
+                  {renderAlbumCover('eventPhotos', albums.eventPhotos)}
+                </div>
+              </div>
+            ) : (
+              renderAlbumView(selectedAlbum, albums[selectedAlbum])
+            )}
             
             <div className="event-details">
               <div className="event-info">
@@ -186,9 +209,6 @@ function CommunityEvents() {
         <h2 className="section-title">Upcoming Events</h2>
         <div className="no-events-message">
           <p>Stay tuned for our next community celebrations! Follow us on social media or contact us to stay updated on upcoming events.</p>
-          <div className="contact-info">
-            <p><strong>RSVP & Information:</strong> (971) 239-4693</p>
-          </div>
         </div>
       </section>
 

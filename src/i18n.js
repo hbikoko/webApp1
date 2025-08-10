@@ -10,6 +10,13 @@ import translationFR from './locales/fr/translation.json';
 import translationSW from './locales/sw/translation.json';
 import translationZU from './locales/zulu/translation.json';
 
+console.log('Loading translations:', {
+  en: translationEN,
+  fr: translationFR,
+  sw: translationSW,
+  zu: translationZU
+});
+
 const resources = {
   en: { translation: translationEN },
   fr: { translation: translationFR },
@@ -22,7 +29,6 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'en', // Set default language
     fallbackLng: 'en',
     debug: true, // Enable debug mode
     interpolation: {
@@ -33,6 +39,9 @@ i18n
       caches: ['localStorage']
     }
   });
+
+console.log('i18n initialized with languages:', i18n.languages);
+console.log('i18n current language:', i18n.language);
 
 export default i18n;
 

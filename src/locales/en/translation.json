@@ -16,6 +16,8 @@
       "header": "Board of Directors"
     },
     "services": {
+      "title": "Our Services",
+      "intro": "Discover the comprehensive range of services AFRHEEC provides to empower African heritage communities through education, cultural programs, and essential resources.",
       "heritageText": "AFRHEEC, the African Heritage Education and Empowerment Community, is dedicated to exploring the rich history and cultural heritage of Africa and its enduring impact on the Black American experience.",
       "heritageText2": "By exploring the historical journey of brutalized Africans terrorized into becoming Americans, AFRHEEC aims to foster a deeper understanding of the challenges and triumphs faced by Black communities today.",
       "heritageText3": "Through initiatives focused on retracing ancestral roots, restoring cultural practices, building strong communities, and reclaiming authentic identities, AFRHEEC empowers individuals to connect with their African heritage and navigate the complexities of modern society. No matter their geographical displacement spurred by the African Diaspora.",
@@ -36,7 +38,12 @@
       "currentProjectsAlt": "Current Projects",
       "currentProjectsTitle": "Current Projects",
       "policyAlt": "Policy & Positions",
-      "policyTitle": "Policy & Positions"
+      "policyTitle": "Policy & Positions",
+      "learnMore": "Learn More",
+      "ctaTitle": "Ready to Get Involved?",
+      "ctaDescription": "Join us in building stronger, more connected communities through culturally responsive programs and services.",
+      "contactUs": "Contact Us",
+      "supportUs": "Support Us"
     },
     "wwd": {
       "header": "What We Do",
@@ -63,18 +70,18 @@
       "privacyNote": "We respect your privacy. Your information will never be shared with third parties."
     },
     "footer": {
-      "contactUs": "Contact Us",
-      "contactDescription": "Get in touch with us to learn more about our programs and how you can get involved.",
-      "email": "Email",
-      "address": "Address",
-      "ourPrograms": "Our Programs"
+          "contactUs": "Contact Us",
+    "contactDescription": "Get in touch with us to learn more about our programs and how you can get involved.",
+    "email": "Email",
+    "address": "Address"
     },
     "aboutUs": {
       "title": "About Us",
       "mission": "The African Heritage Education and Empowerment Community (AFRHEEC) is a nonprofit organization with a powerful mission: to serve as an Educational, Cultural, and Resource Center rooted in Afro-centric principles. AFRHEEC is committed to empowering Black diaspora, African, and African American communities—including immigrant and refugee families—through culturally grounded education, wellness practices, and access to essential resources.",
       "history": "Since its inception, AFRHEEC has prioritized early literacy, culturally specific community events, and family-centered programming in Laine, Marion, Multnomah, and Washington counties in Oregon. Our focus is on healing-centered engagement, traditional foodways, mental health support, and parenting education tailored for families navigating new cultural terrain in the United States.",
-      "approach": "With an approach that is holistic and community-informed, AFRHEEC recognizes the unique challenges refugee and immigrant families face, especially in parenting across cultures, learning a new language, and adapting to a new environment and vastly different culture. We aim to fill gaps to support all black identifying families through programs that are accessible, nurturing, and culturally relevant.",
-      "boardLink": "Meet Our Board of Directors"
+          "approach": "With an approach that is holistic and community-informed, AFRHEEC recognizes the unique challenges refugee and immigrant families face, especially in parenting across cultures, learning a new language, and adapting to a new environment and vastly different culture. We aim to fill gaps to support all black identifying families through programs that are accessible, nurturing, and culturally relevant.",
+    "mapCaption": "Historical map illustrating the transatlantic triangular trade routes during the era of the slave trade, showing the forced movement of millions of Africans across the Atlantic Ocean that created the African diaspora.",
+    "boardLink": "Meet Our Board of Directors"
     },
     "board": {
       "title": "Board of Directors",

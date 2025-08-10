@@ -14,7 +14,7 @@
 }
 
 .contact-section h1 {
-  color: #f4d03f;
+  color: #e74c3c;
   margin-bottom: 20px;
   font-size: 2.5rem;
   font-weight: 600;
@@ -42,19 +42,21 @@
 }
 
 .contact-details a {
-  color: #f4d03f;
+  color: #e74c3c !important;
   text-decoration: none;
   transition: color 0.3s ease;
   padding: 2px 4px;
   border-radius: 3px;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .contact-details a:hover,
 .contact-details a:focus {
   color: #fff;
   text-decoration: underline;
-  background-color: rgba(244, 208, 63, 0.2);
-  outline: 2px solid #f4d03f;
+  background-color: rgba(231, 76, 60, 0.2);
+  outline: 2px solid #e74c3c;
   outline-offset: 2px;
 }
 
@@ -86,7 +88,7 @@
 /* Ensure sufficient color contrast for accessibility */
 @media (prefers-contrast: high) {
   .contact-section h1 {
-    color: #ffeb3b;
+    color: #c0392b;
   }
   
   .contact-details a,

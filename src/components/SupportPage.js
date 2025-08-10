@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/SupportPage.css';
 import mmm2Logo from '../assets/mmm2Logo.png';
+import VolunteerForm from './VolunteerForm';
 
 function SupportPage() {
   const { t } = useTranslation();
@@ -61,6 +62,11 @@ function SupportPage() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Volunteer Form Section */}
+        <div className="support-section volunteer-section">
+          <VolunteerForm />
         </div>
       </div>
     </div>

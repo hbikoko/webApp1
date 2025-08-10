@@ -87,14 +87,14 @@
     "contactUs": "Contactez-Nous",
     "contactDescription": "Contactez-nous pour en savoir plus sur nos programmes et comment vous pouvez vous impliquer.",
     "email": "E-mail",
-    "address": "Adresse",
-    "ourPrograms": "Nos Programmes"
+    "address": "Adresse"
   },
   "aboutUs": {
     "title": "À Propos de Nous",
     "mission": "La Communauté d'Éducation et d'Empowerment du Patrimoine Africain (AFRHEEC) est une organisation à but non lucratif avec une mission puissante : servir de Centre Éducatif, Culturel et de Ressources enraciné dans les principes afrocentriques. AFRHEEC s'engage à donner du pouvoir aux communautés de la diaspora noire, africaines et afro-américaines—y compris les familles d'immigrants et de réfugiés—par l'éducation culturellement ancrée, les pratiques de bien-être, et l'accès aux ressources essentielles.",
     "history": "Depuis sa création, AFRHEEC a priorisé l'alphabétisation précoce, les événements communautaires culturellement spécifiques, et la programmation centrée sur la famille dans les comtés de Laine, Marion, Multnomah, et Washington en Oregon. Notre focus est sur l'engagement centré sur la guérison, les traditions culinaires, le soutien à la santé mentale, et l'éducation parentale adaptée aux familles naviguant dans un nouveau terrain culturel aux États-Unis.",
     "approach": "Avec une approche holistique et informée par la communauté, AFRHEEC reconnaît les défis uniques auxquels font face les familles de réfugiés et d'immigrants, surtout dans l'éducation parentale à travers les cultures, l'apprentissage d'une nouvelle langue, et l'adaptation à un nouvel environnement et une culture très différente. Nous visons à combler les lacunes pour soutenir toutes les familles s'identifiant comme noires à travers des programmes accessibles, nourrissants, et culturellement pertinents.",
+    "mapCaption": "Carte historique illustrant les routes commerciales triangulaires transatlantiques pendant l'ère de la traite des esclaves, montrant le mouvement forcé de millions d'Africains à travers l'océan Atlantique qui a créé la diaspora africaine.",
     "boardLink": "Rencontrez Notre Conseil d'Administration"
   },
   "board": {
