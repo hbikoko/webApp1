@@ -134,6 +134,132 @@ export const countryData = {
       name: "Comoros",
       videoId: "eLBia5ZUqt4",
       description: "Discover the Comoros islands."
+    },
+    // Newly added countries from the table
+    "Algeria": {
+      name: "Algeria",
+      videoId: "9lm1rOOUJj8",
+      description: "Discover Algeria's rich cultural heritage and historical significance."
+    },
+    "Botswana": {
+      name: "Botswana",
+      videoId: "WMmQzpw4djw",
+      description: "Explore Botswana's diverse landscapes and cultural traditions."
+    },
+    "Burundi": {
+      name: "Burundi",
+      videoId: "P9JPJEqOdLc",
+      description: "Learn about Burundi's unique heritage and cultural practices."
+    },
+    "Cabo Verde": {
+      name: "Cabo Verde",
+      videoId: "TEXRmWTxwyE",
+      description: "Experience the vibrant culture and history of Cabo Verde."
+    },
+    "Central African Republic": {
+      name: "Central African Republic",
+      videoId: "07QeqIU_8_Q",
+      description: "Discover the cultural richness of the Central African Republic."
+    },
+    "Chad": {
+      name: "Chad",
+      videoId: "43U47wWmpeM",
+      description: "Explore Chad's diverse cultural heritage and traditions."
+    },
+    "Republic of the Congo": {
+      name: "Republic of the Congo",
+      videoId: "Lo_wflf1wsg",
+      description: "Learn about the Republic of the Congo's cultural legacy."
+    },
+    "Djibouti": {
+      name: "Djibouti",
+      videoId: "HEKenTz7YZE",
+      description: "Discover Djibouti's unique cultural heritage and history."
+    },
+    "Equatorial Guinea": {
+      name: "Equatorial Guinea",
+      videoId: "neDPxjGg9M4",
+      description: "Explore Equatorial Guinea's rich cultural traditions."
+    },
+    "Eswatini": {
+      name: "Eswatini",
+      videoId: "Gxku64Hyk2c",
+      description: "Experience Eswatini's cultural heritage and traditions."
+    },
+    "Guinea": {
+      name: "Guinea",
+      videoId: "ZdeM_nbxTcU",
+      description: "Learn about Guinea's diverse cultural heritage and history."
+    },
+    "Guinea-Bissau": {
+      name: "Guinea-Bissau",
+      videoId: "OaTrH8d_ozo",
+      description: "Discover Guinea-Bissau's unique cultural traditions."
+    },
+    "Kenya": {
+      name: "Kenya",
+      videoId: "tSlf-EMhnWM",
+      description: "Explore Kenya's rich cultural heritage and diverse traditions."
+    },
+    "Lesotho": {
+      name: "Lesotho",
+      videoId: "BfVuwNdrUHE",
+      description: "Learn about Lesotho's cultural heritage and mountain traditions."
+    },
+    "Libya": {
+      name: "Libya",
+      videoId: "8xSzdeY5QWY",
+      description: "Discover Libya's ancient history and cultural significance."
+    },
+    "Mali": {
+      name: "Mali",
+      videoId: "6ndrzMaDQzc",
+      description: "Explore Mali's rich cultural heritage and historical legacy."
+    },
+    "Mauritania": {
+      name: "Mauritania",
+      videoId: "XZURtYRQoKg",
+      description: "Learn about Mauritania's cultural traditions and heritage."
+    },
+    "Mauritius": {
+      name: "Mauritius",
+      videoId: "lfWsAGQHwl4",
+      description: "Discover Mauritius's diverse cultural heritage and island traditions."
+    },
+    "Namibia": {
+      name: "Namibia",
+      videoId: "QLDhCOY_spA",
+      description: "Explore Namibia's unique cultural heritage and natural beauty."
+    },
+    "Niger": {
+      name: "Niger",
+      videoId: "jWJXIBIRKNg",
+      description: "Learn about Niger's cultural traditions and historical significance."
+    },
+    "Rwanda": {
+      name: "Rwanda",
+      videoId: "dVqm40wcnL4",
+      description: "Discover Rwanda's cultural heritage and traditions of resilience."
+    },
+    "São Tomé and Príncipe": {
+      name: "São Tomé and Príncipe",
+      videoId: "c8nwIMvDEFQ",
+      description: "Explore the cultural heritage of São Tomé and Príncipe."
+    },
+    "South Sudan": {
+      name: "South Sudan",
+      videoId: "fScR9WwSjaM",
+      description: "Learn about South Sudan's emerging cultural heritage and traditions."
+    },
+    "Sudan": {
+      name: "Sudan",
+      videoId: "iDpzZ6N4AHA",
+      description: "Discover Sudan's rich cultural heritage and historical legacy."
+    },
+    "Tunisia": {
+      name: "Tunisia",
+      videoId: "aLeV4caUadU",
+      description: "Explore Tunisia's cultural heritage and Mediterranean traditions."
     }
     // You can add more countries as needed
   };
