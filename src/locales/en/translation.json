@@ -47,11 +47,31 @@
     },
     "wwd": {
       "header": "What We Do",
+      "intro": "AFRHEEC empowers African heritage communities through culturally responsive education, heritage preservation, community building, and essential support services. Our programs are designed to strengthen families, preserve cultural identity, and build resilient communities for future generations.",
       "readMore": "Read More About What We Do",
       "heritageandhistory": "Heritage and History",
       "community": "Community",
       "currentprojects": "Current Projects",
-      "policyandpositions": "Policy and Positions"
+      "policyandpositions": "Policy and Positions",
+      "serviceAria": "Learn more about {{title}} - {{description}}",
+      "services": {
+        "heritageandhistory": {
+          "title": "Heritage and History",
+          "description": "Explore the rich cultural heritage and historical connections of African communities through educational programs, cultural preservation initiatives, and historical research."
+        },
+        "community": {
+          "title": "Community",
+          "description": "Build stronger, more connected communities through culturally responsive programs, family support services, and community engagement initiatives."
+        },
+        "currentprojects": {
+          "title": "Current Projects",
+          "description": "Discover our ongoing initiatives including the Summer Reading Program, educational workshops, and community development projects."
+        },
+        "policyandpositions": {
+          "title": "Policy and Positions",
+          "description": "Advocate for policies that support African heritage communities, promote equity, and address systemic challenges faced by immigrant and refugee families."
+        }
+      }
     },
     "newsletter": {
       "title": "Grow Roots",
@@ -143,6 +163,7 @@
     "education": {
       "title": "Education",
       "grantText": "Grant provided by Meyer Memorial Trust",
+      "grantLogoAlt": "Meyer Memorial Trust Logo",
       "srpTitle": "AFRHEEC Summer Reading Program – Program Overview",
       "srpDescription1": "AFRHEEC's ",
       "srpLink": "Summer Reading Program ",
@@ -166,7 +187,14 @@
       "locationInfo2": " and open to families in our service area.",
       "srp2024": "Summer Reading Program 2024",
       "register2025": "Register for the 2025 Summer Reading Program",
-          "registerChild": "Register Your Child Today"
+          "registerChild": "Register Your Child Today",
+      "srpAlbum": {
+        "photo1Alt": "Summer Reading Program 2024 - Photo 1",
+        "photo2Alt": "Summer Reading Program 2024 - Photo 2",
+        "photo3Alt": "Summer Reading Program 2024 - Photo 3",
+        "photo4Alt": "Summer Reading Program 2024 - Photo 4",
+        "photo5Alt": "Summer Reading Program 2024 - Photo 5"
+      }
   },
   "support": {
     "title": "Support",
@@ -204,6 +232,120 @@
       "description": "There are many ways to support our mission. Whether through volunteering, partnerships, or donations, your involvement helps strengthen our community.",
       "contactButton": "Contact Us",
       "donateButton": "Donate"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with us to learn more about our programs and how you can get involved.",
+    "email": "Email",
+    "address": "Address",
+    "ourPrograms": "Our Programs"
+  },
+  "volunteerForm": {
+    "title": "Become a Volunteer",
+    "description": "Join our dedicated team of volunteers and make a difference in the African heritage community. We welcome volunteers with diverse skills and backgrounds to support our programs and initiatives.",
+    "firstNameLabel": "First Name *",
+    "lastNameLabel": "Last Name *",
+    "emailLabel": "Email Address *",
+    "phoneLabel": "Phone Number *",
+    "interestsLabel": "Areas of Interest *",
+    "availabilityLabel": "Availability *",
+    "availabilityPlaceholder": "Select your availability",
+    "experienceLabel": "Previous Volunteer Experience",
+    "experiencePlaceholder": "Tell us about any previous volunteer experience you have...",
+    "messageLabel": "Why would you like to volunteer with AFRHEEC?",
+    "messagePlaceholder": "Share your motivation and what you hope to contribute...",
+    "submit": {
+      "default": "Submit Volunteer Application",
+      "loading": "Submitting..."
+    },
+    "successTitle": "Thank You for Your Interest in Volunteering!",
+    "successMessage": "We've received your volunteer application and will be in touch with you soon. Our team will review your interests and availability to find the perfect volunteer opportunity for you.",
+    "submitAnother": "Submit Another Application",
+    "validation": {
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "phoneRequired": "Phone number is required",
+      "interestsRequired": "Please select at least one area of interest",
+      "availabilityRequired": "Please select your availability",
+      "submitError": "Something went wrong. Please try again."
+    },
+    "interests": {
+      "educationPrograms": "Education Programs",
+      "culturalEvents": "Cultural Events",
+      "communityOutreach": "Community Outreach",
+      "administrativeSupport": "Administrative Support",
+      "eventPlanning": "Event Planning",
+      "translationServices": "Translation Services",
+      "youthPrograms": "Youth Programs",
+      "familySupport": "Family Support"
+    },
+    "availabilityOptions": {
+      "weekdays": "Weekdays",
+      "weekends": "Weekends",
+      "evenings": "Evenings",
+      "flexible": "Flexible",
+      "specialEvents": "Special Events Only"
+    }
+  },
+  "communityEvents": {
+    "pageTitle": "Community Events",
+    "subtitle": "Join us for cultural celebrations, educational workshops, and community gatherings that strengthen our bonds and honor our shared heritage.",
+    "recentTitle": "Recent Events",
+    "upcomingTitle": "Upcoming Events",
+    "upcomingMessage": "Stay tuned for our next community celebrations! Follow us on social media or contact us to stay updated on upcoming events.",
+    "photoAlbumsTitle": "Photo Albums",
+    "photoCount": "{{count}} photos",
+    "backToAlbums": "\u2190 Back to Albums",
+    "labels": {
+      "location": "Location:",
+      "time": "Time:",
+      "hostedBy": "Hosted by:"
+    },
+    "mothersDay": {
+      "title": "A Motherland Mother's Day",
+      "date": "May 10, 2025",
+      "statusPast": "Past Event",
+      "location": "AMAFA Center Community Room, Salem, Oregon",
+      "time": "11:00 AM - 2:00 PM",
+      "hostedBy": "AFRHEEC | In partnership with Engage Northwest",
+      "intro1": "We celebrated an afternoon of joy, connection, and community as AFRHEEC honored the heart of our community\u2014our mothers. This special event was a tribute to the love, strength, and sacrifice that mothers bring to every generation.",
+      "intro2": "A Motherland Mother's Day was a community luncheon that embraced the rich cultural traditions of motherhood, especially for those beginning new chapters as immigrants and refugees. We created a space that felt like home\u2014with flavorful food, refreshing drinks, uplifting music, and the shared joy of belonging.",
+      "quote": "\"All were welcome\u2014dressed to celebrate, bringing stories, laughter, and spirit. The day was filled with good vibes, warm company, and moments that will stay with us.\"",
+      "thanks": "Special thanks to our partners at Engage Northwest for generously providing the space that made this celebration possible.",
+      "languagesTitle": "Multilingual Celebration",
+      "languagesIntro": "This event was celebrated in multiple languages, honoring our diverse community:",
+      "languages": {
+        "swahili": "Swahili: \"Siku ya Mama\" (Mother's Day)",
+        "french": "French: \"F\u00eate des M\u00e8res\" (Mother's Day)",
+        "english": "English: Mother's Day"
+      }
+    },
+    "flyers": {
+      "title": "Event Flyers",
+      "description": "Multilingual event announcements and promotional materials",
+      "photos": {
+        "englishAlt": "Motherland Mother's Day - English Flyer",
+        "frenchAlt": "Motherland Mother's Day - French Flyer",
+        "swahiliAlt": "Motherland Mother's Day - Swahili Flyer"
+      }
+    },
+    "eventPhotos": {
+      "title": "Event Photos",
+      "description": "Photos from the Motherland Mother's Day celebration",
+      "photos": {
+        "photo1Alt": "Motherland Mother's Day - Album Photo 1",
+        "photo2Alt": "Motherland Mother's Day - Album Photo 2",
+        "photo3Alt": "Motherland Mother's Day - Album Photo 3",
+        "photo4Alt": "Motherland Mother's Day - Album Photo 4",
+        "photo5Alt": "Motherland Mother's Day - Album Photo 5",
+        "photo6Alt": "Motherland Mother's Day - Album Photo 6",
+        "photo7Alt": "Motherland Mother's Day - Album Photo 7",
+        "photo8Alt": "Motherland Mother's Day - Album Photo 8",
+        "photo9Alt": "Motherland Mother's Day - Album Photo 9"
+      }
     }
   }
 }

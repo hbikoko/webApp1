@@ -38,14 +38,34 @@
     "policyAlt": "Sera & Misimamo",
     "policyTitle": "Sera & Misimamo"
   },
-  "wwd": {
-    "header": "Tunachofanya",
-    "readMore": "Soma Zaidi Kuhusu Tunachofanya",
-    "heritageandhistory": "Urithi na Historia",
-    "community": "Jamii",
-    "currentprojects": "Miradi ya Sasa",
-    "policyandpositions": "Sera na Misimamo"
-  },
+    "wwd": {
+      "header": "Tunachofanya",
+      "intro": "AFRHEEC inawezesha jamii zenye urithi wa Kiafrika kupitia elimu inayozingatia utamaduni, uhifadhi wa urithi, ujenzi wa jamii, na huduma muhimu za msaada. Programu zetu zimeundwa kuimarisha familia, kuhifadhi utambulisho wa kitamaduni, na kujenga jamii imara kwa vizazi vijavyo.",
+      "readMore": "Soma Zaidi Kuhusu Tunachofanya",
+      "heritageandhistory": "Urithi na Historia",
+      "community": "Jamii",
+      "currentprojects": "Miradi ya Sasa",
+      "policyandpositions": "Sera na Misimamo",
+      "serviceAria": "Jifunze zaidi kuhusu {{title}} - {{description}}",
+      "services": {
+        "heritageandhistory": {
+          "title": "Urithi na Historia",
+          "description": "Gundua urithi mpana wa kitamaduni na historia ya jamii za Kiafrika kupitia programu za elimu, juhudi za kuhifadhi utamaduni, na utafiti wa kihistoria."
+        },
+        "community": {
+          "title": "Jamii",
+          "description": "Jenga jamii zenye nguvu na zilizounganishwa kupitia programu zinazozingatia utamaduni, huduma za msaada wa familia, na miradi ya ushirikishwaji wa jamii."
+        },
+        "currentprojects": {
+          "title": "Miradi ya Sasa",
+          "description": "Gundua miradi yetu inayoendelea ikijumuisha Programu ya Kusoma Majira ya Kiangazi, warsha za elimu, na miradi ya maendeleo ya jamii."
+        },
+        "policyandpositions": {
+          "title": "Sera na Misimamo",
+          "description": "Tetea sera zinazounga mkono jamii zenye urithi wa Kiafrika, kukuza usawa, na kushughulikia changamoto za kimfumo zinazowakabili wahamiaji na wakimbizi."
+        }
+      }
+    },
   "heritage": {
     "pageTitle": "Urithi na Historia ya Kiafrika: Safari ya Uwezo, Utambulisho, na Mabadiliko",
     "header": "Urithi na Historia ya Kiafrika: Safari ya Uwezo, Utambulisho, na Mabadiliko",
@@ -156,6 +176,7 @@
     "education": {
       "title": "Elimu",
       "grantText": "Ruzuku iliyotolewa na Meyer Memorial Trust",
+      "grantLogoAlt": "Nembo ya Meyer Memorial Trust",
       "srpTitle": "Programu ya Usomaji wa Majira ya Joto ya AFRHEEC – Muhtasari wa Programu",
       "srpDescription1": "Programu ya AFRHEEC ya",
       "srpLink": "Usomaji wa Majira ya Joto",
@@ -179,7 +200,14 @@
       "locationInfo2": "na inafunguliwa kwa familia katika eneo letu la huduma.",
       "srp2024": "Programu ya Usomaji wa Majira ya Joto 2024",
       "register2025": "Jiandikishe kwa Programu ya Usomaji wa Majira ya Joto 2025",
-      "registerChild": "Jiandikishe Mtoto Wako Leo"
+      "registerChild": "Jiandikishe Mtoto Wako Leo",
+      "srpAlbum": {
+        "photo1Alt": "Programu ya Usomaji wa Majira ya Joto 2024 - Picha 1",
+        "photo2Alt": "Programu ya Usomaji wa Majira ya Joto 2024 - Picha 2",
+        "photo3Alt": "Programu ya Usomaji wa Majira ya Joto 2024 - Picha 3",
+        "photo4Alt": "Programu ya Usomaji wa Majira ya Joto 2024 - Picha 4",
+        "photo5Alt": "Programu ya Usomaji wa Majira ya Joto 2024 - Picha 5"
+      }
     }
   },
   "support": {
@@ -218,6 +246,120 @@
       "description": "Kuna njia nyingi za kusaidia dhamira yetu. Iwe kupitia kujitolea, ushirikiano, au michango, ushiriki wako husaidia kuimarisha jamii yetu.",
       "contactButton": "Wasiliana Nasi",
       "donateButton": "Toa Michango"
+    }
+  },
+  "contact": {
+    "title": "Wasiliana Nasi",
+    "description": "Wasiliana nasi ili ujifunze zaidi kuhusu programu zetu na jinsi unavyoweza kushiriki.",
+    "email": "Barua Pepe",
+    "address": "Anwani",
+    "ourPrograms": "Programu Zetu"
+  },
+  "volunteerForm": {
+    "title": "Kuwa Mtu wa Kujitolea",
+    "description": "Jiunge na timu yetu ya wachangiaji na ufanye tofauti katika jamii ya urithi wa Kiafrika. Tunakaribisha wachangiaji wenye ujuzi na historia mbalimbali kusaidia programu na juhudi zetu.",
+    "firstNameLabel": "Jina la Kwanza *",
+    "lastNameLabel": "Jina la Mwisho *",
+    "emailLabel": "Anwani ya Barua Pepe *",
+    "phoneLabel": "Namba ya Simu *",
+    "interestsLabel": "Maeneo ya Mvuto *",
+    "availabilityLabel": "Upatikanaji *",
+    "availabilityPlaceholder": "Chagua upatikanaji wako",
+    "experienceLabel": "Uzoefu wa awali wa kujitolea",
+    "experiencePlaceholder": "Tuambie kuhusu uzoefu wowote wa kujitolea uliokuwa nao...",
+    "messageLabel": "Kwa nini ungependa kujitolea na AFRHEEC?",
+    "messagePlaceholder": "Shiriki motisha yako na unachotarajia kuchangia...",
+    "submit": {
+      "default": "Tuma Maombi ya Kujitolea",
+      "loading": "Inatuma..."
+    },
+    "successTitle": "Asante kwa nia yako ya kujitolea!",
+    "successMessage": "Tumepokea ombi lako la kujitolea na tutawasiliana nawe hivi karibuni. Timu yetu itapitia maeneo yako ya mvuto na upatikanaji ili kupata nafasi inayokufaa.",
+    "submitAnother": "Tuma Ombi Lingine",
+    "validation": {
+      "firstNameRequired": "Jina la kwanza linahitajika",
+      "lastNameRequired": "Jina la mwisho linahitajika",
+      "emailRequired": "Barua pepe inahitajika",
+      "emailInvalid": "Tafadhali ingiza anwani sahihi ya barua pepe",
+      "phoneRequired": "Namba ya simu inahitajika",
+      "interestsRequired": "Tafadhali chagua angalau eneo moja la mvuto",
+      "availabilityRequired": "Tafadhali chagua upatikanaji wako",
+      "submitError": "Kuna tatizo limetokea. Tafadhali jaribu tena."
+    },
+    "interests": {
+      "educationPrograms": "Programu za Elimu",
+      "culturalEvents": "Matukio ya Kitamaduni",
+      "communityOutreach": "Uhamasishaji wa Jamii",
+      "administrativeSupport": "Msaada wa Utawala",
+      "eventPlanning": "Mipango ya Matukio",
+      "translationServices": "Huduma za Tafsiri",
+      "youthPrograms": "Programu za Vijana",
+      "familySupport": "Msaada kwa Familia"
+    },
+    "availabilityOptions": {
+      "weekdays": "Siku za wiki",
+      "weekends": "Mwisho wa wiki",
+      "evenings": "Jioni",
+      "flexible": "Inayobadilika",
+      "specialEvents": "Matukio Maalum Pekee"
+    }
+  },
+  "communityEvents": {
+    "pageTitle": "Matukio ya Jamii",
+    "subtitle": "Jiunge nasi kwa sherehe za kitamaduni, warsha za elimu, na mikusanyiko ya jamii inayoboresha uhusiano wetu na kuheshimu urithi wetu wa pamoja.",
+    "recentTitle": "Matukio ya Hivi Karibuni",
+    "upcomingTitle": "Matukio Yanayokuja",
+    "upcomingMessage": "Endelea kufuatilia sherehe zetu zijazo za jamii! Tufuate kwenye mitandao ya kijamii au wasiliana nasi ili uendelee kupata taarifa za matukio yajayo.",
+    "photoAlbumsTitle": "Albamu za Picha",
+    "photoCount": "{{count}} picha",
+    "backToAlbums": "\u2190 Rudi kwenye Albamu",
+    "labels": {
+      "location": "Eneo:",
+      "time": "Muda:",
+      "hostedBy": "Mwenyeji:"
+    },
+    "mothersDay": {
+      "title": "Siku ya Mama ya Motherland",
+      "date": "Mei 10, 2025",
+      "statusPast": "Tukio Limepita",
+      "location": "Chumba cha Jamii cha Kituo cha AMAFA, Salem, Oregon",
+      "time": "11:00 AM - 2:00 PM",
+      "hostedBy": "AFRHEEC | Kwa ushirikiano na Engage Northwest",
+      "intro1": "Tulisherehekea alasiri ya furaha, uhusiano, na jamii huku AFRHEEC ikiheshimu moyo wa jamii yetu\u2014mama zetu. Tukio hili maalum lilikuwa heshima kwa upendo, nguvu, na kujitolea ambavyo mama huleta katika kila kizazi.",
+      "intro2": "Siku ya Mama ya Motherland ilikuwa chakula cha mchana cha jamii kilichokumbatia tamaduni tajiri za uzazi, hasa kwa wale wanaoanza sura mpya kama wahamiaji na wakimbizi. Tuliunda nafasi iliyohisi kama nyumbani\u2014ikiwa na chakula chenye ladha, vinywaji vya kupendeza, muziki unaoinua roho, na furaha ya pamoja ya kuwa sehemu ya jamii.",
+      "quote": "\"Kila mtu alikaribishwa\u2014wakiwa wamevaa kusherehekea, wakiwaleta hadithi, kicheko, na roho. Siku ilijaa mitetemo mizuri, kampani ya kupendeza, na kumbukumbu zitakazodumu.\"",
+      "thanks": "Shukrani za pekee kwa washirika wetu wa Engage Northwest kwa kutoa ukarimu nafasi iliyowezesha sherehe hii.",
+      "languagesTitle": "Sherehe ya Lugha Nyingi",
+      "languagesIntro": "Tukio hili liliadhimishwa kwa lugha nyingi, tukiheshimu jamii yetu yenye utofauti:",
+      "languages": {
+        "swahili": "Kiswahili: \"Siku ya Mama\" (Siku ya Mama)",
+        "french": "Kifaransa: \"F\u00eate des M\u00e8res\" (Siku ya Mama)",
+        "english": "Kiingereza: Mother's Day"
+      }
+    },
+    "flyers": {
+      "title": "Vipeperushi vya Tukio",
+      "description": "Matangazo ya tukio katika lugha mbalimbali na vifaa vya matangazo",
+      "photos": {
+        "englishAlt": "Motherland Mother's Day - Kipeperushi cha Kiingereza",
+        "frenchAlt": "Motherland Mother's Day - Kipeperushi cha Kifaransa",
+        "swahiliAlt": "Motherland Mother's Day - Kipeperushi cha Kiswahili"
+      }
+    },
+    "eventPhotos": {
+      "title": "Picha za Tukio",
+      "description": "Picha kutoka sherehe ya Motherland Mother's Day",
+      "photos": {
+        "photo1Alt": "Motherland Mother's Day - Picha ya Albamu 1",
+        "photo2Alt": "Motherland Mother's Day - Picha ya Albamu 2",
+        "photo3Alt": "Motherland Mother's Day - Picha ya Albamu 3",
+        "photo4Alt": "Motherland Mother's Day - Picha ya Albamu 4",
+        "photo5Alt": "Motherland Mother's Day - Picha ya Albamu 5",
+        "photo6Alt": "Motherland Mother's Day - Picha ya Albamu 6",
+        "photo7Alt": "Motherland Mother's Day - Picha ya Albamu 7",
+        "photo8Alt": "Motherland Mother's Day - Picha ya Albamu 8",
+        "photo9Alt": "Motherland Mother's Day - Picha ya Albamu 9"
+      }
     }
   }
 }

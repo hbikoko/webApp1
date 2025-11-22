@@ -11,41 +11,51 @@ import sankofaIcon from '../assets/sankofa.png';
 
 const servicesData = [
   {
+    key: 'heritageandhistory',
     icon: africaIcon,
-    title: 'Heritage and History',
+    defaultTitle: 'Heritage and History',
     path: '/services/heritage-and-history',
-    description: 'Explore the rich cultural heritage and historical connections of African communities through educational programs, cultural preservation initiatives, and historical research.',
+    defaultDescription: 'Explore the rich cultural heritage and historical connections of African communities through educational programs, cultural preservation initiatives, and historical research.',
     keywords: ['African heritage', 'cultural history', 'African diaspora', 'heritage preservation', 'cultural education', 'African American history'],
-    longDescription: 'Our Heritage and History programs preserve and celebrate African cultural traditions, historical narratives, and ancestral connections. We offer educational workshops, cultural preservation initiatives, and historical research opportunities that help communities understand and honor their roots.'
   },
   {
+    key: 'community',
     icon: treeIcon,
-    title: 'Community',
-    path: '/services/community',
-    description: 'Build stronger, more connected communities through culturally responsive programs, family support services, and community engagement initiatives.',
+    defaultTitle: 'Community',
+    path: '/services',
+    defaultDescription: 'Build stronger, more connected communities through culturally responsive programs, family support services, and community engagement initiatives.',
     keywords: ['community building', 'cultural programs', 'family support', 'community engagement', 'African community', 'social services'],
-    longDescription: 'Our Community programs focus on building resilient, supportive networks for African heritage families. We provide culturally responsive services, family support programs, and community engagement initiatives that strengthen social bonds and create lasting connections.'
   },
   {
+    key: 'currentprojects',
     icon: adinIcon,
-    title: 'Current Projects',
+    defaultTitle: 'Current Projects',
     path: '/services/current-projects',
-    description: 'Discover our ongoing initiatives including the Summer Reading Program, educational workshops, and community development projects.',
+    defaultDescription: 'Discover our ongoing initiatives including the Summer Reading Program, educational workshops, and community development projects.',
     keywords: ['current projects', 'summer reading program', 'educational workshops', 'community development', 'literacy programs', 'AFRHEEC projects'],
-    longDescription: 'Our Current Projects include innovative programs like the Summer Reading Program, educational workshops, and community development initiatives. These projects are designed to address specific needs within African heritage communities while promoting literacy, education, and cultural awareness.'
   },
   {
+    key: 'policyandpositions',
     icon: sankofaIcon,
-    title: 'Policy and Positions',
+    defaultTitle: 'Policy and Positions',
     path: '/services/policy-and-positions',
-    description: 'Advocate for policies that support African heritage communities, promote equity, and address systemic challenges faced by immigrant and refugee families.',
+    defaultDescription: 'Advocate for policies that support African heritage communities, promote equity, and address systemic challenges faced by immigrant and refugee families.',
     keywords: ['policy advocacy', 'social justice', 'equity programs', 'immigrant rights', 'refugee support', 'African American policy'],
-    longDescription: 'Our Policy and Positions work focuses on advocating for systemic change that benefits African heritage communities. We work to promote equity, address systemic challenges, and support policies that advance the rights and well-being of immigrant and refugee families.'
   },
 ];
 
 function WWD() {
   const { t } = useTranslation();
+
+  const services = servicesData.map((service) => {
+    const title = t(`wwd.services.${service.key}.title`, service.defaultTitle);
+    const description = t(
+      `wwd.services.${service.key}.description`,
+      service.defaultDescription
+    );
+
+    return { ...service, title, description };
+  });
 
   // Structured data for services
   const structuredData = {
@@ -64,7 +74,7 @@ function WWD() {
       "@type": "OfferCatalog",
       "name": "AFRHEEC Services",
       "description": "Our comprehensive range of services for African heritage communities",
-      "itemListElement": servicesData.map((service, index) => ({
+      "itemListElement": services.map((service, index) => ({
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
@@ -111,30 +121,30 @@ function WWD() {
               {t('wwd.header', 'What We Do')}
             </h1>
             <p className="wwd-intro">
-              AFRHEEC empowers African heritage communities through culturally responsive education, 
-              heritage preservation, community building, and essential support services. Our programs 
-              are designed to strengthen families, preserve cultural identity, and build resilient 
-              communities for future generations.
+              {t(
+                'wwd.intro',
+                'AFRHEEC empowers African heritage communities through culturally responsive education, heritage preservation, community building, and essential support services. Our programs are designed to strengthen families, preserve cultural identity, and build resilient communities for future generations.'
+              )}
             </p>
           </header>
 
           <section className="services-section" aria-labelledby="services-title">
             <h2 id="services-title" className="sr-only">Our Services</h2>
             <div className="services-container" role="list" aria-label="Our comprehensive services">
-              {servicesData.map((service, index) => (
-                <article key={service.title} className="service-article" role="listitem">
+              {services.map((service) => (
+                <article key={service.key} className="service-article" role="listitem">
                   <Link
                     to={service.path}
                     style={{ textDecoration: 'none', color: 'inherit' }}
-                    aria-label={`Learn more about ${service.title} - ${service.description}`}
+                    aria-label={t('wwd.serviceAria', {
+                      title: service.title,
+                      description: service.description
+                    })}
                     className="service-link"
                   >
                     <ServiceBlock
                       icon={service.icon}
-                      title={t(
-                        `wwd.${service.title.replace(/\s+/g, '').toLowerCase()}`,
-                        service.title
-                      )}
+                      title={service.title}
                       description={service.description}
                     />
                   </Link>
@@ -159,4 +169,3 @@ function WWD() {
 }
 
 export default WWD;
-

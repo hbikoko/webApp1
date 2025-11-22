@@ -14,12 +14,17 @@ function EducationPage() {
   const [selectedImage, setSelectedImage] = useState(null);
   
   const summerReadingImages = [
-    { src: sr1, alt: 'Summer Reading Program 2024 - Photo 1' },
-    { src: sr2, alt: 'Summer Reading Program 2024 - Photo 2' },
-    { src: sr3, alt: 'Summer Reading Program 2024 - Photo 3' },
-    { src: sr4, alt: 'Summer Reading Program 2024 - Photo 4' },
-    { src: sr5, alt: 'Summer Reading Program 2024 - Photo 5' },
+    { src: sr1, altKey: 'education.srpAlbum.photo1Alt', defaultAlt: 'Summer Reading Program 2024 - Photo 1' },
+    { src: sr2, altKey: 'education.srpAlbum.photo2Alt', defaultAlt: 'Summer Reading Program 2024 - Photo 2' },
+    { src: sr3, altKey: 'education.srpAlbum.photo3Alt', defaultAlt: 'Summer Reading Program 2024 - Photo 3' },
+    { src: sr4, altKey: 'education.srpAlbum.photo4Alt', defaultAlt: 'Summer Reading Program 2024 - Photo 4' },
+    { src: sr5, altKey: 'education.srpAlbum.photo5Alt', defaultAlt: 'Summer Reading Program 2024 - Photo 5' },
   ];
+
+  const translatedSummerReadingImages = summerReadingImages.map((image) => ({
+    src: image.src,
+    alt: t(image.altKey, image.defaultAlt)
+  }));
 
   return (
     <div className="education-container">
@@ -28,7 +33,11 @@ function EducationPage() {
       <div className="education-content">
         <div className="summer-reading-section">
           <div className="grant-acknowledgment">
-            <img src={mmm2Logo} alt="Meyer Memorial Trust Logo" className="grant-logo" />
+            <img
+              src={mmm2Logo}
+              alt={t('education.grantLogoAlt', 'Meyer Memorial Trust Logo')}
+              className="grant-logo"
+            />
             <span className="grant-text">
               {t('education.grantText', 'Grant provided by Meyer Memorial Trust')}
             </span>
@@ -79,7 +88,7 @@ function EducationPage() {
           <div className="summer-reading-album">
             <h3 className="album-title">{t('education.srp2024', 'Summer Reading Program 2024')}</h3>
             <div className="album-grid">
-              {summerReadingImages.map((img, idx) => (
+              {translatedSummerReadingImages.map((img, idx) => (
                 <img
                   key={idx}
                   src={img.src}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './styles/CommunityEvents.css';
 import mdEnglish from '../assets/mdEnglish.png';
 import mdFrench from '../assets/mdFrench.jpg';
@@ -14,8 +15,95 @@ import mDay8 from '../assets/mDay8.jpg';
 import mDay9 from '../assets/mDay9.jpg';
 
 function CommunityEvents() {
+  const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedAlbum, setSelectedAlbum] = useState(null);
+  const languageLabels = [
+    { key: 'swahili', defaultLabel: 'Swahili: "Siku ya Mama" (Mother\'s Day)' },
+    { key: 'french', defaultLabel: 'French: "Fête des Mères" (Mother\'s Day)' },
+    { key: 'english', defaultLabel: 'English: Mother\'s Day' }
+  ].map((item) => ({
+    key: item.key,
+    label: t(`communityEvents.mothersDay.languages.${item.key}`, item.defaultLabel)
+  }));
+
+  const albumsData = [
+    {
+      key: 'flyers',
+      titleKey: 'communityEvents.flyers.title',
+      descriptionKey: 'communityEvents.flyers.description',
+      coverImage: mdEnglish,
+      defaultTitle: 'Event Flyers',
+      defaultDescription: 'Multilingual event announcements and promotional materials',
+      photos: [
+        { src: mdEnglish, altKey: 'communityEvents.flyers.photos.englishAlt', defaultAlt: 'Motherland Mother\'s Day - English Flyer' },
+        { src: mdFrench, altKey: 'communityEvents.flyers.photos.frenchAlt', defaultAlt: 'Motherland Mother\'s Day - French Flyer' },
+        { src: mdSwahili, altKey: 'communityEvents.flyers.photos.swahiliAlt', defaultAlt: 'Motherland Mother\'s Day - Swahili Flyer' }
+      ]
+    },
+    {
+      key: 'eventPhotos',
+      titleKey: 'communityEvents.eventPhotos.title',
+      descriptionKey: 'communityEvents.eventPhotos.description',
+      coverImage: mDay1,
+      defaultTitle: 'Event Photos',
+      defaultDescription: 'Photos from the Motherland Mother\'s Day celebration',
+      photos: [
+        { src: mDay1, altKey: 'communityEvents.eventPhotos.photos.photo1Alt', defaultAlt: 'Motherland Mother\'s Day - Album Photo 1' },
+        { src: mDay2, altKey: 'communityEvents.eventPhotos.photos.photo2Alt', defaultAlt: 'Motherland Mother\'s Day - Album Photo 2' },
+        { src: mDay3, altKey: 'communityEvents.eventPhotos.photos.photo3Alt', defaultAlt: 'Motherland Mother\'s Day - Album Photo 3' },
+        { src: mDay4, altKey: 'communityEvents.eventPhotos.photos.photo4Alt', defaultAlt: 'Motherland Mother\'s Day - Album Photo 4' },
+        { src: mDay5, altKey: 'communityEvents.eventPhotos.photos.photo5Alt', defaultAlt: 'Motherland Mother\'s Day - Album Photo 5' },
+        { src: mDay6, altKey: 'communityEvents.eventPhotos.photos.photo6Alt', defaultAlt: 'Motherland Mother\'s Day - Album Photo 6' },
+        { src: mDay7, altKey: 'communityEvents.eventPhotos.photos.photo7Alt', defaultAlt: 'Motherland Mother\'s Day - Album Photo 7' },
+        { src: mDay8, altKey: 'communityEvents.eventPhotos.photos.photo8Alt', defaultAlt: 'Motherland Mother\'s Day - Album Photo 8' },
+        { src: mDay9, altKey: 'communityEvents.eventPhotos.photos.photo9Alt', defaultAlt: 'Motherland Mother\'s Day - Album Photo 9' }
+      ]
+    }
+  ];
+
+  const albums = albumsData.map((album) => ({
+    ...album,
+    title: t(album.titleKey, album.defaultTitle),
+    description: t(album.descriptionKey, album.defaultDescription),
+    photos: album.photos.map((photo) => ({
+      src: photo.src,
+      alt: t(photo.altKey, photo.defaultAlt)
+    }))
+  }));
+
+  const eventDetails = {
+    title: t('communityEvents.mothersDay.title', "A Motherland Mother's Day"),
+    date: t('communityEvents.mothersDay.date', 'May 10, 2025'),
+    status: t('communityEvents.mothersDay.statusPast', 'Past Event'),
+    locationLabel: t('communityEvents.labels.location', 'Location:'),
+    locationValue: t('communityEvents.mothersDay.location', 'AMAFA Center Community Room, Salem, Oregon'),
+    timeLabel: t('communityEvents.labels.time', 'Time:'),
+    timeValue: t('communityEvents.mothersDay.time', '11:00 AM - 2:00 PM'),
+    hostedLabel: t('communityEvents.labels.hostedBy', 'Hosted by:'),
+    hostedValue: t('communityEvents.mothersDay.hostedBy', 'AFRHEEC | In partnership with Engage Northwest'),
+    intro1: t(
+      'communityEvents.mothersDay.intro1',
+      'We celebrated an afternoon of joy, connection, and community as AFRHEEC honored the heart of our community—our mothers. This special event was a tribute to the love, strength, and sacrifice that mothers bring to every generation.'
+    ),
+    intro2: t(
+      'communityEvents.mothersDay.intro2',
+      'A Motherland Mother\'s Day was a community luncheon that embraced the rich cultural traditions of motherhood, especially for those beginning new chapters as immigrants and refugees. We created a space that felt like home—with flavorful food, refreshing drinks, uplifting music, and the shared joy of belonging.'
+    ),
+    quote: t(
+      'communityEvents.mothersDay.quote',
+      '"All were welcome—dressed to celebrate, bringing stories, laughter, and spirit. The day was filled with good vibes, warm company, and moments that will stay with us."'
+    ),
+    thanks: t(
+      'communityEvents.mothersDay.thanks',
+      'Special thanks to our partners at Engage Northwest for generously providing the space that made this celebration possible.'
+    ),
+    languagesTitle: t('communityEvents.mothersDay.languagesTitle', 'Multilingual Celebration'),
+    languagesIntro: t(
+      'communityEvents.mothersDay.languagesIntro',
+      'This event was celebrated in multiple languages, honoring our diverse community:'
+    )
+  };
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -42,45 +130,15 @@ function CommunityEvents() {
     setSelectedAlbum(null);
   };
 
-  // Album data
-  const albums = {
-    flyers: {
-      title: "Event Flyers",
-      description: "Multilingual event announcements and promotional materials",
-      coverImage: mdEnglish,
-      photos: [
-        { src: mdEnglish, alt: "Motherland Mother's Day - English Flyer" },
-        { src: mdFrench, alt: "Motherland Mother's Day - French Flyer" },
-        { src: mdSwahili, alt: "Motherland Mother's Day - Swahili Flyer" }
-      ]
-    },
-    eventPhotos: {
-      title: "Event Photos",
-      description: "Photos from the Motherland Mother's Day celebration",
-      coverImage: mDay1,
-      photos: [
-        { src: mDay1, alt: "Motherland Mother's Day - Album Photo 1" },
-        { src: mDay2, alt: "Motherland Mother's Day - Album Photo 2" },
-        { src: mDay3, alt: "Motherland Mother's Day - Album Photo 3" },
-        { src: mDay4, alt: "Motherland Mother's Day - Album Photo 4" },
-        { src: mDay5, alt: "Motherland Mother's Day - Album Photo 5" },
-        { src: mDay6, alt: "Motherland Mother's Day - Album Photo 6" },
-        { src: mDay7, alt: "Motherland Mother's Day - Album Photo 7" },
-        { src: mDay8, alt: "Motherland Mother's Day - Album Photo 8" },
-        { src: mDay9, alt: "Motherland Mother's Day - Album Photo 9" }
-      ]
-    }
-  };
-
   const renderAlbumCover = (albumKey, album) => (
-    <div 
+    <div
       key={albumKey}
       className="album-cover"
       onClick={() => setSelectedAlbum(albumKey)}
     >
       <div className="album-preview">
-        <img 
-          src={album.coverImage} 
+        <img
+          src={album.coverImage}
           alt={album.title}
           className="album-cover-image"
         />
@@ -88,7 +146,12 @@ function CommunityEvents() {
           <div className="album-info">
             <h3>{album.title}</h3>
             <p>{album.description}</p>
-            <span className="photo-count">{album.photos.length} photos</span>
+            <span className="photo-count">
+              {t('communityEvents.photoCount', {
+                count: album.photos.length,
+                defaultValue: `${album.photos.length} photos`
+              })}
+            </span>
           </div>
         </div>
       </div>
@@ -99,7 +162,7 @@ function CommunityEvents() {
     <div className="album-view">
       <div className="album-header">
         <button className="back-button" onClick={closeAlbum}>
-          ← Back to Albums
+          {t('communityEvents.backToAlbums', '← Back to Albums')}
         </button>
         <h2>{album.title}</h2>
         <p>{album.description}</p>
@@ -125,78 +188,68 @@ function CommunityEvents() {
   return (
     <div className="community-events-container">
       <div className="header-section">
-        <h1 className="page-title">Community Events</h1>
+        <h1 className="page-title">{t('communityEvents.pageTitle', 'Community Events')}</h1>
         <p className="page-subtitle">
-          Join us for cultural celebrations, educational workshops, and community gatherings 
-          that strengthen our bonds and honor our shared heritage.
+          {t(
+            'communityEvents.subtitle',
+            'Join us for cultural celebrations, educational workshops, and community gatherings that strengthen our bonds and honor our shared heritage.'
+          )}
         </p>
       </div>
 
       {/* Past Events Section */}
       <section className="events-section">
-        <h2 className="section-title">Recent Events</h2>
+        <h2 className="section-title">{t('communityEvents.recentTitle', 'Recent Events')}</h2>
         
         {/* Motherland Mother's Day Event */}
         <div className="event-card past-event">
           <div className="event-header">
-            <h3 className="event-title">A Motherland Mother's Day</h3>
-            <span className="event-date">May 10, 2025</span>
-            <span className="event-status past">Past Event</span>
+            <h3 className="event-title">{eventDetails.title}</h3>
+            <span className="event-date">{eventDetails.date}</span>
+            <span className="event-status past">{eventDetails.status}</span>
           </div>
           
           <div className="event-content">
             {/* Photo Albums Section */}
             {!selectedAlbum ? (
               <div className="photo-albums">
-                <h3 className="albums-title">Photo Albums</h3>
+                <h3 className="albums-title">{t('communityEvents.photoAlbumsTitle', 'Photo Albums')}</h3>
                 <div className="albums-grid">
-                  {renderAlbumCover('flyers', albums.flyers)}
-                  {renderAlbumCover('eventPhotos', albums.eventPhotos)}
+                  {albums.map((album) => renderAlbumCover(album.key, album))}
                 </div>
               </div>
             ) : (
-              renderAlbumView(selectedAlbum, albums[selectedAlbum])
+              (() => {
+                const album = albums.find((a) => a.key === selectedAlbum);
+                return album ? renderAlbumView(selectedAlbum, album) : null;
+              })()
             )}
             
             <div className="event-details">
               <div className="event-info">
-                <p><strong>Location:</strong> AMAFA Center Community Room, Salem, Oregon</p>
-                <p><strong>Time:</strong> 11:00 AM - 2:00 PM</p>
-                <p><strong>Hosted by:</strong> AFRHEEC | In partnership with Engage Northwest</p>
+                <p><strong>{eventDetails.locationLabel}</strong> {eventDetails.locationValue}</p>
+                <p><strong>{eventDetails.timeLabel}</strong> {eventDetails.timeValue}</p>
+                <p><strong>{eventDetails.hostedLabel}</strong> {eventDetails.hostedValue}</p>
               </div>
               
               <div className="event-description">
-                <p>
-                  We celebrated an afternoon of joy, connection, and community as AFRHEEC honored 
-                  the heart of our community—<strong>our mothers</strong>. This special event was 
-                  a tribute to the love, strength, and sacrifice that mothers bring to every generation.
-                </p>
-                
-                <p>
-                  <strong>A Motherland Mother's Day</strong> was a community luncheon that embraced 
-                  the rich cultural traditions of motherhood, especially for those beginning new 
-                  chapters as immigrants and refugees. We created a space that felt like home—with 
-                  <strong>flavorful food, refreshing drinks, uplifting music, and the shared joy of belonging</strong>.
-                </p>
-                
+                <p>{eventDetails.intro1}</p>
+                <p>{eventDetails.intro2}</p>
                 <blockquote className="event-quote">
-                  "All were welcome—dressed to celebrate, bringing stories, laughter, and spirit. 
-                  The day was filled with good vibes, warm company, and moments that will stay with us."
+                  {eventDetails.quote}
                 </blockquote>
-                
                 <p className="thanks-note">
-                  <em>Special thanks to our partners at Engage Northwest for generously providing 
-                  the space that made this celebration possible.</em>
+                  <em>{eventDetails.thanks}</em>
                 </p>
               </div>
               
               <div className="event-languages">
-                <h4>Multilingual Celebration</h4>
-                <p>This event was celebrated in multiple languages, honoring our diverse community:</p>
+                <h4>{eventDetails.languagesTitle}</h4>
+                <p>{eventDetails.languagesIntro}</p>
                 <ul>
-                  <li><strong>Swahili:</strong> "Siku ya Mama" (Mother's Day)</li>
-                  <li><strong>French:</strong> "Fête des Mères" (Mother's Day)</li>
-                  <li><strong>English:</strong> Mother's Day</li>
+                  {languageLabels.map((lang) => (
+                    <li key={lang.key}>{lang.label}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -206,9 +259,14 @@ function CommunityEvents() {
 
       {/* Upcoming Events Section */}
       <section className="events-section">
-        <h2 className="section-title">Upcoming Events</h2>
+        <h2 className="section-title">{t('communityEvents.upcomingTitle', 'Upcoming Events')}</h2>
         <div className="no-events-message">
-          <p>Stay tuned for our next community celebrations! Follow us on social media or contact us to stay updated on upcoming events.</p>
+          <p>
+            {t(
+              'communityEvents.upcomingMessage',
+              'Stay tuned for our next community celebrations! Follow us on social media or contact us to stay updated on upcoming events.'
+            )}
+          </p>
         </div>
       </section>
 

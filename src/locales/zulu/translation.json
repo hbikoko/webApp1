@@ -38,14 +38,34 @@
     "policyAlt": "Izinqubomgomo",
     "policyTitle": "Izinqubomgomo"
   },
-  "wwd": {
-    "header": "Esikwenzayo",
-    "readMore": "Funda Okuningi Ngalokho Esikwenzayo",
-    "heritageandhistory": "Ifa Nezimbali",
-    "community": "Umphakathi",
-    "currentprojects": "Amaphrojekthi Amasha",
-    "policyandpositions": "Izinqubomgomo neZikhundla"
-  },
+    "wwd": {
+      "header": "Esikwenzayo",
+      "intro": "I-AFRHEEC iqinisa imiphakathi yelifa lase-Afrika ngokwemfundo ehambisana namasiko, ukuvikelwa kwefa, ukwakha umphakathi, kanye nezinsiza zokweseka ezibalulekile. Izinqubo zethu zakhelwe ukuqinisa imindeni, ukugcina ubuwena besiko, nokwakha imiphakathi emelana nezimo yezizukulwane ezizayo.",
+      "readMore": "Funda Okuningi Ngalokho Esikwenzayo",
+      "heritageandhistory": "Ifa Nezimbali",
+      "community": "Umphakathi",
+      "currentprojects": "Amaphrojekthi Amasha",
+      "policyandpositions": "Izinqubomgomo neZikhundla",
+      "serviceAria": "Funda kabanzi ngo {{title}} - {{description}}",
+      "services": {
+        "heritageandhistory": {
+          "title": "Ifa Nezimbali",
+          "description": "Hlola ifa elicebile namaxhama omlando ezingxenyeni zomphakathi wase-Afrika ngokusebenzisa izinhlelo zemfundo, imizamo yokuvikela isiko, kanye nocwaningo lwezomlando."
+        },
+        "community": {
+          "title": "Umphakathi",
+          "description": "Ake sakhe imiphakathi eqinile, exhumene kahle ngezinhlelo ezihambisana namasiko, izinsiza zokusekela imindeni, kanye nemikhankaso yokubamba iqhaza komphakathi."
+        },
+        "currentprojects": {
+          "title": "Amaphrojekthi Amasha",
+          "description": "Thola imizamo yethu eqhubekayo kuhlanganise noHlelo Lokufunda Ehlobo, ama-workshop emfundo, kanye namaphrojekthi okuthuthukisa umphakathi."
+        },
+        "policyandpositions": {
+          "title": "Izinqubomgomo neZikhundla",
+          "description": "Vikela izinqubomgomo ezisekela imiphakathi enefa lase-Afrika, zikhuthaze ubulungiswa, futhi zibhekane nezinselelo zesistimu ezibhekene nemindeni yabokufika nababaleki."
+        }
+      }
+    },
   "heritage": {
     "pageTitle": "Ifa Nezimbali Zase-Afrika: Uhambo Lokumelana, Ubunikazi, Nokuguquka",
     "header": "Ifa Nezimbali Zase-Afrika: Uhambo Lokumelana, Ubunikazi, Nokuguquka",
@@ -156,6 +176,7 @@
     "education": {
       "title": "Imfundo",
       "grantText": "Isipho esinikezwe nguMeyer Memorial Trust",
+      "grantLogoAlt": "Ilogo ye-Meyer Memorial Trust",
       "srpTitle": "Ihlelo Lokufunda Lasehlobo le-AFRHEEC – Ukuqonda Kwesigaba",
       "srpDescription1": "Ihlelo le-AFRHEEC lokufunda",
       "srpLink": "Lasehlobo",
@@ -179,7 +200,14 @@
       "locationInfo2": "futhi livulekele imindeni endaweni yethu yensizakalo.",
       "srp2024": "Ihlelo Lokufunda Lasehlobo 2024",
       "register2025": "Bhalisa kwiHlelo Lokufunda Lasehlobo 2025",
-      "registerChild": "Bhalisa Ingane Yakho Namhlanje"
+      "registerChild": "Bhalisa Ingane Yakho Namhlanje",
+      "srpAlbum": {
+        "photo1Alt": "Ihlelo Lokufunda Lasehlobo 2024 - Isithombe 1",
+        "photo2Alt": "Ihlelo Lokufunda Lasehlobo 2024 - Isithombe 2",
+        "photo3Alt": "Ihlelo Lokufunda Lasehlobo 2024 - Isithombe 3",
+        "photo4Alt": "Ihlelo Lokufunda Lasehlobo 2024 - Isithombe 4",
+        "photo5Alt": "Ihlelo Lokufunda Lasehlobo 2024 - Isithombe 5"
+      }
     }
   },
   "support": {
@@ -218,6 +246,120 @@
       "description": "Kunezindlela eziningi zokusekela umsebenzi wethu. Kungaba ngokuzinikela, ubudlelwano, noma iminikelo, ukubandakanyeka kwakho kusiza ukuqinisa umphakathi wethu.",
       "contactButton": "Xhumana Nathi",
       "donateButton": "Nika Imikhiqizo"
+    }
+  },
+  "contact": {
+    "title": "Xhumana Nathi",
+    "description": "Thintana nathi ukuze ufunde kabanzi ngezinhlelo zethu kanye nendlela ongabamba iqhaza ngayo.",
+    "email": "I-imeyili",
+    "address": "Ikheli",
+    "ourPrograms": "Izinhlelo Zethu"
+  },
+  "volunteerForm": {
+    "title": "Yiba Isivolontiya",
+    "description": "Joyina ithimba lethu labazinikeli futhi wenze umehluko emphakathini wamagugu ase-Afrika. Siyamukela abazinikele abanolwazi nezizinda ezihlukahlukene ukusekela izinhlelo namaphrojekthi ethu.",
+    "firstNameLabel": "Igama Lokuqala *",
+    "lastNameLabel": "Isibongo *",
+    "emailLabel": "Ikheli le-imeyili *",
+    "phoneLabel": "Inombolo Yocingo *",
+    "interestsLabel": "Izindawo Zentshisekelo *",
+    "availabilityLabel": "Ukutholakala *",
+    "availabilityPlaceholder": "Khetha ukutholakala kwakho",
+    "experienceLabel": "Okuhlangenwe nakho kwangaphambilini kokuzithandela",
+    "experiencePlaceholder": "Sitshele nganoma yisiphi isipiliyoni sokuzithandela owake waba naso...",
+    "messageLabel": "Kungani ungathanda ukuzithandela ne-AFRHEEC?",
+    "messagePlaceholder": "Yabelana ngokugqugquzela kwakho nalokho okuthemba ukunikela...",
+    "submit": {
+      "default": "Thumela Isicelo Sesivolontiya",
+      "loading": "Kuthunyelwa..."
+    },
+    "successTitle": "Siyabonga ngesifiso sakho sokuzithandela!",
+    "successMessage": "Sithole isicelo sakho sokuzithandela futhi sizokuthinta maduze. Ithimba lethu lizobuyekeza izintshisekelo zakho nokutholakala kwakho ukuze lithole ithuba elifanele.",
+    "submitAnother": "Thumela Esinye Isicelo",
+    "validation": {
+      "firstNameRequired": "Igama lokuqala liyadingeka",
+      "lastNameRequired": "Isibongo siyadingeka",
+      "emailRequired": "I-imeyili iyadingeka",
+      "emailInvalid": "Sicela ufake ikheli le-imeyili elivumelekile",
+      "phoneRequired": "Inombolo yocingo iyadingeka",
+      "interestsRequired": "Sicela ukhethe okungenani indawo eyodwa yentshisekelo",
+      "availabilityRequired": "Sicela ukhethe ukutholakala kwakho",
+      "submitError": "Kunenkinga yenzekile. Sicela uzame futhi."
+    },
+    "interests": {
+      "educationPrograms": "Izinhlelo Zemfundo",
+      "culturalEvents": "Imicimbi Yamasiko",
+      "communityOutreach": "Ukunweba Umphakathi",
+      "administrativeSupport": "Ukusekela Kwezokuphatha",
+      "eventPlanning": "Ukuhlelwa Kwemicimbi",
+      "translationServices": "Izinsiza Zokuhumusha",
+      "youthPrograms": "Izinhlelo Zentsha",
+      "familySupport": "Ukusekela Imindeni"
+    },
+    "availabilityOptions": {
+      "weekdays": "Izinsuku zabasebenzi",
+      "weekends": "Impelasonto",
+      "evenings": "Izikhathi zantambama",
+      "flexible": "Okuguquguqukayo",
+      "specialEvents": "Imicimbi Ekhethekile Kuphela"
+    }
+  },
+  "communityEvents": {
+    "pageTitle": "Imicimbi Yomphakathi",
+    "subtitle": "Hlanganyela nathi emikhosini yamasiko, emaworkshop emfundo, nasekuhlanganyeleni komphakathi okuqinisa ubuhlobo bethu futhi kuhloniphe ifa lethu elabiwe.",
+    "recentTitle": "Imicimbi Yakamuva",
+    "upcomingTitle": "Imicimbi Ezayo",
+    "upcomingMessage": "Hlala ubheke izikhathi zethu ezilandelayo zomphakathi! Sisekele ezinkundleni zokuxhumana noma usithinte ukuze uhlale unolwazi ngemicimbi ezayo.",
+    "photoAlbumsTitle": "Ama-albhamu Ezithombe",
+    "photoCount": "{{count}} izithombe",
+    "backToAlbums": "\u2190 Buyela kwama-albhamu",
+    "labels": {
+      "location": "Indawo:",
+      "time": "Isikhathi:",
+      "hostedBy": "Isingathwe ngu:"
+    },
+    "mothersDay": {
+      "title": "Usuku LukaMama lweMotherland",
+      "date": "Meyi 10, 2025",
+      "statusPast": "Umcimbi Owedlule",
+      "location": "Igumbi Lomphakathi le-AMAFA Center, eSalem, Oregon",
+      "time": "11:00 AM - 2:00 PM",
+      "hostedBy": "AFRHEEC | Ngokubambisana ne-Engage Northwest",
+      "intro1": "Sijabulele ntambama yenjabulo, uxhumano, nomphakathi njengoba i-AFRHEEC ihlonipha inhliziyo yomphakathi wethu\u2014omama bethu. Lo mcimbi okhethekile ube ukuhlonipha uthando, amandla, nokuzidela okulethwa omama ezizukulwaneni zonke.",
+      "intro2": "Usuku LukaMama lweMotherland belungumlindelo womphakathi owamukele izindlela ezicebile zamasiko zobumama, ikakhulukazi kulabo abaqala izahluko ezintsha njengabokufika nababaleki. Sidale indawo ezwakala njengekhaya\u2014enenkudla enothisayo, iziphuzo ezihlanzisayo, umculo ophakamisayo, nenjabulo ehlanganyelwayo yokuba yingxenye.",
+      "quote": "\"Wonke umuntu wamukelekile\u2014egqoke ukuzodla, ephethe izindaba, ukuhleka, nomoya. Usuku belugcwele imizwa emihle, ubungane obufudumele, nezikhathi ezizosala nathi.\"",
+      "thanks": "Sibonga kakhulu ozakwethu e-Engage Northwest ngokusinikeza ngesenzo esinobubele isikhala esenze lo mcimbi wenzeka.",
+      "languagesTitle": "Umkhosi Wezilimi Ezahlukeneyo",
+      "languagesIntro": "Lo mcimbi ubungazwe ngezilimi eziningi, kuhlonishwa umphakathi wethu ohlukahlukene:",
+      "languages": {
+        "swahili": "isiSwahili: \"Siku ya Mama\" (Usuku LukaMama)",
+        "french": "isiFulentshi: \"F\u00eate des M\u00e8res\" (Usuku LukaMama)",
+        "english": "isiNgisi: Mother's Day"
+      }
+    },
+    "flyers": {
+      "title": "Amamemo Omcimbi",
+      "description": "Izaziso zomcimbi ngezilimi ezahlukene nezinto zokukhangisa",
+      "photos": {
+        "englishAlt": "Motherland Mother's Day - Iphephandaba lesiNgisi",
+        "frenchAlt": "Motherland Mother's Day - Iphephandaba lesiFulentshi",
+        "swahiliAlt": "Motherland Mother's Day - Iphephandaba lesiSwahili"
+      }
+    },
+    "eventPhotos": {
+      "title": "Izithombe Zomcimbi",
+      "description": "Izithombe zomkhosi weMotherland Mother's Day",
+      "photos": {
+        "photo1Alt": "Motherland Mother's Day - Isithombe se-Albhamu 1",
+        "photo2Alt": "Motherland Mother's Day - Isithombe se-Albhamu 2",
+        "photo3Alt": "Motherland Mother's Day - Isithombe se-Albhamu 3",
+        "photo4Alt": "Motherland Mother's Day - Isithombe se-Albhamu 4",
+        "photo5Alt": "Motherland Mother's Day - Isithombe se-Albhamu 5",
+        "photo6Alt": "Motherland Mother's Day - Isithombe se-Albhamu 6",
+        "photo7Alt": "Motherland Mother's Day - Isithombe se-Albhamu 7",
+        "photo8Alt": "Motherland Mother's Day - Isithombe se-Albhamu 8",
+        "photo9Alt": "Motherland Mother's Day - Isithombe se-Albhamu 9"
+      }
     }
   }
 }

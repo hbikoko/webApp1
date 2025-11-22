@@ -38,14 +38,34 @@
     "policyAlt": "Politiques & Positions",
     "policyTitle": "Politiques & Positions"
   },
-  "wwd": {
-    "header": "Ce Que Nous Faisons",
-    "readMore": "En Savoir Plus Sur Ce Que Nous Faisons",
-    "heritageandhistory": "Héritage et Histoire",
-    "community": "Communauté",
-    "currentprojects": "Projets Actuels",
-    "policyandpositions": "Politiques et Positions"
-  },
+    "wwd": {
+      "header": "Ce Que Nous Faisons",
+      "intro": "AFRHEEC renforce les communautés d'héritage africain grâce à une éducation adaptée à la culture, à la préservation du patrimoine, au développement communautaire et à des services de soutien essentiels. Nos programmes sont conçus pour renforcer les familles, préserver l'identité culturelle et bâtir des communautés résilientes pour les générations futures.",
+      "readMore": "En Savoir Plus Sur Ce Que Nous Faisons",
+      "heritageandhistory": "Héritage et Histoire",
+      "community": "Communauté",
+      "currentprojects": "Projets Actuels",
+      "policyandpositions": "Politiques et Positions",
+      "serviceAria": "En savoir plus sur {{title}} - {{description}}",
+      "services": {
+        "heritageandhistory": {
+          "title": "Héritage et Histoire",
+          "description": "Explorez le riche patrimoine culturel et les liens historiques des communautés africaines grâce à des programmes éducatifs, des initiatives de préservation culturelle et de la recherche historique."
+        },
+        "community": {
+          "title": "Communauté",
+          "description": "Construisez des communautés plus fortes et connectées grâce à des programmes culturellement adaptés, des services de soutien aux familles et des initiatives d'engagement communautaire."
+        },
+        "currentprojects": {
+          "title": "Projets Actuels",
+          "description": "Découvrez nos initiatives en cours, dont le programme de lecture d'été, les ateliers éducatifs et les projets de développement communautaire."
+        },
+        "policyandpositions": {
+          "title": "Politiques et Positions",
+          "description": "Plaidez pour des politiques qui soutiennent les communautés d'héritage africain, favorisent l'équité et répondent aux défis systémiques auxquels font face les familles immigrantes et réfugiées."
+        }
+      }
+    },
   "heritage": {
     "pageTitle": "Héritage et Histoire Africains: Un Voyage de Résilience, d'Identité et de Transformation",
     "header": "Héritage et Histoire Africains: Un Voyage de Résilience, d'Identité et de Transformation",
@@ -156,6 +176,7 @@
     "education": {
       "title": "Éducation",
       "grantText": "Subvention fournie par Meyer Memorial Trust",
+      "grantLogoAlt": "Logo Meyer Memorial Trust",
       "srpTitle": "Programme de Lecture d'Été AFRHEEC – Aperçu du Programme",
       "srpDescription1": "Le",
       "srpLink": "Programme de Lecture d'Été",
@@ -179,7 +200,14 @@
       "locationInfo2": "et ouvert aux familles de notre zone de service.",
       "srp2024": "Programme de Lecture d'Été 2024",
       "register2025": "S'inscrire au Programme de Lecture d'Été 2025",
-      "registerChild": "Inscrire Votre Enfant Aujourd'hui"
+      "registerChild": "Inscrire Votre Enfant Aujourd'hui",
+      "srpAlbum": {
+        "photo1Alt": "Programme de Lecture d'Été 2024 - Photo 1",
+        "photo2Alt": "Programme de Lecture d'Été 2024 - Photo 2",
+        "photo3Alt": "Programme de Lecture d'Été 2024 - Photo 3",
+        "photo4Alt": "Programme de Lecture d'Été 2024 - Photo 4",
+        "photo5Alt": "Programme de Lecture d'Été 2024 - Photo 5"
+      }
     }
   },
   "support": {
@@ -218,6 +246,120 @@
       "description": "Il y a plusieurs façons de soutenir notre mission. Que ce soit par le bénévolat, les partenariats ou les dons, votre implication aide à renforcer notre communauté.",
       "contactButton": "Contactez-nous",
       "donateButton": "Faire un Don"
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Contactez-nous pour en savoir plus sur nos programmes et comment vous pouvez vous impliquer.",
+    "email": "Email",
+    "address": "Adresse",
+    "ourPrograms": "Nos Programmes"
+  },
+  "volunteerForm": {
+    "title": "Devenez bénévole",
+    "description": "Rejoignez notre équipe de bénévoles dévoués et faites une différence dans la communauté du patrimoine africain. Nous accueillons des bénévoles avec des compétences et des parcours variés pour soutenir nos programmes et initiatives.",
+    "firstNameLabel": "Prénom *",
+    "lastNameLabel": "Nom *",
+    "emailLabel": "Adresse e-mail *",
+    "phoneLabel": "Numéro de téléphone *",
+    "interestsLabel": "Domaines d'intérêt *",
+    "availabilityLabel": "Disponibilités *",
+    "availabilityPlaceholder": "Sélectionnez vos disponibilités",
+    "experienceLabel": "Expérience de bénévolat précédente",
+    "experiencePlaceholder": "Parlez-nous de toute expérience de bénévolat que vous avez...",
+    "messageLabel": "Pourquoi souhaitez-vous faire du bénévolat avec l'AFRHEEC ?",
+    "messagePlaceholder": "Partagez votre motivation et ce que vous espérez apporter...",
+    "submit": {
+      "default": "Envoyer la candidature de bénévole",
+      "loading": "Envoi..."
+    },
+    "successTitle": "Merci pour votre intérêt à faire du bénévolat !",
+    "successMessage": "Nous avons reçu votre candidature et vous contacterons bientôt. Notre équipe examinera vos intérêts et disponibilités pour trouver l'opportunité idéale pour vous.",
+    "submitAnother": "Soumettre une autre candidature",
+    "validation": {
+      "firstNameRequired": "Le prénom est requis",
+      "lastNameRequired": "Le nom est requis",
+      "emailRequired": "L'e-mail est requis",
+      "emailInvalid": "Veuillez entrer une adresse e-mail valide",
+      "phoneRequired": "Le numéro de téléphone est requis",
+      "interestsRequired": "Veuillez sélectionner au moins un domaine d'intérêt",
+      "availabilityRequired": "Veuillez sélectionner vos disponibilités",
+      "submitError": "Un problème est survenu. Veuillez réessayer."
+    },
+    "interests": {
+      "educationPrograms": "Programmes éducatifs",
+      "culturalEvents": "Événements culturels",
+      "communityOutreach": "Sensibilisation communautaire",
+      "administrativeSupport": "Support administratif",
+      "eventPlanning": "Organisation d'événements",
+      "translationServices": "Services de traduction",
+      "youthPrograms": "Programmes jeunesse",
+      "familySupport": "Soutien aux familles"
+    },
+    "availabilityOptions": {
+      "weekdays": "En semaine",
+      "weekends": "Week-ends",
+      "evenings": "Soirées",
+      "flexible": "Flexible",
+      "specialEvents": "Uniquement événements spéciaux"
+    }
+  },
+  "communityEvents": {
+    "pageTitle": "Événements Communautaires",
+    "subtitle": "Rejoignez-nous pour des célébrations culturelles, des ateliers éducatifs et des rassemblements communautaires qui renforcent nos liens et honorent notre patrimoine commun.",
+    "recentTitle": "Événements Récents",
+    "upcomingTitle": "Événements à Venir",
+    "upcomingMessage": "Restez à l'écoute pour nos prochaines célébrations communautaires ! Suivez-nous sur les réseaux sociaux ou contactez-nous pour rester informé des événements à venir.",
+    "photoAlbumsTitle": "Albums Photos",
+    "photoCount": "{{count}} photos",
+    "backToAlbums": "\u2190 Retour aux Albums",
+    "labels": {
+      "location": "Lieu :",
+      "time": "Heure :",
+      "hostedBy": "Organisé par :"
+    },
+    "mothersDay": {
+      "title": "Une Fête des Mères de la Terre-Mère",
+      "date": "10 mai 2025",
+      "statusPast": "Événement passé",
+      "location": "Salle Communautaire du Centre AMAFA, Salem, Oregon",
+      "time": "11h00 - 14h00",
+      "hostedBy": "AFRHEEC | En partenariat avec Engage Northwest",
+      "intro1": "Nous avons célébré un après-midi de joie, de connexion et de communauté alors qu'AFRHEEC honorait le cœur de notre communauté\u2014nos mères. Cet événement spécial était un hommage à l'amour, la force et le sacrifice que les mères apportent à chaque génération.",
+      "intro2": "Une Fête des Mères de la Terre-Mère était un déjeuner communautaire qui a embrassé les riches traditions culturelles de la maternité, en particulier pour celles qui commencent de nouveaux chapitres en tant qu'immigrantes et réfugiées. Nous avons créé un espace qui ressemblait à la maison\u2014avec une cuisine savoureuse, des boissons rafraîchissantes, une musique stimulante et la joie partagée d'appartenir.",
+      "quote": "\"Tout le monde était bienvenu\u2014habillé pour célébrer, apportant des histoires, des rires et de l'esprit. La journée était remplie de bonnes ondes, d'une chaleureuse compagnie et de moments qui resteront avec nous.\"",
+      "thanks": "Remerciements spéciaux à nos partenaires d'Engage Northwest pour avoir généreusement fourni l'espace qui a rendu cette célébration possible.",
+      "languagesTitle": "Célébration Multilingue",
+      "languagesIntro": "Cet événement a été célébré en plusieurs langues, honorant notre communauté diversifiée :",
+      "languages": {
+        "swahili": "Swahili : \"Siku ya Mama\" (Fête des Mères)",
+        "french": "Français : \"F\u00eate des M\u00e8res\" (Fête des Mères)",
+        "english": "Anglais : Mother's Day"
+      }
+    },
+    "flyers": {
+      "title": "Affiches de l'Événement",
+      "description": "Annonces d'événements multilingues et supports promotionnels",
+      "photos": {
+        "englishAlt": "Motherland Mother's Day - Affiche en anglais",
+        "frenchAlt": "Motherland Mother's Day - Affiche en français",
+        "swahiliAlt": "Motherland Mother's Day - Affiche en swahili"
+      }
+    },
+    "eventPhotos": {
+      "title": "Photos de l'Événement",
+      "description": "Photos de la célébration Motherland Mother's Day",
+      "photos": {
+        "photo1Alt": "Motherland Mother's Day - Photo 1",
+        "photo2Alt": "Motherland Mother's Day - Photo 2",
+        "photo3Alt": "Motherland Mother's Day - Photo 3",
+        "photo4Alt": "Motherland Mother's Day - Photo 4",
+        "photo5Alt": "Motherland Mother's Day - Photo 5",
+        "photo6Alt": "Motherland Mother's Day - Photo 6",
+        "photo7Alt": "Motherland Mother's Day - Photo 7",
+        "photo8Alt": "Motherland Mother's Day - Photo 8",
+        "photo9Alt": "Motherland Mother's Day - Photo 9"
+      }
     }
   }
 }

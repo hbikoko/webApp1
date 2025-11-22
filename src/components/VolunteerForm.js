@@ -19,22 +19,22 @@ function VolunteerForm() {
   const [errors, setErrors] = useState({});
 
   const interestOptions = [
-    'Education Programs',
-    'Cultural Events',
-    'Community Outreach',
-    'Administrative Support',
-    'Event Planning',
-    'Translation Services',
-    'Youth Programs',
-    'Family Support'
+    { key: 'educationPrograms', defaultLabel: 'Education Programs' },
+    { key: 'culturalEvents', defaultLabel: 'Cultural Events' },
+    { key: 'communityOutreach', defaultLabel: 'Community Outreach' },
+    { key: 'administrativeSupport', defaultLabel: 'Administrative Support' },
+    { key: 'eventPlanning', defaultLabel: 'Event Planning' },
+    { key: 'translationServices', defaultLabel: 'Translation Services' },
+    { key: 'youthPrograms', defaultLabel: 'Youth Programs' },
+    { key: 'familySupport', defaultLabel: 'Family Support' }
   ];
 
   const availabilityOptions = [
-    'Weekdays',
-    'Weekends',
-    'Evenings',
-    'Flexible',
-    'Special Events Only'
+    { key: 'weekdays', defaultLabel: 'Weekdays' },
+    { key: 'weekends', defaultLabel: 'Weekends' },
+    { key: 'evenings', defaultLabel: 'Evenings' },
+    { key: 'flexible', defaultLabel: 'Flexible' },
+    { key: 'specialEvents', defaultLabel: 'Special Events Only' }
   ];
 
   const handleInputChange = (e) => {
@@ -52,12 +52,12 @@ function VolunteerForm() {
     }
   };
 
-  const handleCheckboxChange = (interest) => {
+  const handleCheckboxChange = (interestKey) => {
     setFormData(prev => ({
       ...prev,
-      interests: prev.interests.includes(interest)
-        ? prev.interests.filter(item => item !== interest)
-        : [...prev.interests, interest]
+      interests: prev.interests.includes(interestKey)
+        ? prev.interests.filter(item => item !== interestKey)
+        : [...prev.interests, interestKey]
     }));
   };
 
@@ -65,29 +65,29 @@ function VolunteerForm() {
     const newErrors = {};
     
     if (!formData.firstName.trim()) {
-      newErrors.firstName = 'First name is required';
+      newErrors.firstName = t('volunteerForm.validation.firstNameRequired', 'First name is required');
     }
     
     if (!formData.lastName.trim()) {
-      newErrors.lastName = 'Last name is required';
+      newErrors.lastName = t('volunteerForm.validation.lastNameRequired', 'Last name is required');
     }
     
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = t('volunteerForm.validation.emailRequired', 'Email is required');
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
+      newErrors.email = t('volunteerForm.validation.emailInvalid', 'Please enter a valid email address');
     }
     
     if (!formData.phone.trim()) {
-      newErrors.phone = 'Phone number is required';
+      newErrors.phone = t('volunteerForm.validation.phoneRequired', 'Phone number is required');
     }
     
     if (formData.interests.length === 0) {
-      newErrors.interests = 'Please select at least one area of interest';
+      newErrors.interests = t('volunteerForm.validation.interestsRequired', 'Please select at least one area of interest');
     }
     
     if (!formData.availability) {
-      newErrors.availability = 'Please select your availability';
+      newErrors.availability = t('volunteerForm.validation.availabilityRequired', 'Please select your availability');
     }
 
     setErrors(newErrors);
@@ -109,12 +109,26 @@ function VolunteerForm() {
       
       const formDataToSubmit = new FormData();
       // Google Form field IDs
+      const interestsLabel = formData.interests
+        .map((interestKey) => t(
+          `volunteerForm.interests.${interestKey}`,
+          interestOptions.find((option) => option.key === interestKey)?.defaultLabel || interestKey
+        ))
+        .join(', ');
+
+      const availabilityLabel = formData.availability
+        ? t(
+            `volunteerForm.availabilityOptions.${formData.availability}`,
+            availabilityOptions.find((option) => option.key === formData.availability)?.defaultLabel || formData.availability
+          )
+        : '';
+
       formDataToSubmit.append('entry.1738825547', formData.firstName); // First Name
       formDataToSubmit.append('entry.1250817320', formData.lastName); // Last Name
       formDataToSubmit.append('entry.388803601', formData.email); // Email
       formDataToSubmit.append('entry.1497950874', formData.phone); // Phone
-      formDataToSubmit.append('entry.468551905', formData.interests.join(', ')); // Areas of Interest
-      formDataToSubmit.append('entry.1618589420', formData.availability); // Availability
+      formDataToSubmit.append('entry.468551905', interestsLabel); // Areas of Interest
+      formDataToSubmit.append('entry.1618589420', availabilityLabel); // Availability
       formDataToSubmit.append('entry.942235469', formData.experience); // Previous Volunteer Experience
       formDataToSubmit.append('entry.300834652', formData.message); // Why would you like to volunteer with AFRHEEC?
 
@@ -139,7 +153,7 @@ function VolunteerForm() {
       setErrors({});
     } catch (error) {
       console.error('Error submitting form:', error);
-      setErrors({ submit: 'Something went wrong. Please try again.' });
+      setErrors({ submit: t('volunteerForm.validation.submitError', 'Something went wrong. Please try again.') });
     } finally {
       setIsLoading(false);
     }
@@ -149,16 +163,18 @@ function VolunteerForm() {
     return (
       <div className="volunteer-form-container">
         <div className="volunteer-form-success">
-          <h3>Thank You for Your Interest in Volunteering!</h3>
+          <h3>{t('volunteerForm.successTitle', 'Thank You for Your Interest in Volunteering!')}</h3>
           <p>
-            We've received your volunteer application and will be in touch with you soon. 
-            Our team will review your interests and availability to find the perfect volunteer opportunity for you.
+            {t(
+              'volunteerForm.successMessage',
+              'We\'ve received your volunteer application and will be in touch with you soon. Our team will review your interests and availability to find the perfect volunteer opportunity for you.'
+            )}
           </p>
           <button 
             className="volunteer-form-reset"
             onClick={() => setIsSubmitted(false)}
           >
-            Submit Another Application
+            {t('volunteerForm.submitAnother', 'Submit Another Application')}
           </button>
         </div>
       </div>
@@ -168,17 +184,19 @@ function VolunteerForm() {
   return (
     <div className="volunteer-form-container">
       <div className="volunteer-form-header">
-        <h2 className="volunteer-form-title">Become a Volunteer</h2>
+        <h2 className="volunteer-form-title">{t('volunteerForm.title', 'Become a Volunteer')}</h2>
         <p className="volunteer-form-description">
-          Join our dedicated team of volunteers and make a difference in the African heritage community. 
-          We welcome volunteers with diverse skills and backgrounds to support our programs and initiatives.
+          {t(
+            'volunteerForm.description',
+            'Join our dedicated team of volunteers and make a difference in the African heritage community. We welcome volunteers with diverse skills and backgrounds to support our programs and initiatives.'
+          )}
         </p>
       </div>
 
       <form className="volunteer-form" onSubmit={handleSubmit}>
         <div className="form-row">
           <div className="form-group">
-            <label htmlFor="firstName">First Name *</label>
+            <label htmlFor="firstName">{t('volunteerForm.firstNameLabel', 'First Name *')}</label>
             <input
               type="text"
               id="firstName"
@@ -191,7 +209,7 @@ function VolunteerForm() {
           </div>
 
           <div className="form-group">
-            <label htmlFor="lastName">Last Name *</label>
+            <label htmlFor="lastName">{t('volunteerForm.lastNameLabel', 'Last Name *')}</label>
             <input
               type="text"
               id="lastName"
@@ -206,7 +224,7 @@ function VolunteerForm() {
 
         <div className="form-row">
           <div className="form-group">
-            <label htmlFor="email">Email Address *</label>
+            <label htmlFor="email">{t('volunteerForm.emailLabel', 'Email Address *')}</label>
             <input
               type="email"
               id="email"
@@ -219,7 +237,7 @@ function VolunteerForm() {
           </div>
 
           <div className="form-group">
-            <label htmlFor="phone">Phone Number *</label>
+            <label htmlFor="phone">{t('volunteerForm.phoneLabel', 'Phone Number *')}</label>
             <input
               type="tel"
               id="phone"
@@ -233,25 +251,28 @@ function VolunteerForm() {
         </div>
 
         <div className="form-group">
-          <label>Areas of Interest *</label>
+          <label>{t('volunteerForm.interestsLabel', 'Areas of Interest *')}</label>
           <div className="checkbox-grid">
-            {interestOptions.map((interest) => (
-              <div key={interest} className="checkbox-item">
-                <input
-                  type="checkbox"
-                  id={interest}
-                  checked={formData.interests.includes(interest)}
-                  onChange={() => handleCheckboxChange(interest)}
-                />
-                <label htmlFor={interest}>{interest}</label>
-              </div>
-            ))}
+            {interestOptions.map((interest) => {
+              const label = t(`volunteerForm.interests.${interest.key}`, interest.defaultLabel);
+              return (
+                <div key={interest.key} className="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id={`interest-${interest.key}`}
+                    checked={formData.interests.includes(interest.key)}
+                    onChange={() => handleCheckboxChange(interest.key)}
+                  />
+                  <label htmlFor={`interest-${interest.key}`}>{label}</label>
+                </div>
+              );
+            })}
           </div>
           {errors.interests && <span className="error-message">{errors.interests}</span>}
         </div>
 
         <div className="form-group">
-          <label htmlFor="availability">Availability *</label>
+          <label htmlFor="availability">{t('volunteerForm.availabilityLabel', 'Availability *')}</label>
           <select
             id="availability"
             name="availability"
@@ -259,34 +280,43 @@ function VolunteerForm() {
             onChange={handleInputChange}
             className={errors.availability ? 'error' : ''}
           >
-            <option value="">Select your availability</option>
-            {availabilityOptions.map((option) => (
-              <option key={option} value={option}>{option}</option>
-            ))}
+            <option value="">{t('volunteerForm.availabilityPlaceholder', 'Select your availability')}</option>
+            {availabilityOptions.map((option) => {
+              const label = t(`volunteerForm.availabilityOptions.${option.key}`, option.defaultLabel);
+              return (
+                <option key={option.key} value={option.key}>{label}</option>
+              );
+            })}
           </select>
           {errors.availability && <span className="error-message">{errors.availability}</span>}
         </div>
 
         <div className="form-group">
-          <label htmlFor="experience">Previous Volunteer Experience</label>
+          <label htmlFor="experience">{t('volunteerForm.experienceLabel', 'Previous Volunteer Experience')}</label>
           <textarea
             id="experience"
             name="experience"
             value={formData.experience}
             onChange={handleInputChange}
-            placeholder="Tell us about any previous volunteer experience you have..."
+            placeholder={t(
+              'volunteerForm.experiencePlaceholder',
+              'Tell us about any previous volunteer experience you have...'
+            )}
             rows="3"
           />
         </div>
 
         <div className="form-group">
-          <label htmlFor="message">Why would you like to volunteer with AFRHEEC?</label>
+          <label htmlFor="message">{t('volunteerForm.messageLabel', 'Why would you like to volunteer with AFRHEEC?')}</label>
           <textarea
             id="message"
             name="message"
             value={formData.message}
             onChange={handleInputChange}
-            placeholder="Share your motivation and what you hope to contribute..."
+            placeholder={t(
+              'volunteerForm.messagePlaceholder',
+              'Share your motivation and what you hope to contribute...'
+            )}
             rows="4"
           />
         </div>
@@ -298,7 +328,9 @@ function VolunteerForm() {
           className="volunteer-form-submit"
           disabled={isLoading}
         >
-          {isLoading ? 'Submitting...' : 'Submit Volunteer Application'}
+          {isLoading 
+            ? t('volunteerForm.submit.loading', 'Submitting...') 
+            : t('volunteerForm.submit.default', 'Submit Volunteer Application')}
         </button>
       </form>
     </div>
